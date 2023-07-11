@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url('fonts/Satoshi-Bold.otf');
+  src: url('fonts/Satoshi-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url('fonts/Satoshi-Regular.otf');
+  src: url('fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url('fonts/PlusJakartaSans-ExtraBold');
+  src: url('fonts/PlusJakartaSans-ExtraBold') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url('fonts/PlusJakartaSans-Bold');
+  src: url('fonts/PlusJakartaSans-Bold') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --font-family-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-family-body: 'Satoshi', sans-serif;
+
+  /* Font size: X-Large */
+  --font-size-xlarge-desktop: 3rem;     /* 48px */
+  --line-height-xlarge-desktop: 4.5rem; /* 72px */
+  --font-size-xlarge-mobile: 1.5rem;    /* 24px */
+  --line-height-xlarge-mobile: 2.5rem;  /* 40px */
+
+  /* Font size: Large */
+  --font-size-large-desktop: 1.5rem;    /* 24px */
+  --line-height-large-desktop: 2.5rem;  /* 40px */
+  --font-size-large-mobile: 1.125rem;   /* 18px */
+  --line-height-large-mobile: 1.5rem;   /* 24px */
+
+  /* Font size: Title */
+  --font-size-title-desktop: 1rem;      /* 16px */
+  --line-height-title-desktop: 1.5rem;  /* 24px */
+  --font-size-title-mobile: 0.625rem;   /* 10px */
+  --line-height-title-mobile: 1rem;     /* 16px */
+
+  /* Font size: Subtitle */
+  --font-size-subtitle: 0.875rem; /* 14px */
+  --line-height-subtitle: 1.5rem; /* 24px */
+
+  /* Font size: Default */
+  --font-size: 0.875rem; /* 14px */
+  --line-height: 1.5rem; /* 24px */
+
+  /* Font size: Small */
+  --font-size-small: 0.75rem; /* 12px */
+  --line-height-small: 1rem;  /* 16px */
+}
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
+  background: repeating-linear-gradient(
+    gainsboro, gainsboro 8px, white 8px, white 16px
+  );
+}
+
+body {
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  line-height: var(--line-height);
+  font-size: var(--font-size);
+  font-family: var(--font-family-body);
+}
+
+h2, h3, h4, h5, h6 {
+  margin: 0 0 8px 0;
+  /* background-color: red; */
+  font-family: var(--font-family-heading);
+}
+
+p {
+  /* background-color: yellow; */
+  margin: 0 0 8px 0;
+}
+
+.text-xlarge {
+  font-family: var(--font-family-heading);
+  font-weight: 800;
+  font-size: var(--font-size-xlarge-desktop);
+  line-height: var(--line-height-xlarge-desktop);
+  /* font-size: var(--font-size-xlarge-mobile); */
+  /* line-height: var(--line-height-xlarge-mobile); */
+}
+
+.text-large {
+  font-family: var(--font-family-heading);
+  font-weight: 800;
+  font-size: var(--font-size-large-desktop);
+  line-height: var(--line-height-large-desktop);
+  /* font-size: var(--font-size-large-mobile); */
+  /* line-height: var(--line-height-large-mobile); */
+}
+
+.text-title {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: var(--font-size-title-desktop);
+  line-height: var(--line-height-title-desktop);
+  /* font-size: var(--font-size-title-mobile); */
+  /* line-height: var(--line-height-title-mobile); */
+}
+
+.text-subtitle {
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: var(--font-size-subtitle);
+  line-height: var(--line-height-subtitle);
+}
+
+.text-default {
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+.text-small {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
