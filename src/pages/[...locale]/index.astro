@@ -1,12 +1,28 @@
 ---
 import { getStaticPaths } from "../../utils/staticPaths";
 
+import { routes } from '../../routes';
+import { getLocaleFromUrl } from "../../utils/i18n";
+
+const locale = getLocaleFromUrl(Astro.url)
+
 import Layout from "../../layouts/Layout.astro";
 
 export { getStaticPaths };
 ---
 
 <Layout title="Gabriela Borraz" description="Rocks">
+  <nav>
+    <ul>
+      <li><a href={routes.root({ locale })}>Inicio</a></li>
+      <li><a href={routes.about({ locale })}>Sobre mí</a></li>
+      <li><a href={routes.portfolio.root({ locale })}>Portafolio</a></li>
+      <li><a href={routes.blog.root({ locale })}>Blog</a></li>
+      <li><a href={routes.faq({ locale })}>FAQ</a></li>
+      <li><a href={routes.contact({ locale })}>Contacto</a></li>
+    </ul>
+  </nav>
+
   <h2 class="text-xlarge">
     XLarge – The quick brown fox jumps over the lazy dog
     <span>soy azulito perdío</span>

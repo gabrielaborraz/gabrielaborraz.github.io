@@ -75,6 +75,8 @@
   --grey-anti-flash-white: #F3F3F7;
   --grey-ghost-white: #E8EBF2;
   --grey-lavander-web: #D7DCEA;
+
+  --rythm: 8px;
 }
 
 * {
@@ -88,9 +90,9 @@ html, body {
 html {
   scroll-behavior: smooth;
   min-height: 100%;
-  background: repeating-linear-gradient(
-    gainsboro, gainsboro 8px, white 8px, white 16px
-  );
+  // background: repeating-linear-gradient(
+  //   gainsboro, gainsboro 8px, white 8px, white 16px
+  // );
 }
 
 body {
@@ -159,4 +161,33 @@ p {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
   color: var(--black-oxford-blue);
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+nav {
+  box-shadow: 0px -1px 0px 0px var(--grey-lavander-web) inset;
+}
+
+nav ul {
+  display: flex;
+  align-content: stretch;
+  height: calc(var(--rythm) * 8);
+}
+
+nav li {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  display: block;
 }
