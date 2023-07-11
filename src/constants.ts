@@ -1,3 +1,3 @@
-const LOCALES = ["es", "en"];
+export const LOCALES = ["es", "en"];
 
-const DEFAULT_LOCALE = ["es"];
+export const DEFAULT_LOCALE = "es";
