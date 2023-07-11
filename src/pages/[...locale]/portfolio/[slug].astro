@@ -7,6 +7,6 @@ export const getStaticPaths = async () => {
   return [{ params: { slug: "project1" } }];
 };
 ---
-<Layout title="Gabriela Borraz" description="Rocks" active="portfolio">
+<Layout title={slug || ""} description="Rocks" active="portfolio">
   Portfolio project {slug}
 </Layout>

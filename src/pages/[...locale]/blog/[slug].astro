@@ -10,7 +10,7 @@ export const getStaticPaths = async () => {
   ];
 };
 ---
-<Layout title="Gabriela Borraz" description="Rocks" active="blog">
+<Layout title={slug || ""} description="Rocks" active="blog">
   {slug}
   {locale}
 </Layout>
