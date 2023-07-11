@@ -3,7 +3,10 @@ const { locale } = Astro.params;
 
 import { getStaticPaths } from "../../utils/staticPaths";
 
+import Layout from "../../layouts/Layout.astro";
+
 export { getStaticPaths };
 ---
-
-About page {locale}
+<Layout title="Sobre mí" description="Rocks" active="about">
+  About page {locale}
+</Layout>

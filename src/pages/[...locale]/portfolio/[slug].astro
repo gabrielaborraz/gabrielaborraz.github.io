@@ -1,9 +1,12 @@
 ---
 const { slug } = Astro.params;
 
+import Layout from "../../../layouts/Layout.astro";
+
 export const getStaticPaths = async () => {
   return [{ params: { slug: "project1" } }];
 };
 ---
-
-Portfolio project {slug}
+<Layout title="Gabriela Borraz" description="Rocks" active="portfolio">
+  Portfolio project {slug}
+</Layout>

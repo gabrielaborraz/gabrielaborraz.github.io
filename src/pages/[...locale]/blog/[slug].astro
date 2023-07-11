@@ -1,6 +1,8 @@
 ---
 const { locale, slug } = Astro.params;
 
+import Layout from "../../../layouts/Layout.astro";
+
 export const getStaticPaths = async () => {
   return [
     { params: { locale: "en", slug: "post1-en" } },
@@ -8,6 +10,7 @@ export const getStaticPaths = async () => {
   ];
 };
 ---
-
-{slug}
-{locale}
+<Layout title="Gabriela Borraz" description="Rocks" active="blog">
+  {slug}
+  {locale}
+</Layout>

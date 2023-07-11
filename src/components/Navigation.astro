@@ -1,0 +1,43 @@
+---
+import { routes } from "../routes";
+import { getLocaleFromUrl } from "../utils/i18n";
+import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
+import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+
+const locale = getLocaleFromUrl(Astro.url);
+
+const active = Astro.props.active || 'root';
+
+const activeClass = (item: string): string => {
+  return active === item ? 'active' : ''
+}
+---
+
+<nav>
+  <ul>
+    <li id="nav-burger">
+      <a href="#"><MenuRoundedIcon /></a>
+    </li>
+    <li class="nav-item" id="nav-close">
+      <a href="#"><CloseRoundedIcon /></a>
+    </li>
+    <li class={`nav-item ${activeClass('root')}`}>
+      <a href={routes.root({ locale })}>Inicio</a>
+    </li>
+    <li class={`nav-item ${activeClass('about')}`}>
+      <a href={routes.about({ locale })}>Sobre mí</a>
+    </li>
+    <li class={`nav-item ${activeClass('portfolio')}`}>
+      <a href={routes.portfolio.root({ locale })}>Portafolio</a>
+    </li>
+    <li class={`nav-item ${activeClass('blog')}`}>
+      <a href={routes.blog.root({ locale })}>Blog</a>
+    </li>
+    <li class={`nav-item ${activeClass('faq')}`}>
+      <a href={routes.faq({ locale })}>FAQ</a>
+    </li>
+    <li class={`nav-item ${activeClass('contact')}`}>
+      <a href={routes.contact({ locale })}>Contacto</a>
+    </li>
+  </ul>
+</nav>

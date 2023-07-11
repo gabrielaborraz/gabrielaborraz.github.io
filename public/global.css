@@ -49,8 +49,10 @@
   /* Font size: Title */
   --font-size-title-desktop: 1rem;      /* 16px */
   --line-height-title-desktop: 1.5rem;  /* 24px */
+  --font-weight-title-desktop: 800;
   --font-size-title-mobile: 0.625rem;   /* 10px */
   --line-height-title-mobile: 1rem;     /* 16px */
+  --font-weight-title-mobile: 800;
 
   /* Font size: Subtitle */
   --font-size-subtitle: 0.875rem; /* 14px */
@@ -76,8 +78,14 @@
   --grey-ghost-white: #E8EBF2;
   --grey-lavander-web: #D7DCEA;
 
+  /* Vertical rythm */
   --rythm: 8px;
+
+  /* Breakpoints widths */
+  --medium-screen: 1008px;
 }
+
+
 
 * {
   margin: 0;
@@ -163,6 +171,12 @@ p {
   color: var(--black-oxford-blue);
 }
 
+/* Icons */
+.MuiSvgIcon-fontSizeMedium {
+  width: 24px;
+  height: 24px;
+}
+
 ul {
   padding: 0;
 }
@@ -171,23 +185,73 @@ li {
   list-style-type: none;
 }
 
-nav {
-  box-shadow: 0px -1px 0px 0px var(--grey-lavander-web) inset;
-}
-
+/* Navigation */
 nav ul {
   display: flex;
   align-content: stretch;
-  height: calc(var(--rythm) * 8);
+  flex-direction: column;
+  // position: absolute;
+  // top: 0;
+  // right: 0;
+  // bottom: 0;
+  // left: 0;
+  // padding: calc(var(--rythm) * 3);
+  background-color: white;
 }
 
 nav li {
-  flex-grow: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  flex-grow: 1;
+  box-shadow: 0px -1px 0px 0px var(--grey-lavander-web) inset;
+  display: none;
+
+  &#nav-close, &#nav-burger {
+    flex-grow: 0;
+    align-self: end;
+    box-shadow: none;
+  }
+
+  &#nav-burger {
+    display: flex;
+    width: calc(var(--rythm) * 8);
+    height: calc(var(--rythm) * 8);
+  }
+
+  &#nav-close {
+    height: calc(var(--rythm) * 5);
+  }
+
+  &.active {
+    box-shadow: 0px -3px 0px 0px var(--blue-neon) inset;
+  }
 }
 
 nav a {
-  display: block;
+  text-decoration: none;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-title-desktop);
+  font-weight: var(--font-weight-title-desktop);
+  line-height: var(--line-height-title-desktop);
+  color: var(--black-oxford-blue);
+}
+
+@media only screen and (min-width: 1008px) {
+  nav ul {
+    flex-direction: row;
+    padding: 0;
+  }
+
+  nav li {
+    display: flex;
+    height: calc(var(--rythm) * 8);
+
+    &#nav-burger, &#nav-close {
+      display: none;
+    }
+  }
 }
