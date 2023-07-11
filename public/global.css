@@ -63,6 +63,18 @@
   /* Font size: Small */
   --font-size-small: 0.75rem; /* 12px */
   --line-height-small: 1rem;  /* 16px */
+
+  /* Colors */
+  --blue-neon: #4162FF;
+  --blue-persian: #142DCC;
+  --blue-resolution: #0E208A;
+  --black-space-cadet: #1C213C;
+  --black-oxford-blue: #060C28;
+  --white: #FFF;
+  --grey-seasalt: #F9FAFB;
+  --grey-anti-flash-white: #F3F3F7;
+  --grey-ghost-white: #E8EBF2;
+  --grey-lavander-web: #D7DCEA;
 }
 
 * {
@@ -87,6 +99,7 @@ body {
   line-height: var(--line-height);
   font-size: var(--font-size);
   font-family: var(--font-family-body);
+  color: var(--black-space-cadet);
 }
 
 h2, h3, h4, h5, h6 {
@@ -107,6 +120,11 @@ p {
   line-height: var(--line-height-xlarge-desktop);
   /* font-size: var(--font-size-xlarge-mobile); */
   /* line-height: var(--line-height-xlarge-mobile); */
+  color: var(--black-oxford-blue);
+
+  & span {
+    color: var(--blue-neon);
+  }
 }
 
 .text-large {
@@ -116,6 +134,8 @@ p {
   line-height: var(--line-height-large-desktop);
   /* font-size: var(--font-size-large-mobile); */
   /* line-height: var(--line-height-large-mobile); */
+  color: var(--blue-neon);
+
 }
 
 .text-title {
@@ -125,6 +145,7 @@ p {
   line-height: var(--line-height-title-desktop);
   /* font-size: var(--font-size-title-mobile); */
   /* line-height: var(--line-height-title-mobile); */
+  color: var(--black-oxford-blue);
 }
 
 .text-subtitle {
@@ -134,12 +155,8 @@ p {
   line-height: var(--line-height-subtitle);
 }
 
-.text-default {
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-}
-
 .text-small {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
+  color: var(--black-oxford-blue);
 }
