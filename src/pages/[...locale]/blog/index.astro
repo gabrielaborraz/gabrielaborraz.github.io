@@ -1,0 +1,10 @@
+---
+const { locale } = Astro.params;
+
+export const getStaticPaths = async () => {
+  return [{ params: { locale: "en" } }, { params: { locale: undefined } }];
+};
+---
+
+Blog index
+{locale}

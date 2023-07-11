@@ -1,0 +1,9 @@
+---
+const { slug } = Astro.params;
+
+export const getStaticPaths = async () => {
+  return [{ params: { slug: "project1" } }];
+};
+---
+
+Portfolio project {slug}
