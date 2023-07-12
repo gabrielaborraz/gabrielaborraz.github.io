@@ -10,14 +10,18 @@ import Layout from "../../../layouts/Layout.astro";
 
 export const getStaticPaths = async () => {
   return [
-    { params: { slug: "project-1", locale: undefined } },
-    { params: { slug: "project-1", locale: 'en' } },
-    { params: { slug: "helloapi", locale: undefined } },
-    { params: { slug: "helloapi", locale: 'en' } },
+    { params: { slug: "palabras-magicas", locale: undefined } },
+    { params: { slug: "palabras-magicas", locale: 'en' } },
+    { params: { slug: "mpk", locale: undefined } },
+    { params: { slug: "mpk", locale: 'en' } },
+    { params: { slug: "tales-milly-cohen", locale: undefined } },
+    { params: { slug: "tales-milly-cohen", locale: 'en' } },
+    { params: { slug: "viola-fermin-rdz", locale: undefined } },
+    { params: { slug: "viola-fermin-rdz", locale: 'en' } },
   ];
 };
 
 ---
-<Layout title={t(`portfolio.project.${slug}.title`)} description="Aquí breve descripción del proyecto" active="portfolio">
+<Layout title={t(`portfolio.project.${slug}.title`)} description={t(`portfolio.project.${slug}.description`)} active="portfolio">
   Portfolio project {slug}
 </Layout>

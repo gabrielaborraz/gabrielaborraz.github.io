@@ -2,11 +2,14 @@
 const { locale } = Astro.params;
 
 import { getStaticPaths } from "../../utils/staticPaths";
+import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
+
+const t = useTranslations(locale);
 
 import Layout from "../../layouts/Layout.astro";
 
 export { getStaticPaths };
 ---
-<Layout title="Sobre mí | Gabriela Borraz" description="Animadora versátil de gráficos por computadora que da vida a ideas con creatividad y destreza. Descubre mi trabajo de animación, ilustración y diseño" active="about">
+<Layout title={t('about.title')} description={t('about.description')} active="about">
   About page {locale}
 </Layout>

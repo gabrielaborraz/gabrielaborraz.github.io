@@ -1,10 +1,14 @@
 ---
 import { getStaticPaths } from "../../../../utils/staticPaths";
+import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
 
 import Layout from "../../../../layouts/Layout.astro";
 
 export { getStaticPaths };
 ---
-<Layout title="Portafolio de Diseño" description="Explora mis proyectos de diseño" active="portfolio">
+<Layout title= {t('portfolio.design.index.title')} description={t('portfolio.design.index.description')} active="portfolio">
 Design index
 </Layout>

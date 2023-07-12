@@ -2,15 +2,20 @@
 const { locale, slug } = Astro.params;
 
 import Layout from "../../../layouts/Layout.astro";
+import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
+
+const t = useTranslations(locale);
 
 export const getStaticPaths = async () => {
   return [
-    { params: { slug: "post-1", locale: undefined } },
-    { params: { slug: "post-1", locale: 'en' } },
+    { params: { slug: "welcome", locale: undefined } },
+    { params: { slug: "welcome", locale: 'en' } },
+    { params: { slug: "animation-superpowers", locale: undefined } },
+    { params: { slug: "animation-superpowers", locale: 'en' } },
   ];
 };
 ---
-<Layout title={slug || ""} description="Aquí breve descripción del post" active="blog">
+<Layout title={t(`blog.post.${slug}.title`)}  description={t(`blog.post.${slug}.description`)} active="blog">
   {slug}
   {locale}
 </Layout>

@@ -2,11 +2,14 @@
 const { locale } = Astro.params;
 
 import { getStaticPaths } from "../../utils/staticPaths";
+import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
+
+const t = useTranslations(locale);
 
 import Layout from "../../layouts/Layout.astro";
 
 export { getStaticPaths };
 ---
-<Layout title="Preguntas Frecuentes" description="Respondiendo a Preguntas Frecuentes sobre nuestros servicios de animación y diseño" active="faq">
+<Layout title={t('faq.title')} description={t('faq.description')} active="faq">
   FAQ page {locale}
 </Layout>
