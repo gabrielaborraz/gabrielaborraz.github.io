@@ -1,12 +1,23 @@
 ---
 const { slug } = Astro.params;
 
+import { getLocaleFromUrl, useTranslations } from "../../../utils/i18n/utils";
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
+
 import Layout from "../../../layouts/Layout.astro";
 
 export const getStaticPaths = async () => {
-  return [{ params: { slug: "project1" } }];
+  return [
+    { params: { slug: "project-1", locale: undefined } },
+    { params: { slug: "project-1", locale: 'en' } },
+    { params: { slug: "helloapi", locale: undefined } },
+    { params: { slug: "helloapi", locale: 'en' } },
+  ];
 };
+
 ---
-<Layout title={slug || ""} description="Aquí breve descripción del proyecto" active="portfolio">
+<Layout title={t(`portfolio.project.${slug}.title`)} description="Aquí breve descripción del proyecto" active="portfolio">
   Portfolio project {slug}
 </Layout>

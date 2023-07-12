@@ -1,11 +1,16 @@
 ---
 import { getStaticPaths } from "../../utils/staticPaths";
+import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
 
 import Layout from "../../layouts/Layout.astro";
 
+
 export { getStaticPaths };
 ---
-<Layout title="Inicio | Gabriela Borraz" description="Bienvenidos al sitio web de Gabriela Borraz, donde las ideas creativas cobran vida para comunicar, inspirar y conectar">
+<Layout title={t('home.title')} description={t('home.description')}>
   <h2 class="text-xlarge">
     XLarge – The quick brown fox jumps over the lazy dog
     <span>soy azulito perdío</span>

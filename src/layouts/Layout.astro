@@ -1,7 +1,7 @@
 ---
 const { title, description, active } = Astro.props;
 
-import { getLocaleFromUrl } from "../utils/i18n";
+import { getLocaleFromUrl } from "../utils/i18n/utils";
 
 const locale = getLocaleFromUrl(Astro.url);
 

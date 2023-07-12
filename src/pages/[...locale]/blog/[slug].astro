@@ -5,8 +5,8 @@ import Layout from "../../../layouts/Layout.astro";
 
 export const getStaticPaths = async () => {
   return [
-    { params: { locale: "en", slug: "post1-en" } },
-    { params: { locale: undefined, slug: "post1-es" } },
+    { params: { slug: "post-1", locale: undefined } },
+    { params: { slug: "post-1", locale: 'en' } },
   ];
 };
 ---
