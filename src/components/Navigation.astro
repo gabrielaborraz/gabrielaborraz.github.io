@@ -1,8 +1,9 @@
 ---
-import { routes } from "../routes";
-import { getLocaleFromUrl } from "../utils/i18n";
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+
+import { routes } from "../routes";
+import { getLocaleFromUrl } from "../utils/i18n";
 
 const locale = getLocaleFromUrl(Astro.url);
 
@@ -13,13 +14,13 @@ const activeClass = (item: string): string => {
 }
 ---
 
-<nav>
+<nav id="nav">
   <ul>
     <li id="nav-burger">
-      <a href="#"><MenuRoundedIcon /></a>
+      <button><MenuRoundedIcon /></button>
     </li>
-    <li class="nav-item" id="nav-close">
-      <a href="#"><CloseRoundedIcon /></a>
+    <li id="nav-close">
+      <button><CloseRoundedIcon /></button>
     </li>
     <li class={`nav-item ${activeClass('root')}`}>
       <a href={routes.root({ locale })}>Inicio</a>

@@ -3,7 +3,7 @@ const { title, description, active } = Astro.props;
 
 import { getLocaleFromUrl } from "../utils/i18n";
 
-const locale = getLocaleFromUrl(Astro.url)
+const locale = getLocaleFromUrl(Astro.url);
 
 import Navigation from "../components/Navigation.astro";
 
@@ -45,8 +45,12 @@ export interface Props {
 		<title>{title}</title>
 	</head>
 	<body>
-		<Navigation active={active} />
+		<Navigation locale={locale} active={active} />
 
 		<slot />
+
+		<script>
+			import "/src/scripts/main.js";
+		</script>
 	</body>
 </html>
