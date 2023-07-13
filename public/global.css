@@ -81,6 +81,9 @@
   /* Vertical rythm */
   --rythm: 8px;
 
+  /* Width */
+  --max-width: calc(1440px * 0.8);
+
   /* Breakpoints widths */
   --medium-screen: 1008px;
 }
@@ -111,7 +114,7 @@ body {
 }
 
 h2, h3, h4, h5, h6 {
-  margin: 0 0 8px 0;
+  margin: 0;
   /* background-color: red; */
   font-family: var(--font-family-heading);
 }
@@ -138,6 +141,7 @@ button {
 
 a {
   text-decoration: none;
+  color: var(--black-space-cadet);
 }
 
 .text-xlarge {
@@ -186,7 +190,6 @@ a {
   }
 }
 
-
 .text-subtitle {
   font-family: var(--font-family-heading);
   font-weight: 700;
@@ -195,9 +198,10 @@ a {
 }
 
 .text-small {
+  font-family: var(--font-family-body);
+  font-weight: normal;
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
-  color: var(--black-oxford-blue);
 }
 
 .text-uppercase {
@@ -326,6 +330,27 @@ nav {
 }
 
 .section {
-  width: 1120px;
+  max-width: var(--max-width);
+  margin: calc(var(--rythm) * 8) auto;
+}
+
+.footer {
+  max-width: var(--max-width);
   margin: 0 auto;
+  box-shadow: inset 0px 1px 0px 0px var(--grey-lavander-web);
+
+  & p {
+    margin-bottom: calc(var(--rythm) * 2);
+  }
+
+  & h6 {
+    text-align: center;
+  }
+
+  & .content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: calc(var(--rythm) * 4);
+    padding: calc(var(--rythm) * 3) calc(var(--rythm) * 6);
+  }
 }

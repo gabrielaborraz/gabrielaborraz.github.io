@@ -1,0 +1,58 @@
+---
+import { routes } from "../routes";
+import { getLocaleFromUrl } from "../utils/i18n/utils";
+
+const locale = getLocaleFromUrl(Astro.url);
+const year = new Date().getFullYear();
+---
+<footer class="footer">
+  <div class="content">
+    <div>
+      <p class="text-title text-uppercase">Menú</p>
+
+      <ul>
+        <li><a href={routes.root({ locale })}>Inicio</a></li>
+        <li><a href={routes.about({ locale })}>Acerca de</a></li>
+        <li><a href={routes.portfolio.root({ locale })}>Portafolio</a></li>
+        <li><a href={routes.blog.root({ locale })}>Blog</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="text-title text-uppercase">Sígueme</p>
+
+      <ul>
+        <li><a href="">Instagram</a></li>
+        <li><a href="">YouTube</a></li>
+        <li><a href="">Behance</a></li>
+        <li><a href="">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="text-title text-uppercase">Te respondo</p>
+
+      <ul>
+        <li><a href={routes.contact({ locale })}>Contacto</a></li>
+        <li><a href={routes.faq({ locale })}>FAQ</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="text-title text-uppercase">Idioma</p>
+
+      <ul>
+        <li><a href={routes.root({ locale: 'es' })}>Español</a></li>
+        <li><a href={routes.root({ locale: 'en' })}>English</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="text-title text-uppercase">Suscríbete</p>
+    </div>
+  </div>
+
+  <h6 class="text-small">
+    © {year} by Gabriela Borraz. Powered and secured by <a href="https://kenaro.co" target="_blank">Kenaro Ltd.</a>
+  </h6>
+</footer>
