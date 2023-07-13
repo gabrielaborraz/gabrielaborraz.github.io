@@ -12,10 +12,7 @@ export { getStaticPaths };
 ---
 <Layout title={t('home.title')} description={t('home.description')}>
   <section class="hero">
-    <h2 class="text-xlarge">
-      Las ideas cobran vida
-      <span>para comunicar / inspirar / conectar</span>
-    </h2>
+    <h2 class="text-xlarge" set:html={t('home.hero')} />
   </section>
 
   <main>
