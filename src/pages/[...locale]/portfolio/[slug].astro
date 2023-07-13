@@ -13,17 +13,29 @@ import Layout from "../../../layouts/Layout.astro";
 
 export const getStaticPaths = async () => {
   return [
-    { params: { slug: "palabras-magicas", locale: undefined } },
-    { params: { slug: "palabras-magicas", locale: 'en' } },
-    { params: { slug: "mpk", locale: undefined } },
-    { params: { slug: "mpk", locale: 'en' } },
+    { params: { slug: "magic-words", locale: undefined } },
+    { params: { slug: "magic-words", locale: 'en' } },
+    { params: { slug: "midotpowerkids", locale: undefined } },
+    { params: { slug: "midotpowerkids", locale: 'en' } },
     { params: { slug: "tales-milly-cohen", locale: undefined } },
     { params: { slug: "tales-milly-cohen", locale: 'en' } },
-    { params: { slug: "viola-fermin-rdz", locale: undefined } },
-    { params: { slug: "viola-fermin-rdz", locale: 'en' } },
+    { params: { slug: "viola-from-newspain-to-chiapas", locale: undefined } },
+    { params: { slug: "viola-from-newspain-to-chiapas", locale: 'en' } },
   ];
 };
 ---
 <Layout title={title} description={description} active="portfolio">
-  Portfolio project {slug}
+  <section id="header" class="section">
+    <div class="title">
+      <p class="text-title text-uppercase">{t(`portfolio.project.${slug}.header.title`)}</p>
+      <h4 class="text-large">{t(`portfolio.project.${slug}.header.subtitle`)}</h4>
+    </div>
+  </section>
+
+  <section id="sinopsis" class="section">
+    <div class="title">
+      <p class="text-title text-uppercase">Sinopsis</p>
+      <p class="body" set:html={t(`portfolio.project.${slug}.sinopsis`)}/>
+    </div>
+  </section>
 </Layout>
