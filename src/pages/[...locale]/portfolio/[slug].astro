@@ -6,6 +6,9 @@ import { getLocaleFromUrl, useTranslations } from "../../../utils/i18n/utils";
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
+const title = t(`portfolio.project.${slug}.title`);
+const description = t(`portfolio.project.${slug}.description`);
+
 import Layout from "../../../layouts/Layout.astro";
 
 export const getStaticPaths = async () => {
@@ -20,8 +23,7 @@ export const getStaticPaths = async () => {
     { params: { slug: "viola-fermin-rdz", locale: 'en' } },
   ];
 };
-
 ---
-<Layout title={t(`portfolio.project.${slug}.title`)} description={t(`portfolio.project.${slug}.description`)} active="portfolio">
+<Layout title={title} description={description} active="portfolio">
   Portfolio project {slug}
 </Layout>

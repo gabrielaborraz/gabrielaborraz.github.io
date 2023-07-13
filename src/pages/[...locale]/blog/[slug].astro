@@ -1,9 +1,10 @@
 ---
-const { locale, slug } = Astro.params;
+const { slug } = Astro.params;
 
 import Layout from "../../../layouts/Layout.astro";
-import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
+import { getLocaleFromUrl, useTranslations } from "../../../utils/i18n/utils";
 
+const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
 export const getStaticPaths = async () => {
