@@ -143,10 +143,8 @@ a {
 .text-xlarge {
   font-family: var(--font-family-heading);
   font-weight: 800;
-  font-size: var(--font-size-xlarge-desktop);
-  line-height: var(--line-height-xlarge-desktop);
-  /* font-size: var(--font-size-xlarge-mobile); */
-  /* line-height: var(--line-height-xlarge-mobile); */
+  font-size: var(--font-size-xlarge-mobile);
+  line-height: var(--line-height-xlarge-mobile);
   color: var(--black-oxford-blue);
 
   & span {
@@ -157,10 +155,8 @@ a {
 .text-large {
   font-family: var(--font-family-heading);
   font-weight: 800;
-  font-size: var(--font-size-large-desktop);
-  line-height: var(--line-height-large-desktop);
-  /* font-size: var(--font-size-large-mobile); */
-  /* line-height: var(--line-height-large-mobile); */
+  font-size: var(--font-size-large-mobile);
+  line-height: var(--line-height-large-mobile);
   color: var(--blue-neon);
 
 }
@@ -168,12 +164,28 @@ a {
 .text-title {
   font-family: var(--font-family-heading);
   font-weight: 700;
-  font-size: var(--font-size-title-desktop);
-  line-height: var(--line-height-title-desktop);
-  /* font-size: var(--font-size-title-mobile); */
-  /* line-height: var(--line-height-title-mobile); */
+  font-size: var(--font-size-title-mobile);
+  line-height: var(--line-height-title-mobile);
   color: var(--black-oxford-blue);
 }
+
+@media only screen and (min-width: 1008px) {
+  .text-xlarge {
+    font-size: var(--font-size-xlarge-desktop);
+    line-height: var(--line-height-xlarge-desktop);
+  }
+
+  .text-large {
+    font-size: var(--font-size-large-desktop);
+    line-height: var(--line-height-large-desktop);
+  }
+
+  .text-title {
+    font-size: var(--font-size-title-desktop);
+    line-height: var(--line-height-title-desktop);
+  }
+}
+
 
 .text-subtitle {
   font-family: var(--font-family-heading);
@@ -290,6 +302,21 @@ nav {
       &.nav-item {
         display: flex;
       }
+    }
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - calc(var(--rythm) * 8)); /* Total height minus nav height (64px) */
+
+  & h2 {
+    text-align: center;
+
+    & span {
+      display: block;
     }
   }
 }
