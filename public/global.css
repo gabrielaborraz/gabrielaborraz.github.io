@@ -118,7 +118,7 @@ h2, h3, h4, h5, h6 {
 
 p {
   /* background-color: yellow; */
-  margin: 0 0 8px 0;
+  margin: 0;
 }
 
 ul {
@@ -198,6 +198,10 @@ a {
   font-size: var(--font-size-small);
   line-height: var(--line-height-small);
   color: var(--black-oxford-blue);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 /* Icons */
@@ -319,4 +323,9 @@ nav {
       display: block;
     }
   }
+}
+
+.section {
+  width: 1120px;
+  margin: 0 auto;
 }
