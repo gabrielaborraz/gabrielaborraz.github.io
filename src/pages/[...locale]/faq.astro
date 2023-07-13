@@ -10,5 +10,10 @@ import Layout from "../../layouts/Layout.astro";
 export { getStaticPaths };
 ---
 <Layout title={t('faq.title')} description={t('faq.description')} active="faq">
-  FAQ page {locale}
+  <section id="header" class="section">
+    <div class="title">
+      <p class="text-title text-uppercase">Respondiendo</p>
+      <h4 class="text-large">A preguntas frecuentes</h4>
+    </div>
+  </section>
 </Layout>

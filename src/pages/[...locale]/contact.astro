@@ -10,5 +10,10 @@ import Layout from "../../layouts/Layout.astro";
 export { getStaticPaths };
 ---
 <Layout title={t('contact.title')} description={t('contact.description')} active="contact">
-  Contact page {locale}
+  <section id="contact" class="section">
+    <div class="title">
+      <p class="text-title text-uppercase">Escríbeme</p>
+      <h4 class="text-large">Y creemos cosas increíbles</h4>
+    </div>
+  </section>
 </Layout>
