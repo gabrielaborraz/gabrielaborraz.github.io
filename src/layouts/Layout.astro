@@ -45,7 +45,11 @@ export interface Props {
 		<title>{title}</title>
 	</head>
 	<body>
-		<Navigation locale={locale} active={active} />
+		<header>
+			<Navigation locale={locale} active={active} />
+
+			<slot name="hero" />
+		</header>
 
 		<slot />
 
