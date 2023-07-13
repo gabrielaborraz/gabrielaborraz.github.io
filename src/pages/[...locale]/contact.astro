@@ -5,15 +5,18 @@ import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
+const title = t('contact.title');
+const description = t('contact.description');
+
 import Layout from "../../layouts/Layout.astro";
 
 export { getStaticPaths };
 ---
-<Layout title={t('contact.title')} description={t('contact.description')} active="contact">
+<Layout title={title} description={description} active="contact">
   <section id="contact" class="section">
     <div class="title">
-      <p class="text-title text-uppercase">Escríbeme</p>
-      <h4 class="text-large">Y creemos cosas increíbles</h4>
+      <p class="text-title text-uppercase">{t('home.contact.title')}</p>
+      <h4 class="text-large">{t('home.contact.subtitle')}</h4>
     </div>
   </section>
 </Layout>

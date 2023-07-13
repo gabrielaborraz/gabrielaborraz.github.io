@@ -5,22 +5,22 @@ import { getLocaleFromUrl, useTranslations } from "../../../utils/i18n/utils";
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
+const title = t('blog.index.title');
+const description = t('blog.index.description');
+
 export const getStaticPaths = async () => {
   return [{ params: { locale: "en" } }, { params: { locale: undefined } }];
 };
 ---
-<Layout title={t('blog.index.title')} description={t('blog.index.description')} active="blog">
+<Layout title={title} description={description} active="blog">
   <section class="hero">
-    <h2 class="text-xlarge">
-      Experimenta. Explora.
-      <span>Evoluciona.</span>
-    </h2>
+    <h2 class="text-xlarge"  set:html={t('blog.hero')}/>
   </section>
 
-  <section id="playground" class="section">
+  <section id="header" class="section">
     <div class="title">
-      <p class="text-title text-uppercase">Playgroud</p>
-      <h4 class="text-large">Mi diario creativo</h4>
+      <p class="text-title text-uppercase">{t('blog.header.title')}</p>
+      <h4 class="text-large">{t('blog.header.subtitle')}</h4>
     </div>
   </section>
 </Layout>

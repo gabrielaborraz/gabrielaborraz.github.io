@@ -5,48 +5,51 @@ import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
+const title = t('home.title');
+const description = t('home.description');
+
 import Layout from "../../layouts/Layout.astro";
 
 
 export { getStaticPaths };
 ---
-<Layout title={t('home.title')} description={t('home.description')}>
+<Layout title={title} description={description}>
   <section class="hero">
     <h2 class="text-xlarge" set:html={t('home.hero')} />
   </section>
 
   <section id="featured" class="section">
     <div class="title">
-      <p class="text-title text-uppercase">Lo más destacado</p>
-      <h4 class="text-large">Proyectos de animación</h4>
+      <p class="text-title text-uppercase">{t('home.featured.title')}</p>
+      <h4 class="text-large">{t('home.featured.subtitle')}</h4>
     </div>
   </section>
 
   <section id="show-reel" class="section">
     <div class="title">
-      <p class="text-title text-uppercase">Video</p>
-      <h4 class="text-large">Show Reel 2023</h4>
+      <p class="text-title text-uppercase">{t('home.show-reel.title')}</p>
+      <h4 class="text-large">{t('home.show-reel.subtitle')}</h4>
   </div>
   </section>
 
   <section id="collaborations" class="section">
     <div class="title">
-      <p class="text-title text-uppercase">Colaboraciones exitosas</p>
-      <h4 class="text-large">Con grandes marcas y clientes</h4>
+      <p class="text-title text-uppercase">{t('home.collaborations.title')}</p>
+      <h4 class="text-large">{t('home.collaborations.subtitle')}</h4>
     </div>
   </section>
 
   <section id="newest" class="section">
     <div class="title">
-      <p class="text-title text-uppercase">Lo más reciente</p>
-      <h4 class="text-large">Galería de proyectos</h4>
+      <p class="text-title text-uppercase">{t('home.newest.title')}</p>
+      <h4 class="text-large">{t('home.newest.subtitle')}</h4>
     </div>
   </section>
 
   <section id="contact" class="section">
     <div class="title">
-      <p class="text-title text-uppercase">Escríbeme</p>
-      <h4 class="text-large">Y creemos cosas increíbles</h4>
+      <p class="text-title text-uppercase">{t('home.contact.title')}</p>
+      <h4 class="text-large">{t('home.contact.subtitle')}</h4>
     </div>
   </section>
 </Layout>

@@ -5,10 +5,13 @@ import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
+const title = t('about.title');
+const description = t('about.description');
+
 import Layout from "../../layouts/Layout.astro";
 
 export { getStaticPaths };
 ---
-<Layout title={t('about.title')} description={t('about.description')} active="about">
+<Layout title={title} description={description} active="about">
   About page {locale}
 </Layout>
