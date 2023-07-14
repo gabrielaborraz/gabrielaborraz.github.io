@@ -1,0 +1,33 @@
+---
+import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
+
+type ProjectCardProps = {
+  imageSrc: string;
+  title: string;
+  description: string;
+  year: string | number;
+  client: string;
+  projectUrl: string;
+  videoUrl?: string;
+}
+
+const { imageSrc, title, description, year, client, projectUrl } = Astro.props;
+const videoUrl = Astro.props.videoUrl;
+---
+
+<div class="project-card">
+  <div class="project-overlay">
+    <PlayCircleOutlineRoundedIcon />
+  </div>
+
+  <img src={imageSrc} />
+
+  <a href={projectUrl} class="project-link">
+    <p>
+      <span class="text-subtitle">{title}</span>
+      {description}
+    </p>
+  </a>
+
+  <p class="text-small text-uppercase">{year} / {client}</p>
+<div>

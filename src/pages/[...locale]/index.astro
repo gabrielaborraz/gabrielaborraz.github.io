@@ -1,5 +1,9 @@
 ---
+import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+
 import { getStaticPaths } from "../../utils/staticPaths";
+import { routes } from "../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 
 const locale = getLocaleFromUrl(Astro.url);
@@ -9,7 +13,17 @@ const title = t('home.title');
 const description = t('home.description');
 
 import Layout from "../../layouts/Layout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
 
+const project1 = {
+  imageSrc: '/projects/magic-words.jpg',
+  title: 'Palabras mágicas',
+  description: 'Lorem ipsum dolor sit amet',
+  year: '2023',
+  client: 'Tutorah Kids',
+  projectUrl: routes.portfolio.project({ project: 'magic-words', locale }),
+  videoUrl: 'https://www.youtube.com/watch?v=PxmXOsvjJx8'
+}
 
 export { getStaticPaths };
 ---
@@ -18,10 +32,46 @@ export { getStaticPaths };
     <h2 class="text-xlarge" set:html={t('home.hero')} />
   </section>
 
-  <section id="featured" class="section">
+  <section id="featured" class="section projects">
     <div class="title">
       <p class="text-title text-uppercase">{t('home.featured.title')}</p>
       <h4 class="text-large">{t('home.featured.subtitle')}</h4>
+    </div>
+
+    <div class="content">
+      <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
+
+      <ul class="projects-cards">
+        <li>
+          <ProjectCard
+            imageSrc={project1.imageSrc}
+            title={project1.title}
+            description={project1.description}
+            year={project1.year}
+            client={project1.client}
+            projectUrl={project1.projectUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc="/projects/midot-power-kids.jpg"
+            title="Midot Power Kids"
+            description="Lorem Ipsum"
+            year="2022"
+            client="Tutorah Kids"
+            projectUrl="https://www.youtube.com/watch?v=-jO1qc-euZg" />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc="/projects/mili-cohen-tales.jpg"
+            title="Cuentos de Mily Cohen"
+            description="Lorem Ipsum"
+            year="2021"
+            client="Tutorah Kids"
+            projectUrl="https://www.youtube.com/watch?v=fYH0K5Wk6vE" />
+          </li>
+      </ul>
+
+      <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
     </div>
   </section>
 
