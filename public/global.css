@@ -50,8 +50,8 @@
   --font-size-title-desktop: 1rem;      /* 16px */
   --line-height-title-desktop: 1.5rem;  /* 24px */
   --font-weight-title-desktop: 800;
-  --font-size-title-mobile: 0.625rem;   /* 10px */
-  --line-height-title-mobile: 1rem;     /* 16px */
+  --font-size-title-mobile: 0.75rem;    /* 12px */
+  --line-height-title-mobile: 1.25rem;  /* 20px */
   --font-weight-title-mobile: 800;
 
   /* Font size: Subtitle */
@@ -336,7 +336,7 @@ nav {
 
 .footer {
   max-width: var(--max-width);
-  margin: 0 auto;
+  margin: calc(var(--rythm) * 3);
   box-shadow: inset 0px 1px 0px 0px var(--grey-lavander-web);
 
   & p {
@@ -349,8 +349,19 @@ nav {
 
   & .content {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: calc(var(--rythm) * 4);
-    padding: calc(var(--rythm) * 3) calc(var(--rythm) * 6);
+    padding: calc(var(--rythm) * 2) 0;
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .footer {
+    margin: 0 auto;
+
+    & .content {
+      grid-template-columns: repeat(5, 1fr);
+      padding: calc(var(--rythm) * 3) calc(var(--rythm) * 6);
+    }
   }
 }
