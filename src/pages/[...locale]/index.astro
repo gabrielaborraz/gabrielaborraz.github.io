@@ -28,7 +28,7 @@ const project1 = {
 export { getStaticPaths };
 ---
 <Layout title={title} description={description}>
-  <section class="hero">
+  <section class="hero" slot="hero">
     <h2 class="text-xlarge" set:html={t('home.hero')} />
   </section>
 

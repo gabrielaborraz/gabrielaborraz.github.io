@@ -34,7 +34,7 @@ export const getStaticPaths = async () => {
 
   <section id="sinopsis" class="section">
     <div class="title">
-      <p class="text-title text-uppercase">Sinopsis</p>
+      <p class="text-title text-uppercase">{t('portfolio.project.sinopsis')}</p>
       <p class="body" set:html={t(`portfolio.project.${slug}.sinopsis`)}/>
     </div>
   </section>

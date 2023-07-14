@@ -224,6 +224,20 @@ a {
 
 /* Navigation */
 nav {
+  width: var(--max-width);
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: var(--white);
+  z-index: 2;
+
+  & a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   & ul {
     display: flex;
     align-content: stretch;
@@ -334,6 +348,10 @@ nav {
       display: block;
     }
   }
+}
+
+main {
+  margin-top: calc(var(--rythm) * 8);
 }
 
 .section {
