@@ -16,11 +16,13 @@ const videoUrl = Astro.props.videoUrl;
 ---
 
 <div class="project-card">
-  <div class="project-overlay">
-    <PlayCircleOutlineRoundedIcon />
-  </div>
+  <div class="project-thumbnail">
+    <img src={imageSrc} />
 
-  <img src={imageSrc} />
+    <div class="project-overlay">
+      <PlayCircleOutlineRoundedIcon />
+    </div>
+  </div>
 
   <a href={projectUrl} class="project-link">
     <p>

@@ -386,25 +386,29 @@ main {
     flex-direction: column;
     margin: 0 auto;
     width: 320px;
-    position: relative;
+
+    & .project-thumbnail {
+      position: relative;
+    }
 
     & img {
+      height: 180px;
+      display: block;
       border-top-right-radius: var(--border-radius);
       border-top-left-radius: var(--border-radius);
-      height: 180px;
     }
 
     & .project-overlay {
-      cursor: pointer;
+      height: 180px;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 180px;
       position: absolute;
       top: 0;
       right: 0;
       left: 0;
       z-index: 1;
+      cursor: pointer;
       border-top-right-radius: var(--border-radius);
       border-top-left-radius: var(--border-radius);
 
