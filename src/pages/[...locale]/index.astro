@@ -14,6 +14,7 @@ const description = t('home.description');
 
 import Layout from "../../layouts/Layout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
+import Modal from '../../components/Modal.astro';
 
 const project1 = {
   imageSrc: '/projects/magic-words.jpg',
@@ -49,7 +50,8 @@ export { getStaticPaths };
             description={project1.description}
             year={project1.year}
             client={project1.client}
-            projectUrl={project1.projectUrl} />
+            projectUrl={project1.projectUrl}
+            videoUrl={project1.videoUrl} />
         </li>
         <li>
           <ProjectCard
@@ -58,7 +60,8 @@ export { getStaticPaths };
             description="Lorem Ipsum"
             year="2022"
             client="Tutorah Kids"
-            projectUrl="https://www.youtube.com/watch?v=-jO1qc-euZg" />
+            projectUrl=""
+            videoUrl="https://www.youtube.com/watch?v=-jO1qc-euZg" />
         </li>
         <li>
           <ProjectCard
@@ -67,7 +70,8 @@ export { getStaticPaths };
             description="Lorem Ipsum"
             year="2021"
             client="Tutorah Kids"
-            projectUrl="https://www.youtube.com/watch?v=fYH0K5Wk6vE" />
+            projectUrl=""
+            videoUrl="https://www.youtube.com/watch?v=fYH0K5Wk6vE" />
           </li>
       </ul>
 
@@ -102,4 +106,6 @@ export { getStaticPaths };
       <h4 class="text-large">{t('home.contact.subtitle')}</h4>
     </div>
   </section>
+
+  <Modal />
 </Layout>
