@@ -44,6 +44,16 @@ const handleClickProject = (project, modal) => {
   modal.classList.remove("none");
 }
 
+const handleClickVideoButton = (button) => {
+  if(!button) return;
+
+  const videoUrl = button.getAttribute('data-video');
+  const videoId = videoUrl.split('v=').pop();
+
+  const player = YouTubePlayer('video-player-button');
+  player.loadVideoById(videoId);
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const nav = document.getElementById('nav');
   const burgerButton = document.getElementById('nav-burger');
@@ -51,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const projects = document.getElementsByClassName('project-thumbnail');
   const modal = document.getElementById('modal-container');
   const modalButton = Array.from(document.getElementsByClassName('modal-close'))[0];
+  const videoButton = document.getElementById('video-player-button');
 
   // YouTube player
   player = YouTubePlayer('video-player');
@@ -78,5 +89,10 @@ document.addEventListener('DOMContentLoaded', function () {
     project.addEventListener('click', () => {
       handleClickProject(project, modal);
     });
+  });
+
+  // Show reel video button
+  videoButton.addEventListener('click', () => {
+    handleClickVideoButton(videoButton);
   });
 });

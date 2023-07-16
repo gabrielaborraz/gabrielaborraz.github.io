@@ -82,7 +82,8 @@
   --rythm: 8px;
 
   /* Width */
-  --max-width: calc(1440px * 0.8);
+  /* --max-width: calc(1440px * 0.8); */
+  --max-width: 1120px;
 
   /* Borders */
   --border-radius: 12px;
@@ -358,6 +359,11 @@ nav {
   max-width: var(--max-width);
   margin: calc(var(--rythm) * 8) auto;
   padding: calc(var(--rythm) * 3);
+
+  & .content {
+    display: flex;
+    margin-top: calc(var(--rythm) * 6);
+  }
 }
 
 @media only screen and (min-width: 1008px) {
@@ -370,11 +376,6 @@ nav {
  * Projects
  */
 .projects {
-  & .content {
-    display: flex;
-    margin-top: calc(var(--rythm) * 6);
-  }
-
   & .projects-cards {
     flex: 1;
     display: grid;
@@ -443,6 +444,55 @@ nav {
   }
 }
 
+/*
+ * Show reel
+ */
+ .video-thumbnail {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0px 4px 0px 0px var(--blue-neon);
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+  }
+
+  & .video-overlay {
+    display: flex;
+    height: calc(100% - 1px); /* 624px height - 1px border top */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    border-top: 1px solid   var(--grey-ghost-white);
+    border-right: 1px solid var(--grey-ghost-white);
+    border-left: 1px solid  var(--grey-ghost-white);
+    border-radius: var(--border-radius);
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.8);
+
+      & .MuiSvgIcon-fontSizeMedium {
+        visibility: visible;
+      }
+    }
+
+    & .MuiSvgIcon-fontSizeMedium {
+      width: calc(var(--rythm) * 15);
+      height: calc(var(--rythm) * 15);
+      fill: var(--blue-neon);
+      visibility: hidden;
+    }
+  }
+}
 
 /*
  * Footer
@@ -519,9 +569,9 @@ nav {
 
   & .modal-body {
     position: relative;
-    padding: 1px;
-    background-color: var(--grey-ghost-white);
     border-radius: var(--border-radius);
+    padding-bottom: 4px;
+    box-shadow: inset 0px -4px 0px 0px var(--blue-neon);
   }
 
   & .modal-body > iframe {

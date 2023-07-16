@@ -1,6 +1,7 @@
 ---
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
 
 import { getStaticPaths } from "../../utils/staticPaths";
 import { routes } from "../../routes";
@@ -25,6 +26,8 @@ const project1 = {
   projectUrl: routes.portfolio.project({ project: 'magic-words', locale }),
   videoUrl: 'https://www.youtube.com/watch?v=PxmXOsvjJx8'
 }
+
+const showReelUrl = 'https://www.youtube.com/watch?v=edXnSyD0NsA'
 
 export { getStaticPaths };
 ---
@@ -79,11 +82,21 @@ export { getStaticPaths };
     </div>
   </section>
 
-  <section id="show-reel" class="section">
+  <section id="show-reel" class="section show-reel">
     <div class="title">
       <p class="text-title text-uppercase">{t('home.show-reel.title')}</p>
       <h4 class="text-large">{t('home.show-reel.subtitle')}</h4>
-  </div>
+    </div>
+
+    <div class="content">
+      <button id="video-player-button" class="video-thumbnail" data-video={showReelUrl}>
+        <img src="/show-reel/2023-cover.jpg" />
+
+        <div class="video-overlay">
+          <PlayCircleOutlineRoundedIcon />
+        </div>
+      </button>
+    </div>
   </section>
 
   <section id="collaborations" class="section">
