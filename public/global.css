@@ -494,62 +494,61 @@ nav {
   &.none {
     display: none;
   }
-}
 
-.modal {
-  overflow-x: auto;
-  display: flex;
-  flex-direction: column;
-  margin: calc(var(--rythm) * 2);
-}
-
-.modal-header, .modal-footer {
-  display: flex;
-}
-
-.modal-header {
-  padding: calc(var(--rythm) * 3);
-  position: relative;
-  justify-content: space-between;
-}
-
-.modal-footer {
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.modal-body {
-  position: relative;
-  padding: 1px;
-  background-color: var(--grey-ghost-white);
-  border-radius: var(--border-radius);
-}
-
-.modal-body > iframe {
-  display: block;
-  aspect-ratio: 16 / 9;
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--border-radius);
-}
-
-.modal-close {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  inset: 0 0 auto auto;
-
-  .MuiSvgIcon-fontSizeMedium {
-    fill: var(--white);
-    height: 32px;
-    width: 32px;
-    opacity: .8;
-
-    &:hover {
-      opacity: 1;
-      fill: var(--blue-neon);
-    }
+  & .modal {
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    margin: calc(var(--rythm) * 2);
   }
 
+  & .modal-header, & .modal-footer {
+    display: flex;
+  }
+
+  & .modal-header {
+    padding: calc(var(--rythm) * 3);
+    position: relative;
+    justify-content: space-between;
+  }
+
+  & .modal-footer {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  & .modal-body {
+    position: relative;
+    padding: 1px;
+    background-color: var(--grey-ghost-white);
+    border-radius: var(--border-radius);
+  }
+
+  & .modal-body > iframe {
+    display: block;
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+  }
+
+  & .modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0 0 auto auto;
+
+    & .MuiSvgIcon-fontSizeMedium {
+      fill: var(--white);
+      height: 32px;
+      width: 32px;
+      opacity: .8;
+
+      &:hover {
+        opacity: 1;
+        fill: var(--blue-neon);
+      }
+    }
+  }
 }

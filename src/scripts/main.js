@@ -22,9 +22,7 @@ const handleClickModal = () => {
   }
 }
 
-const handleEscapeModal = (e) => {
-  const modal = document.getElementById('modal-container');
-
+const handleEscapeModal = (e, modal) => {
   if(!modal) return;
 
   if(e.keyCode === 27){
@@ -34,19 +32,16 @@ const handleEscapeModal = (e) => {
   }
 }
 
-const handleClickProject = (project) => {
+const handleClickProject = (project, modal) => {
   const videoUrl = project.getAttribute('data-video');
 
-  if(videoUrl === null) return;
+  if(videoUrl === null || !modal) return;
 
   const videoId = videoUrl.split('v=').pop();
-  console.log(`Video URL: ${videoUrl}`);
-  console.log(`Video ID: ${videoId}`)
-
-  const modal = document.getElementById('modal-container');
-  modal.classList.remove("none");
 
   player.loadVideoById(videoId);
+
+  modal.classList.remove("none");
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -57,11 +52,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const modal = document.getElementById('modal-container');
   const modalButton = Array.from(document.getElementsByClassName('modal-close'))[0];
 
+  // YouTube player
   player = YouTubePlayer('video-player');
 
+  // Navigation
   window.addEventListener('resize', () => { handleToggleMenu(nav) });
-
-  window.addEventListener('keydown', handleEscapeModal);
 
   burgerButton.addEventListener('click', () => {
     nav.classList.add('nav-mobile-open');
@@ -71,12 +66,17 @@ document.addEventListener('DOMContentLoaded', function () {
     nav.classList.remove('nav-mobile-open');
   });
 
+  // Modal window
+  window.addEventListener('keydown', (e) => {
+    handleEscapeModal(e, modal);
+  });
+
   modal.addEventListener('click', handleClickModal);
   modalButton.addEventListener('click', handleClickModal);
 
   Array.from(projects).forEach((project) => {
     project.addEventListener('click', () => {
-      handleClickProject(project);
+      handleClickProject(project, modal);
     });
   });
 });
