@@ -106,10 +106,48 @@ export { getStaticPaths };
     </div>
   </section>
 
-  <section id="newest" class="section">
+  <section id="newest" class="section projects">
     <div class="title">
       <p class="text-title text-uppercase">{t('home.newest.title')}</p>
       <h4 class="text-large">{t('home.newest.subtitle')}</h4>
+    </div>
+    <div class="content">
+      <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
+
+      <ul class="projects-cards">
+        <li>
+          <ProjectCard
+            imageSrc={project1.imageSrc}
+            title={project1.title}
+            description={project1.description}
+            year={project1.year}
+            client={project1.client}
+            projectUrl={project1.projectUrl}
+            videoUrl={project1.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc="/projects/midot-power-kids.jpg"
+            title="Midot Power Kids"
+            description="Lorem Ipsum"
+            year="2022"
+            client="Tutorah Kids"
+            projectUrl=""
+            videoUrl="https://www.youtube.com/watch?v=-jO1qc-euZg" />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc="/projects/mili-cohen-tales.jpg"
+            title="Cuentos de Mily Cohen"
+            description="Lorem Ipsum"
+            year="2021"
+            client="Tutorah Kids"
+            projectUrl=""
+            videoUrl="https://www.youtube.com/watch?v=fYH0K5Wk6vE" />
+          </li>
+      </ul>
+
+      <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
     </div>
   </section>
 
