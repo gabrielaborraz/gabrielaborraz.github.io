@@ -223,6 +223,7 @@ object {
   vertical-align: middle;
 }
 
+/* Header & Navigation */
 .header {
   display: flex;
   justify-content: center;
@@ -230,7 +231,6 @@ object {
   min-height: calc(var(--rythm) * 8);
 }
 
-/* Navigation */
 nav {
   width: 100%;
   position: fixed;
@@ -372,6 +372,7 @@ nav {
   }
 }
 
+/* Main content */
 .main {
   display: flex;
   flex-direction: column;
@@ -392,39 +393,6 @@ nav {
   .section {
     width: var(--max-width);
     margin: calc(var(--rythm) * 8) auto;
-  }
-}
-
-.overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 1;
-
-  &:hover {
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8);
-
-    & .MuiSvgIcon-fontSizeMedium {
-      visibility: visible;
-    }
-  }
-
-  & .MuiSvgIcon-fontSizeMedium {
-    width: calc(var(--rythm) * 5);
-    height: calc(var(--rythm) * 5);
-    fill: var(--blue-neon);
-    visibility: hidden;
-  }
-}
-
-@media only screen and (min-width: 1008px) {
-  .project-card {
-    padding: 0;
   }
 }
 
@@ -481,6 +449,10 @@ nav {
     & .projects-cards {
       grid-template-columns: repeat(3, 1fr);
     }
+  }
+
+  .project-card {
+    padding: 0;
   }
 }
 
@@ -721,5 +693,35 @@ nav {
         fill: var(--blue-neon);
       }
     }
+  }
+}
+
+/*
+ * Misc stuff
+ */
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    & .MuiSvgIcon-fontSizeMedium {
+      visibility: visible;
+    }
+  }
+
+  & .MuiSvgIcon-fontSizeMedium {
+    width: calc(var(--rythm) * 5);
+    height: calc(var(--rythm) * 5);
+    fill: var(--blue-neon);
+    visibility: hidden;
   }
 }
