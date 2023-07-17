@@ -99,10 +99,34 @@ export { getStaticPaths };
     </div>
   </section>
 
-  <section id="collaborations" class="section">
+  <section id="clients" class="section clients">
     <div class="title">
       <p class="text-title text-uppercase">{t('home.collaborations.title')}</p>
       <h4 class="text-large">{t('home.collaborations.subtitle')}</h4>
+    </div>
+
+    <div class="content">
+      <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
+
+      <ul class="clients-cards">
+        <li class="client-card">
+          <figure>
+            <object data="/clients/gnius-club.svg" />
+          </figure>
+        </li>
+        <li class="client-card">
+          <figure>
+            <object data="/clients/tutorah-kids.svg" />
+          </figure>
+        </li>
+        <li class="client-card">
+          <figure>
+            <object data="/clients/arte-ayuda.svg" />
+          </figure>
+        </li>
+      </ul>
+
+      <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
     </div>
   </section>
 
@@ -111,6 +135,7 @@ export { getStaticPaths };
       <p class="text-title text-uppercase">{t('home.newest.title')}</p>
       <h4 class="text-large">{t('home.newest.subtitle')}</h4>
     </div>
+
     <div class="content">
       <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
 
