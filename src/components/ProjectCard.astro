@@ -11,7 +11,7 @@ const videoUrl = Astro.props.videoUrl;
     <button class="project-thumbnail" data-video={videoUrl}>
       <img src={imageSrc} />
 
-      <div class="project-overlay">
+      <div class="overlay project-overlay">
         <PlayCircleOutlineRoundedIcon />
       </div>
     </button>}
@@ -20,7 +20,7 @@ const videoUrl = Astro.props.videoUrl;
     <a href={projectUrl} class="project-thumbnail">
       <img src={imageSrc} />
 
-      <div class="project-overlay">
+      <div class="overlay project-overlay">
         <ImageOutlinedIcon />
       </div>
     </a>}
