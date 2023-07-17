@@ -223,11 +223,19 @@ object {
   vertical-align: middle;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(var(--rythm) * 8);
+}
+
 /* Navigation */
 nav {
-  width: var(--max-width);
+  width: 100%;
   position: fixed;
-  top: 0%;
+  top: 0;
+  right: 0;
   left: 50%;
   transform: translate(-50%, 0);
   background-color: var(--white);
@@ -293,6 +301,8 @@ nav {
   }
 
   &.nav-mobile-open {
+    bottom: 0;
+
     & ul {
       position: absolute;
       top: 0;
@@ -320,6 +330,9 @@ nav {
 
 @media only screen and (min-width: 1008px) {
   nav {
+    width: var(--max-width);
+    height: auto;
+
     & ul {
       flex-direction: row;
     }
@@ -353,18 +366,32 @@ nav {
   }
 }
 
+@media only screen and (min-width: 1008px) {
+  .hero {
+    width: var(--max-width);
+  }
+}
+
 .main {
-  margin-top: calc(var(--rythm) * 8);
+  display: flex;
+  flex-direction: column;
 }
 
 .section {
-  max-width: var(--max-width);
-  margin: calc(var(--rythm) * 15) auto;
+  margin-top: calc(var(--rythm) * 4);
+  margin-bottom: calc(var(--rythm) * 4);
   padding: calc(var(--rythm) * 3);
 
   & .content {
     display: flex;
     margin-top: calc(var(--rythm) * 6);
+  }
+}
+
+@media only screen and (min-width: 1008px) {
+  .section {
+    width: var(--max-width);
+    margin: calc(var(--rythm) * 8) auto;
   }
 }
 
