@@ -144,12 +144,7 @@ button {
 }
 
 a {
-  text-decoration: none;
   color: var(--black-space-cadet);
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 object {
@@ -239,6 +234,8 @@ nav {
   z-index: 2;
 
   & a {
+    text-decoration: none;
+
     &:hover {
       text-decoration: none;
     }
@@ -424,6 +421,14 @@ nav {
       position: relative;
     }
 
+    & a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     & img {
       height: 180px;
       display: block;
@@ -511,12 +516,85 @@ nav {
 }
 
 /*
+ * FAQs
+ */
+.faqs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  & .faq {
+    padding: calc(var(--rythm) * 1);
+    box-shadow: inset 0px -1px 0px 0px var(--grey-ghost-white);
+
+    & .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      height: calc(var(--rythm) * 7);
+      padding-right: 32px; /* background width */
+      text-align: left;
+
+      &::after {
+        content: '';
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        right: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M480-357q-6 0-11-2t-10-7L261-564q-9-9-9-21t9-21q9-9 21.5-9t21.5 9l176 176 176-176q9-9 21-9t21 9q9 9 9 21.5t-9 21.5L501-366q-5 5-10 7t-11 2Z"/></svg>');
+      }
+
+      &.faq-question-open {
+        &::after {
+          background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M480-543 304-367q-9 9-21.5 9.5T261-366q-9-9-9-21.5t9-21.5l198-198q5-5 10-7t11-2q6 0 11 2t10 7l197 197q9 9 9.5 21t-8.5 21q-9 9-21.5 9t-21.5-9L480-543Z"/></svg>');
+        }
+      }
+    }
+
+    & .faq-answer {
+      display: none;
+      margin-top: calc(var(--rythm) * 2);
+      margin-bottom: calc(var(--rythm) * 2);
+
+      &.show {
+        display: block;
+      }
+
+      /* TODO. Make generic for content */
+      & p:not(:last-child) {
+        margin-bottom: calc(var(--rythm) * 2);
+      }
+
+      & ul {
+        padding-left: calc(var(--rythm) * 2);
+      }
+
+      & li {
+        list-style-type: disc;
+      }
+    }
+  }
+}
+
+/*
  * Footer
  */
 .footer {
   max-width: var(--max-width);
   margin: calc(var(--rythm) * 3);
   box-shadow: inset 0px 1px 0px 0px var(--grey-lavander-web);
+
+  & a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
   & p {
     margin-bottom: calc(var(--rythm) * 2);

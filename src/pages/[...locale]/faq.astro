@@ -1,5 +1,9 @@
 ---
+import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';
+import ExpandLessRoundedIcon from '@mui/icons-material/ExpandLessRounded';
+
 import { getStaticPaths } from "../../utils/staticPaths";
+import { routes } from "../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 
 const locale = getLocaleFromUrl(Astro.url);
@@ -17,6 +21,75 @@ export { getStaticPaths };
     <div class="title">
       <p class="text-title text-uppercase">{t('faq.header.title')}</p>
       <h4 class="text-large">{t('faq.header.subtitle')}</h4>
+    </div>
+
+    <div class="content">
+      <ul class="faqs">
+        <li class="faq">
+          <h4 class="text-subtitle">
+            <button class="faq-question">
+              ¿Cuánto cuesta un vídeo?
+            </button>
+          </h4>
+          <div class="faq-answer">
+            <p>
+              Depende de la complejidad, la cantidad de videos a realizar, la duración y el plazo de entrega.
+              Estos son algunos de los factores que influyen en el precio.
+              <a href={routes.contact({ locale })}>Cuéntame cuál es tu proyecto, presupuesto</a>
+              y te ayudaré a encontrar una solución que se ajuste a tus objetivos.
+            </p>
+          </div>
+        </li>
+
+        <li class="faq">
+          <h4 class="text-subtitle">
+            <button class="faq-question">
+              ¿Qué tipo de vídeos puedes crear?
+            </button>
+          </h4>
+          <div class="faq-answer">
+            <p>Puedo ayudarte con una amplia variedad de videos, por ejemplo:</p>
+
+            <ul>
+              <li>Animaciones de logotipos: Dale vida y personalidad a tu marca.</li>
+              <li>Contenido para redes sociales: Destaca en las plataformas con videos llamativos.</li>
+              <li>Videos explicativos y de presentación: Comunica tus ideas con dinamismo y profesionalismo.</li>
+              <li>Animaciones personalizadas para sitios web: Capta la atención de los visitantes con animaciones únicas.</li>
+              <li>Animación en 2D: Dale personalidad a tus personajes y crea historias que enganchen a tu público.</li>
+              <li>Videos para tu estrategia de marketing: Transforma tus ventas y atrae a tu audiencia.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="faq">
+          <h4 class="text-subtitle">
+            <button class="faq-question">
+              ¿Dónde te encuentras ubicada?
+            </button>
+          </h4>
+          <div class="faq-answer">
+            <p>
+              Para dar inicio a nuestra colaboración podemos encontrarnos en persona en la Ciudad de México o si lo prefieres,
+              podemos comunicarnos a través de una llamada telefónica, videollamada o <a href={routes.contact({ locale })}>correo electrónico</a>.
+              La elección es tuya, lo que sea más conveniente para ti.
+              ¡Espero tener la oportunidad de trabajar contigo pronto!
+            </p>
+          </div>
+        </li>
+
+        <li class="faq">
+          <h4 class="text-subtitle">
+            <button class="faq-question">
+              ¿Ofreces descuentos para organizaciones sin ánimo de lucro?
+            </button>
+          </h4>
+          <div class="faq-answer">
+            <p>
+              ¡Por supuesto! No dudes en <a href={routes.contact({ locale })}>contactarme</a> y trabajaremos juntos para hacer del mundo un lugar mejor.
+            </p>
+          </div>
+        </li>
+      </ul>
     </div>
   </section>
 </Layout>
