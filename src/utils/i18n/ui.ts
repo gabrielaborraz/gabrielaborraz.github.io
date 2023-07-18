@@ -101,21 +101,21 @@ export const ui = {
     "portfolio.project.magic-words.header.subtitle": "Palabras Mágicas",
     "portfolio.project.magic-words.sinopsis":
       "Bajo la brillante Dirección de Arte de Daniel Corkidi, se crearon un total de 24 episodios que se distribuyeron en 2 temporadas. Esta serie animada dio vida a los entrañables personajes de Livy, Summy y Koby, quienes comparten inolvidables momentos con su abuela y que a través de sus vivencias, descubrirán el poder que tiene una sola palabra para cambiar el mundo.",
-    "portfolio.project.midotpowerkids.title": "Midot Power Kids",
-    "portfolio.project.midotpowerkids.description":
+    "portfolio.project.midot-power-kids.title": "Midot Power Kids",
+    "portfolio.project.midot-power-kids.description":
       "Serie animada infantil para Tutorah Kids",
-    "portfolio.project.midotpowerkids.header.title": "Serie animada infantil",
-    "portfolio.project.midotpowerkids.header.subtitle": "Midot Power Kids",
-    "portfolio.project.midotpowerkids.sinopsis":
+    "portfolio.project.midot-power-kids.header.title": "Serie animada infantil",
+    "portfolio.project.midot-power-kids.header.subtitle": "Midot Power Kids",
+    "portfolio.project.midot-power-kids.sinopsis":
       "¡Prepárate para emocionantes aventuras junto a los Midot Power Kids! Esta serie animada te llevará a través de sus 12 increíbles episodios a un mundo lleno de personajes entrañables y divertidos, con la idea y guion de Olga Rosenberg, esta serie te sumergirá en maravillosas historias donde aprenderás valiosas lecciones sobre las emociones y cómo aplicarlas en la vida diaria. ¡Únete a los Midot Power Kids en sus travesías y déjate inspirar por su increíble poder!",
-    "portfolio.project.tales-milly-cohen.title": "Cuentos de Milly Cohen",
-    "portfolio.project.tales-milly-cohen.description":
+    "portfolio.project.milly-cohen-tales.title": "Cuentos de Milly Cohen",
+    "portfolio.project.milly-cohen-tales.description":
       "Serie animada infantil para Tutorah Kids",
-    "portfolio.project.tales-milly-cohen.header.title":
+    "portfolio.project.milly-cohen-tales.header.title":
       "Serie animada infantil",
-    "portfolio.project.tales-milly-cohen.header.subtitle":
+    "portfolio.project.milly-cohen-tales.header.subtitle":
       "Cuentos de Milly Cohen",
-    "portfolio.project.tales-milly-cohen.sinopsis":
+    "portfolio.project.milly-cohen-tales.sinopsis":
       "Los cautivadores cuentos ilustrados de Milly Cohen han cobrado vida en el mundo de la animación, deja volar tu imaginación mientras te sumerges en sus fascinantes historias ideales para disfrutar en compañía de toda la familia. ¡Embárcate en una aventura llena de magia con los Cuentos de Milly!",
     "portfolio.project.viola-from-newspain-to-chiapas.title":
       "El Viaje de la viola",
@@ -239,20 +239,20 @@ export const ui = {
     "portfolio.project.magic-words.header.subtitle": "Magic Words",
     "portfolio.project.magic-words.sinopsis":
       "Under the brilliant Art Direction of Daniel Corkidi, a total of 24 episodes were created and distributed over 2 seasons. This animated series brought to life the beloved characters of Livy, Summy, and Koby, who share unforgettable moments with their grandmother and through their experiences, they will discover the power that a single word has to change the world.",
-    "portfolio.project.midotpowerkids.title": "Midot Power Kids",
-    "portfolio.project.midotpowerkids.description":
+    "portfolio.project.midot-power-kids.title": "Midot Power Kids",
+    "portfolio.project.midot-power-kids.description":
       "Animated show for Tutorah Kids",
-    "portfolio.project.midotpowerkids.header.title": "Kids animation",
-    "portfolio.project.midotpowerkids.header.subtitle": "Midot Power Kids",
-    "portfolio.project.midotpowerkids.sinopsis":
+    "portfolio.project.midot-power-kids.header.title": "Kids animation",
+    "portfolio.project.midot-power-kids.header.subtitle": "Midot Power Kids",
+    "portfolio.project.midot-power-kids.sinopsis":
       "Get ready for exciting adventures with the Midot Power Kids! This animated series will take you through its 12 incredible episodes to a world full of charming and fun characters. With the concept and script by Olga Rosenberg, this series will immerse you in wonderful stories where you will learn valuable lessons about emotions and how to apply them in everyday life. Join the Midot Power Kids on their journeys and let yourself be inspired by their incredible power!",
-    "portfolio.project.tales-milly-cohen.title": "The Tales of Milly Cohen",
-    "portfolio.project.tales-milly-cohen.description":
+    "portfolio.project.milly-cohen-tales.title": "The Tales of Milly Cohen",
+    "portfolio.project.milly-cohen-tales.description":
       "Animated show for Tutorah Kids",
-    "portfolio.project.tales-milly-cohen.header.title": "Kids animation",
-    "portfolio.project.tales-milly-cohen.header.subtitle":
+    "portfolio.project.milly-cohen-tales.header.title": "Kids animation",
+    "portfolio.project.milly-cohen-tales.header.subtitle":
       "The Tales of Milly Cohen",
-    "portfolio.project.tales-milly-cohen.sinopsis":
+    "portfolio.project.milly-cohen-tales.sinopsis":
       "The illustrated tales by Milly Cohen have come to life in the world of animation. Let your imagination run free as you dive into her fascinating stories, perfect for enjoying with the whole family. Start a magical adventure with Milly's Tales!",
     "portfolio.project.viola-from-newspain-to-chiapas.title":
       "The journey of the viola",
