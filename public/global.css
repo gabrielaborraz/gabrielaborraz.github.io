@@ -385,6 +385,7 @@ nav {
   .section {
     width: var(--max-width);
     margin: calc(var(--rythm) * 8) auto;
+    padding: 0;
   }
 }
 
