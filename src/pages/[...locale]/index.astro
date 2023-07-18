@@ -19,12 +19,32 @@ import Modal from '../../components/Modal.astro';
 
 const project1 = {
   imageSrc: '/projects/magic-words.jpg',
-  title: 'Palabras mágicas',
-  description: 'Lorem ipsum dolor sit amet',
-  year: '2023',
-  client: 'Tutorah Kids',
+  title: t('home.project1.title'),
+  description: t('home.project1.description'),
+  year: t('home.project1.year'),
+  client: t('home.project1.client'),
   projectUrl: routes.portfolio.project({ project: 'magic-words', locale }),
   videoUrl: 'https://www.youtube.com/watch?v=PxmXOsvjJx8'
+}
+
+const project2 = {
+  imageSrc: '/projects/milly-cohen-tales.jpg',
+  title: t('home.project2.title'),
+  description: t('home.project2.description'),
+  year: t('home.project2.year'),
+  client: t('home.project2.client'),
+  projectUrl: routes.portfolio.project({ project: 'milly-cohen-tales', locale }),
+  videoUrl: 'https://www.youtube.com/watch?v=fYH0K5Wk6vE',
+}
+
+const project3 = {
+  imageSrc: '/projects/midot-power-kids.jpg',
+  title: t('home.project3.title'),
+  description: t('home.project3.description'),
+  year: t('home.project3.year'),
+  client: t('home.project3.client'),
+  projectUrl: routes.portfolio.project({ project: 'midot-power-kids', locale }),
+  videoUrl: 'https://www.youtube.com/watch?v=-jO1qc-euZg',
 }
 
 const showReelUrl = 'https://www.youtube.com/watch?v=edXnSyD0NsA'
@@ -58,23 +78,23 @@ export { getStaticPaths };
         </li>
         <li>
           <ProjectCard
-            imageSrc="/projects/midot-power-kids.jpg"
-            title="Midot Power Kids"
-            description="Lorem Ipsum"
-            year="2022"
-            client="Tutorah Kids"
-            projectUrl=""
-            videoUrl="https://www.youtube.com/watch?v=-jO1qc-euZg" />
+            imageSrc={project2.imageSrc}
+            title={project2.title}
+            description={project2.description}
+            year={project2.year}
+            client={project2.client}
+            projectUrl={project2.projectUrl}
+            videoUrl={project2.videoUrl} />
         </li>
         <li>
           <ProjectCard
-            imageSrc="/projects/mili-cohen-tales.jpg"
-            title="Cuentos de Mily Cohen"
-            description="Lorem Ipsum"
-            year="2021"
-            client="Tutorah Kids"
-            projectUrl=""
-            videoUrl="https://www.youtube.com/watch?v=fYH0K5Wk6vE" />
+            imageSrc={project3.imageSrc}
+            title={project3.title}
+            description={project3.description}
+            year={project3.year}
+            client={project3.client}
+            projectUrl={project3.projectUrl}
+            videoUrl={project3.videoUrl} />
           </li>
       </ul>
 
@@ -162,7 +182,7 @@ export { getStaticPaths };
         </li>
         <li>
           <ProjectCard
-            imageSrc="/projects/mili-cohen-tales.jpg"
+            imageSrc="/projects/milly-cohen-tales.jpg"
             title="Cuentos de Mily Cohen"
             description="Lorem Ipsum"
             year="2021"
