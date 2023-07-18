@@ -18,40 +18,41 @@ import Layout from "../../layouts/Layout.astro";
 export { getStaticPaths };
 ---
 <Layout title={title} description={description} active="about">
-  <section class="section">
+  <section class="section about">
     <div class="content">
-      <div class="about">
-        <div>
-          <h3 class="title text-large text-uppercase">
-            {t('about.header1')}
-          </h3>
-
-          <div class="content">
-            <p set:html={t('about.content1')}/>
-            <div class="about-sn">
-              <a href="https://www.behance.net/GabrielaBorraz" target="_blank">
-                <Behance />
-              </a>
-              <a href="https://www.instagram.com/gabrielaborraz" target="_blank">
-                <Instagram />
-              </a>
-              <a href="https://www.youtube.com/channel/UCSZ1OnqX_LIHIr-JOWr0sFQ" target="_blank">
-                <YouTube />
-              </a>
-            </div>
-          </div>
-        </div>
+      <div>
+        <h3 class="title text-large text-uppercase">
+          {t('about.header1')}
+        </h3>
 
         <div>
-          <h3 class="title text-large text-uppercase">
-            {t('about.header2')}
-          </h3>
-          <div class="content">
-            <p set:html={t('about.content2')}/> 
-            <a href={routes.contact({ locale })} class="btn">
-              {t('about.btn')}
+          <p set:html={t('about.content1')} />
+
+          <div class="about-sn">
+            <a href="https://www.behance.net/GabrielaBorraz" target="_blank">
+              <Behance />
+            </a>
+            <a href="https://www.instagram.com/gabrielaborraz" target="_blank">
+              <Instagram />
+            </a>
+            <a href="https://www.youtube.com/channel/UCSZ1OnqX_LIHIr-JOWr0sFQ" target="_blank">
+              <YouTube />
             </a>
           </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="title text-large text-uppercase">
+          {t('about.header2')}
+        </h3>
+
+        <div>
+          <p set:html={t('about.content2')} /> 
+
+          <a href={routes.contact({ locale })} class="btn">
+            {t('about.btn')}
+          </a>
         </div>
       </div>
     </div>
