@@ -23,13 +23,11 @@ export { getStaticPaths };
       <div class="about">
         <div>
           <h3 class="title text-large text-uppercase">
-            ¿Quién soy?
+            {t('about.header1')}
           </h3>
 
           <div class="content">
-            <p>¡Hola! Yo soy Gabriela Borraz y soy la creadora detrás de la pantalla, quien narra historias a través de la animación, una artesana del pixel que da vida a ilustraciones y diseños.</p>
-            <p>Me encanta colaborar con mentes creativas y apasionadas. Mi objetivo es compartir mi arte con un amplio público y despertar emociones en cada persona que se cruce con mis creaciones.</p>
-            <p>Te invito a seguirme en mis redes sociales:</p>
+            <p set:html={t('about.content1')}/>
 
             <div class="about-sn">
               <a href="https://www.behance.net/GabrielaBorraz" target="_blank">
@@ -47,24 +45,13 @@ export { getStaticPaths };
 
         <div>
           <h3 class="title text-large text-uppercase">
-            ¿Qué hago?
+            {t('about.header2')}
           </h3>
 
           <div class="content">
-            <p>Gráficos animados diseñados para transformar ideas en imágenes y despertar emociones.</p>
-            <p>Y te puedo ayudar a producir una amplia variedad de videos, por ejemplo:</p>
-
-            <ul>
-              <li>Animaciones de logotipos</li>
-              <li>Contenido para redes sociales</li>
-              <li>Videos explicativos y de presentación</li>
-              <li>Animaciones personalizadas para sitios web</li>
-              <li>Animación de personajes</li>
-              <li>Videos para tu estrategia de marketing</li>
-            </ul>
-
+            <p set:html={t('about.content2')}/> 
             <a href={routes.contact({ locale })} class="btn">
-              Escríbeme
+              {t('about.btn')}
             </a>
           </div>
         </div>
