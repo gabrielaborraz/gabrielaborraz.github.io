@@ -1,5 +1,6 @@
 ---
 import { getStaticPaths } from "../../../utils/staticPaths";
+import { routes } from "../../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../../utils/i18n/utils";
 
 const locale = getLocaleFromUrl(Astro.url);
@@ -9,6 +10,38 @@ const title = t('portfolio.index.title');
 const description = t('portfolio.index.description');
 
 import Layout from "../../../layouts/Layout.astro";
+import ProjectCard from "../../../components/ProjectCard.astro";
+import Modal from '../../../components/Modal.astro';
+
+const project1 = {
+  imageSrc: '/projects/magic-words.jpg',
+  title: t('home.project1.title'),
+  description: t('home.project1.description'),
+  year: t('home.project1.year'),
+  client: t('home.project1.client'),
+  projectUrl: routes.portfolio.project({ project: 'magic-words', locale }),
+  videoUrl: 'https://www.youtube.com/watch?v=PxmXOsvjJx8'
+}
+
+const project2 = {
+  imageSrc: '/projects/milly-cohen-tales.jpg',
+  title: t('home.project2.title'),
+  description: t('home.project2.description'),
+  year: t('home.project2.year'),
+  client: t('home.project2.client'),
+  projectUrl: routes.portfolio.project({ project: 'milly-cohen-tales', locale }),
+  videoUrl: 'https://www.youtube.com/watch?v=fYH0K5Wk6vE',
+}
+
+const project3 = {
+  imageSrc: '/projects/midot-power-kids.jpg',
+  title: t('home.project3.title'),
+  description: t('home.project3.description'),
+  year: t('home.project3.year'),
+  client: t('home.project3.client'),
+  projectUrl: routes.portfolio.project({ project: 'midot-power-kids', locale }),
+  videoUrl: 'https://www.youtube.com/watch?v=-jO1qc-euZg',
+}
 
 export { getStaticPaths };
 ---
@@ -17,17 +50,149 @@ export { getStaticPaths };
     <h2 class="text-xlarge" set:html={t('portfolio.hero')}/>
   </section>
 
-  <section id="multimedia" class="section">
+  <section id="multimedia" class="section projects">
     <div class="title">
       <p class="text-title text-uppercase">{t('portfolio.multimedia.title')}</p>
       <h4 class="text-large">{t('portfolio.multimedia.subtitle')}</h4>
     </div>
+
+    <div class="content">
+      <ul class="projects-cards">
+        <li>
+          <ProjectCard
+            imageSrc={project1.imageSrc}
+            title={project1.title}
+            description={project1.description}
+            year={project1.year}
+            client={project1.client}
+            projectUrl={project1.projectUrl}
+            videoUrl={project1.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={project2.imageSrc}
+            title={project2.title}
+            description={project2.description}
+            year={project2.year}
+            client={project2.client}
+            projectUrl={project2.projectUrl}
+            videoUrl={project2.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={project3.imageSrc}
+            title={project3.title}
+            description={project3.description}
+            year={project3.year}
+            client={project3.client}
+            projectUrl={project3.projectUrl}
+            videoUrl={project3.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={project1.imageSrc}
+            title={project1.title}
+            description={project1.description}
+            year={project1.year}
+            client={project1.client}
+            projectUrl={project1.projectUrl}
+            videoUrl={project1.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={project2.imageSrc}
+            title={project2.title}
+            description={project2.description}
+            year={project2.year}
+            client={project2.client}
+            projectUrl={project2.projectUrl}
+            videoUrl={project2.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={project3.imageSrc}
+            title={project3.title}
+            description={project3.description}
+            year={project3.year}
+            client={project3.client}
+            projectUrl={project3.projectUrl}
+            videoUrl={project3.videoUrl} />
+        </li>
+      </ul>
+    </div>
   </section>
 
-  <section id="design" class="section">
+  <section id="design" class="section projects">
     <div class="title">
       <p class="text-title text-uppercase">{t('portfolio.design.title')}</p>
       <h4 class="text-large">{t('portfolio.design.subtitle')}</h4>
     </div>
+
+    <div class="content">
+      <ul class="projects-cards">
+        <li>
+          <ProjectCard
+            imageSrc={project1.imageSrc}
+            title={project1.title}
+            description={project1.description}
+            year={project1.year}
+            client={project1.client}
+            projectUrl={project1.projectUrl}
+            videoUrl={project1.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={project2.imageSrc}
+            title={project2.title}
+            description={project2.description}
+            year={project2.year}
+            client={project2.client}
+            projectUrl={project2.projectUrl}
+            videoUrl={project2.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={project3.imageSrc}
+            title={project3.title}
+            description={project3.description}
+            year={project3.year}
+            client={project3.client}
+            projectUrl={project3.projectUrl}
+            videoUrl={project3.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={project1.imageSrc}
+            title={project1.title}
+            description={project1.description}
+            year={project1.year}
+            client={project1.client}
+            projectUrl={project1.projectUrl}
+            videoUrl={project1.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={project2.imageSrc}
+            title={project2.title}
+            description={project2.description}
+            year={project2.year}
+            client={project2.client}
+            projectUrl={project2.projectUrl}
+            videoUrl={project2.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={project3.imageSrc}
+            title={project3.title}
+            description={project3.description}
+            year={project3.year}
+            client={project3.client}
+            projectUrl={project3.projectUrl}
+            videoUrl={project3.videoUrl} />
+        </li>
+      </ul>
+    </div>
   </section>
+
+  <Modal />
 </Layout>

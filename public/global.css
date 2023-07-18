@@ -371,6 +371,7 @@ object {
 .main {
   display: flex;
   flex-direction: column;
+  padding: calc(var(--rythm) * 8) 0;
 
   & > * {
     padding: calc(var(--rythm) * 3);
@@ -412,6 +413,7 @@ object {
     flex: 1;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    row-gap: calc(var(--rythm) * 6);
   }
 
   & .project-card {

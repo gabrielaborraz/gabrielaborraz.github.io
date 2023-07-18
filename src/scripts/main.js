@@ -46,9 +46,11 @@ const handleClickProject = (project, modal) => {
 
   const videoId = videoUrl.split('v=').pop();
 
-  player.loadVideoById(videoId);
+  if(player) {
+    player.loadVideoById(videoId);
 
-  modal.classList.remove("none");
+    modal.classList.remove("none");
+  }
 }
 
 const handleClickVideoButton = (button) => {
@@ -104,9 +106,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const videoPlayer = document.getElementById('video-player');
 
   // YouTube player
-  if(videoPlayer && videoButton) {
-    player = YouTubePlayer('video-player');
+  player = YouTubePlayer('video-player');
 
+  if(videoPlayer && videoButton) {
     // Show reel video button
     videoButton.addEventListener('click', () => {
       handleClickVideoButton(videoButton);
