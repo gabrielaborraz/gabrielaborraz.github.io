@@ -1,5 +1,6 @@
 ---
 import { getStaticPaths } from "../../utils/staticPaths";
+import { routes } from '../../routes';
 import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 
 const locale = getLocaleFromUrl(Astro.url);
@@ -17,6 +18,17 @@ export { getStaticPaths };
     <div class="title">
       <p class="text-title text-uppercase">{t('home.contact.title')}</p>
       <h4 class="text-large">{t('home.contact.subtitle')}</h4>
+    </div>
+    
+    <div>
+      <form>
+        <input type="text" placeholder={t('contact.input.name')} />
+        <input type="email" placeholder={t('contact.input.email')} />
+        <textarea placeholder={t('contact.input.message')} />
+        <button type="submit" class="btn">
+          {t('contact.btn')}
+        </button>   
+      </form>     
     </div>
   </section>
 </Layout>

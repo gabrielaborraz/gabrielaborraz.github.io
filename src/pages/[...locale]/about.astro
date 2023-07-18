@@ -28,7 +28,6 @@ export { getStaticPaths };
 
           <div class="content">
             <p set:html={t('about.content1')}/>
-
             <div class="about-sn">
               <a href="https://www.behance.net/GabrielaBorraz" target="_blank">
                 <Behance />
@@ -47,7 +46,6 @@ export { getStaticPaths };
           <h3 class="title text-large text-uppercase">
             {t('about.header2')}
           </h3>
-
           <div class="content">
             <p set:html={t('about.content2')}/> 
             <a href={routes.contact({ locale })} class="btn">
