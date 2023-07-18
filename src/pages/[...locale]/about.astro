@@ -25,20 +25,18 @@ export { getStaticPaths };
           {t('about.header1')}
         </h3>
 
-        <div>
-          <p set:html={t('about.content1')} />
+        <div set:html={t('about.content1')} />
 
-          <div class="about-sn">
-            <a href="https://www.behance.net/GabrielaBorraz" target="_blank">
-              <Behance />
-            </a>
-            <a href="https://www.instagram.com/gabrielaborraz" target="_blank">
-              <Instagram />
-            </a>
-            <a href="https://www.youtube.com/channel/UCSZ1OnqX_LIHIr-JOWr0sFQ" target="_blank">
-              <YouTube />
-            </a>
-          </div>
+        <div class="about-sn">
+          <a href="https://www.behance.net/GabrielaBorraz" target="_blank">
+            <Behance />
+          </a>
+          <a href="https://www.instagram.com/gabrielaborraz" target="_blank">
+            <Instagram />
+          </a>
+          <a href="https://www.youtube.com/channel/UCSZ1OnqX_LIHIr-JOWr0sFQ" target="_blank">
+            <YouTube />
+          </a>
         </div>
       </div>
 
@@ -47,13 +45,11 @@ export { getStaticPaths };
           {t('about.header2')}
         </h3>
 
-        <div>
-          <p set:html={t('about.content2')} /> 
+        <div set:html={t('about.content2')} /> 
 
-          <a href={routes.contact({ locale })} class="btn">
-            {t('about.btn')}
-          </a>
-        </div>
+        <a href={routes.contact({ locale })} class="btn">
+          {t('about.btn')}
+        </a>
       </div>
     </div>
   </section>

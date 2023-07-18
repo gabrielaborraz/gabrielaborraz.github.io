@@ -525,8 +525,6 @@ object {
 .about {
   & p {
     margin: 0;
-    margin-block-start: 0;
-    margin-block-end: 0;
     margin-bottom: calc(var(--rythm) * 2);
   }
 
@@ -541,6 +539,10 @@ object {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: calc(var(--rythm) * 8);
+  }
+
+  & .title {
+    margin-bottom: calc(var(--rythm) * 4);
   }
 
   & .text-large {

@@ -18,51 +18,64 @@ export const ui = {
     "home.newest.subtitle": "Galería de proyectos",
     "home.contact.title": "Escríbeme",
     "home.contact.subtitle": "Y creemos cosas increíbles",
-    "home.project1.title":"Palabras Mágicas",
-    "home.project1.description":"¡Prepárate para reír y aprender! Cada episodio está lleno de diversión, amistad y valiosas lecciones.",
-    "home.project1.year":"2016",
-    "home.project1.client":"Tutorah Kids",
-    "home.project2.title":"Cuentos de Milly Cohen",
-    "home.project2.description":"Proyecto inspirador con valiosas lecciones de vida a través de personajes adorables.",
-    "home.project2.year":"2021",
-    "home.project2.client":"Tutorah Kids",
-    "home.project3.title":"Midot Power Kids",
-    "home.project3.description":"Embárcate en una mágica aventura junto a tus midots favoritos y descubre sus valiosas lecciones.",
-    "home.project3.year":"2020",
-    "home.project3.client":"Tutorah Kids",
+    "home.project1.title": "Palabras Mágicas",
+    "home.project1.description":
+      "¡Prepárate para reír y aprender! Cada episodio está lleno de diversión, amistad y valiosas lecciones.",
+    "home.project1.year": "2016",
+    "home.project1.client": "Tutorah Kids",
+    "home.project2.title": "Cuentos de Milly Cohen",
+    "home.project2.description":
+      "Proyecto inspirador con valiosas lecciones de vida a través de personajes adorables.",
+    "home.project2.year": "2021",
+    "home.project2.client": "Tutorah Kids",
+    "home.project3.title": "Midot Power Kids",
+    "home.project3.description":
+      "Embárcate en una mágica aventura junto a tus midots favoritos y descubre sus valiosas lecciones.",
+    "home.project3.year": "2020",
+    "home.project3.client": "Tutorah Kids",
     /***********ABOUT***********/
     "about.title": "Sobre mí | Gabriela Borraz",
     "about.description":
       "Animadora versátil de gráficos por computadora que da vida a ideas con creatividad y destreza. Descubre mi trabajo de animación, ilustración y diseño",
-    "about.header1":"¿Quién soy",
-    "about.header2":"¿Qué hago",
-    "about.content1":"¡Hola! Yo soy Gabriela Borraz y soy la creadora detrás de la pantalla, quien narra historias a través de la animación, una artesana del pixel que da vida a ilustraciones y diseños. <p>Me encanta colaborar con mentes creativas y apasionadas. Mi objetivo es compartir mi arte con un amplio público y despertar emociones en cada persona que se cruce con mis creaciones.</p> <p>Te invito a seguirme en mis redes sociales:</p>",
-    "about.content2":"Gráficos animados diseñados para transformar ideas en imágenes y despertar emociones. <p>Y te puedo ayudar a producir una amplia variedad de videos, por ejemplo:</p> <ul> <li>Animaciones de logotipos</li> <li>Contenido para redes sociales</li> <li>Videos explicativos y de presentación</li> <li>Animaciones personalizadas para sitios web</li> <li>Animación de personajes</li> <li>Videos para tu estrategia de marketing</li> </ul>",
-    "about.btn":"Escríbeme",
+    "about.header1": "¿Quién soy?",
+    "about.header2": "¿Qué hago?",
+    "about.content1":
+      "<p>¡Hola! Yo soy Gabriela Borraz y soy la creadora detrás de la pantalla, quien narra historias a través de la animación, una artesana del pixel que da vida a ilustraciones y diseños.</p> <p>Me encanta colaborar con mentes creativas y apasionadas. Mi objetivo es compartir mi arte con un amplio público y despertar emociones en cada persona que se cruce con mis creaciones.</p> <p>Te invito a seguirme en mis redes sociales:</p>",
+    "about.content2":
+      "<p>Gráficos animados diseñados para transformar ideas en imágenes y despertar emociones.</p> <p>Y te puedo ayudar a producir una amplia variedad de videos, por ejemplo:</p> <ul> <li>Animaciones de logotipos</li> <li>Contenido para redes sociales</li> <li>Videos explicativos y de presentación</li> <li>Animaciones personalizadas para sitios web</li> <li>Animación de personajes</li> <li>Videos para tu estrategia de marketing</li> </ul>",
+    "about.btn": "Escríbeme",
     /***********CONTACT***********/
     "contact.title": "En contacto",
     "contact.description":
       "Escríbeme, me encantaría saber sobre tu próximo proyecto",
-    "contact.input.name":"Nombre*",
-    "contact.input.email":"Correo electrónico*",
-    "contact.input.message":"Escribe aquí tu mensaje*",
-    "contact.btn":"Enviar",
+    "contact.input.name": "Nombre*",
+    "contact.input.email": "Correo electrónico*",
+    "contact.input.message": "Escribe aquí tu mensaje*",
+    "contact.btn": "Enviar",
     /***********FAQ***********/
     "faq.title": "Preguntas frecuentes",
     "faq.description":
       "Respondiendo a Preguntas Frecuentes sobre nuestros servicios de animación y diseño",
     "faq.header.title": "Respondiendo",
     "faq.header.subtitle": "A preguntas frecuentes",
-    "faq.question1":"¿Cuánto cuesta un vídeo?",
-    "faq.question2":"¿Qué tipo de vídeos puedes crear?",
-    "faq.question3":"¿Dónde te encuentras ubicada?",
-    "faq.question4":"¿Ofreces descuentos para organizaciones sin ánimo de lucro?",
-    "faq.answer1":`Depende de la complejidad, la cantidad de videos a realizar, la duración y el plazo de entrega. Estos son algunos de los factores que influyen en el precio. Cuéntame cuál es tu <a href="${routes.contact({ locale: 'es' })}">proyecto/presupuesto</a> y te ayudaré a encontrar una solución que se ajuste a tus objetivos.`,
-    "faq.answer2":"Puedo ayudarte con una amplia variedad de videos, por ejemplo: <ul> <li>Animaciones de logotipos: Dale vida y personalidad a tu marca.</li> <li>Contenido para redes sociales: Destaca en las plataformas con videos llamativos.</li> <li>Videos explicativos y de presentación: Comunica tus ideas con dinamismo y profesionalismo.</li> <li>Animaciones personalizadas para sitios web: Capta la atención de los visitantes con animaciones únicas.</li> <li>Animación en 2D: Dale personalidad a tus personajes y crea historias que enganchen a tu público.</li> <li>Videos para tu estrategia de marketing: Transforma tus ventas y atrae a tu audiencia.</li> </ul>",
-    "faq.answer3":`Para dar inicio a nuestra colaboración podemos encontrarnos en persona en la Ciudad de México o si lo prefieres, podemos comunicarnos a través de una llamada telefónica, videollamada o <a href="${routes.contact({ locale: 'es' })}">correo electrónico</a>. La elección es tuya, lo que sea más conveniente para ti. ¡Espero tener la oportunidad de trabajar contigo pronto!`,
-    "faq.answer4":`¡Por supuesto! No dudes en <a href="${routes.contact({ locale: 'es' })}">contactarme</a> y trabajaremos juntos para hacer del mundo un lugar mejor.`,
+    "faq.question1": "¿Cuánto cuesta un vídeo?",
+    "faq.question2": "¿Qué tipo de vídeos puedes crear?",
+    "faq.question3": "¿Dónde te encuentras ubicada?",
+    "faq.question4":
+      "¿Ofreces descuentos para organizaciones sin ánimo de lucro?",
+    "faq.answer1": `Depende de la complejidad, la cantidad de videos a realizar, la duración y el plazo de entrega. Estos son algunos de los factores que influyen en el precio. Cuéntame cuál es tu <a href="${routes.contact(
+      { locale: "es" }
+    )}">proyecto/presupuesto</a> y te ayudaré a encontrar una solución que se ajuste a tus objetivos.`,
+    "faq.answer2":
+      "Puedo ayudarte con una amplia variedad de videos, por ejemplo: <ul> <li>Animaciones de logotipos: Dale vida y personalidad a tu marca.</li> <li>Contenido para redes sociales: Destaca en las plataformas con videos llamativos.</li> <li>Videos explicativos y de presentación: Comunica tus ideas con dinamismo y profesionalismo.</li> <li>Animaciones personalizadas para sitios web: Capta la atención de los visitantes con animaciones únicas.</li> <li>Animación en 2D: Dale personalidad a tus personajes y crea historias que enganchen a tu público.</li> <li>Videos para tu estrategia de marketing: Transforma tus ventas y atrae a tu audiencia.</li> </ul>",
+    "faq.answer3": `Para dar inicio a nuestra colaboración podemos encontrarnos en persona en la Ciudad de México o si lo prefieres, podemos comunicarnos a través de una llamada telefónica, videollamada o <a href="${routes.contact(
+      { locale: "es" }
+    )}">correo electrónico</a>. La elección es tuya, lo que sea más conveniente para ti. ¡Espero tener la oportunidad de trabajar contigo pronto!`,
+    "faq.answer4": `¡Por supuesto! No dudes en <a href="${routes.contact({
+      locale: "es",
+    })}">contactarme</a> y trabajaremos juntos para hacer del mundo un lugar mejor.`,
     /***********PORTFOLIO***********/
-    "portfolio.index.title":"Portafolio de Proyectos",
+    "portfolio.index.title": "Portafolio de Proyectos",
     "portfolio.index.description":
       "Explora mi portafolio de proyectos y descubre cómo puedo ayudarte a producir una amplia variedad de videos y dar vida a tus ideas",
     "portfolio.hero":
@@ -145,49 +158,61 @@ export const ui = {
     "home.newest.subtitle": "Project gallery",
     "home.contact.title": "Get in touch",
     "home.contact.subtitle": "And let's create amazing things",
-    "home.project1.title":"Magic Words",
-    "home.project1.description":"Get ready to laugh and learn! Each episode is filled with fun, friendship and valuable lessons.",
-    "home.project1.year":"2016",
-    "home.project1.client":"Tutorah Kids",
-    "home.project2.title":"The Tales of Milly Cohen",
-    "home.project2.description":"An inspiring project with valuable life lessons portrayed through adorable characters.",
-    "home.project2.year":"2021",
-    "home.project2.client":"Tutorah Kids",
-    "home.project3.title":"Midot Power Kids",
-    "home.project3.description":"Begin a magical adventure with your favorite midots and discover their valuable lessons.",
-    "home.project3.year":"2020",
-    "home.project3.client":"Tutorah Kids",
+    "home.project1.title": "Magic Words",
+    "home.project1.description":
+      "Get ready to laugh and learn! Each episode is filled with fun, friendship and valuable lessons.",
+    "home.project1.year": "2016",
+    "home.project1.client": "Tutorah Kids",
+    "home.project2.title": "The Tales of Milly Cohen",
+    "home.project2.description":
+      "An inspiring project with valuable life lessons portrayed through adorable characters.",
+    "home.project2.year": "2021",
+    "home.project2.client": "Tutorah Kids",
+    "home.project3.title": "Midot Power Kids",
+    "home.project3.description":
+      "Begin a magical adventure with your favorite midots and discover their valuable lessons.",
+    "home.project3.year": "2020",
+    "home.project3.client": "Tutorah Kids",
     /***********ABOUT***********/
     "about.title": "About | Gabriela Borraz",
     "about.description":
       "Versatile digital animator who brings ideas to life with creativity and expertise. Discover my work in animation, illustration and design",
-    "about.header1":"Who I am",
-    "about.header2":"What do i do?",
-    "about.content1":"Hello! I'm Gabriela Borraz, the creator behind the screen, who tells stories through animation, a pixel artisan who brings illustrations and designs to life. <p>I love collaborating with creative and passionate minds. My goal is to share my art with a wide audience and arouse emotions in every person who comes across my creations.</p> <p>I invite you to follow me on my social media:</p>",
-    "about.content2":"Animated graphics designed to transform ideas into visuals and wake up emotions.<p>And I can help you produce a wide variety of videos, such as:</p> <ul> <li>Logo animations</li> <li>Social media content</li> <li>Explainer and presentation videos </li> <li>Custom animations for websites/li> <li>Character animation</li> <li>Videos for your marketing strategy</li> </ul>",
-    "about.btn":"Get in touch!",
+    "about.header1": "Who I am",
+    "about.header2": "What do i do?",
+    "about.content1":
+      "Hello! I'm Gabriela Borraz, the creator behind the screen, who tells stories through animation, a pixel artisan who brings illustrations and designs to life. <p>I love collaborating with creative and passionate minds. My goal is to share my art with a wide audience and arouse emotions in every person who comes across my creations.</p> <p>I invite you to follow me on my social media:</p>",
+    "about.content2":
+      "Animated graphics designed to transform ideas into visuals and wake up emotions.<p>And I can help you produce a wide variety of videos, such as:</p> <ul> <li>Logo animations</li> <li>Social media content</li> <li>Explainer and presentation videos </li> <li>Custom animations for websites/li> <li>Character animation</li> <li>Videos for your marketing strategy</li> </ul>",
+    "about.btn": "Get in touch!",
     /***********CONTACT***********/
     "contact.title": "Get in touch",
     "contact.description":
       "Send me an email, I would love to hear about your upcoming project",
-    "contact.input.name":"Name*",
-    "contact.input.email":"Email address*",
-    "contact.input.message":"Type your message here*",
-    "contact.btn":"Send",
+    "contact.input.name": "Name*",
+    "contact.input.email": "Email address*",
+    "contact.input.message": "Type your message here*",
+    "contact.btn": "Send",
     /***********FAQ***********/
     "faq.title": "Frequently asked questions",
     "faq.description":
       "Answering Frequently Asked Questions about our animation and design services",
     "faq.header.title": "Answering",
     "faq.header.subtitle": "Frequently Asked Questions",
-    "faq.question1":"How much does a video cost?",
-    "faq.question2":"What types of videos can you create?",
-    "faq.question3":"Where are you located?",
-    "faq.question4":"Do you offer discounts for non-profit organizations?",
-    "faq.answer1":`It depends on the complexity, the number of videos to be produced, the duration and the delivery timeline. These are some of the factors that influence the price. Let me know your <a href="${routes.contact({ locale: 'en' })}">project/budget</a> and I will help you find a solution that fits your goals.`,
-    "faq.answer2":"I can assist you with a wide variety of videos, including: <ul> <li>Logo animations: Bring life and personality to your brand.</li> <li>Social media content: Stand out on platforms with eye-catching videos.</li> <li>Explainer and presentation videos: Communicate your ideas dynamically and professionally.</li> <li>Custom animations for websites: Capture visitors' attention with unique animations.</li> <li>2D animation: Give personality to your characters and create engaging stories for your audience.</li> <li>Videos for your marketing strategy: Transform your sales and attract your audience.</li> </ul>",
-    "faq.answer3":`To begin our collaboration, we can meet in person in Mexico City or if you prefer, we can communicate through a phone call, video call or <a href="${routes.contact({ locale: 'en' })}">email.</a> The choice is yours, whatever is most convenient for you. I look forward to the opportunity to work with you soon!`,
-    "faq.answer4":`Absolutely! Feel free <a href="${routes.contact({ locale: 'en' })}">to contact me</a> and we will work together to make the world a better place.`,
+    "faq.question1": "How much does a video cost?",
+    "faq.question2": "What types of videos can you create?",
+    "faq.question3": "Where are you located?",
+    "faq.question4": "Do you offer discounts for non-profit organizations?",
+    "faq.answer1": `It depends on the complexity, the number of videos to be produced, the duration and the delivery timeline. These are some of the factors that influence the price. Let me know your <a href="${routes.contact(
+      { locale: "en" }
+    )}">project/budget</a> and I will help you find a solution that fits your goals.`,
+    "faq.answer2":
+      "I can assist you with a wide variety of videos, including: <ul> <li>Logo animations: Bring life and personality to your brand.</li> <li>Social media content: Stand out on platforms with eye-catching videos.</li> <li>Explainer and presentation videos: Communicate your ideas dynamically and professionally.</li> <li>Custom animations for websites: Capture visitors' attention with unique animations.</li> <li>2D animation: Give personality to your characters and create engaging stories for your audience.</li> <li>Videos for your marketing strategy: Transform your sales and attract your audience.</li> </ul>",
+    "faq.answer3": `To begin our collaboration, we can meet in person in Mexico City or if you prefer, we can communicate through a phone call, video call or <a href="${routes.contact(
+      { locale: "en" }
+    )}">email.</a> The choice is yours, whatever is most convenient for you. I look forward to the opportunity to work with you soon!`,
+    "faq.answer4": `Absolutely! Feel free <a href="${routes.contact({
+      locale: "en",
+    })}">to contact me</a> and we will work together to make the world a better place.`,
     /***********PORTFOLIO***********/
     "portfolio.index.title": "Project Portfolio ",
     "portfolio.index.description":
