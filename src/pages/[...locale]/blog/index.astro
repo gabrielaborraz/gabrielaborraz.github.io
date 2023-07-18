@@ -13,7 +13,7 @@ export const getStaticPaths = async () => {
 };
 ---
 <Layout title={title} description={description} active="blog">
-  <section class="hero">
+  <section class="hero" slot="hero">
     <h2 class="text-xlarge"  set:html={t('blog.hero')}/>
   </section>
 

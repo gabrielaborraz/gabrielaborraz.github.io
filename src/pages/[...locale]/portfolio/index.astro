@@ -13,7 +13,7 @@ import Layout from "../../../layouts/Layout.astro";
 export { getStaticPaths };
 ---
 <Layout title= {title} description={description} active="portfolio">
-  <section class="hero">
+  <section class="hero" slot="hero">
     <h2 class="text-xlarge" set:html={t('portfolio.hero')}/>
   </section>
 
@@ -30,5 +30,4 @@ export { getStaticPaths };
       <h4 class="text-large">{t('portfolio.design.subtitle')}</h4>
     </div>
   </section>
-
 </Layout>
