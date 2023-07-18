@@ -17,7 +17,7 @@ import Layout from "../../layouts/Layout.astro";
 export { getStaticPaths };
 ---
 <Layout title={title} description={description} active="faq">
-  <section id="header" class="section">
+  <section class="section">
     <div class="title">
       <p class="text-title text-uppercase">{t('faq.header.title')}</p>
       <h4 class="text-large">{t('faq.header.subtitle')}</h4>
@@ -31,7 +31,7 @@ export { getStaticPaths };
               ¿Cuánto cuesta un vídeo?
             </button>
           </h4>
-          <div class="faq-answer">
+          <div class="faq-answer writer">
             <p>
               Depende de la complejidad, la cantidad de videos a realizar, la duración y el plazo de entrega.
               Estos son algunos de los factores que influyen en el precio.
@@ -47,7 +47,7 @@ export { getStaticPaths };
               ¿Qué tipo de vídeos puedes crear?
             </button>
           </h4>
-          <div class="faq-answer">
+          <div class="faq-answer writer">
             <p>Puedo ayudarte con una amplia variedad de videos, por ejemplo:</p>
 
             <ul>
@@ -67,7 +67,7 @@ export { getStaticPaths };
               ¿Dónde te encuentras ubicada?
             </button>
           </h4>
-          <div class="faq-answer">
+          <div class="faq-answer writer">
             <p>
               Para dar inicio a nuestra colaboración podemos encontrarnos en persona en la Ciudad de México o si lo prefieres,
               podemos comunicarnos a través de una llamada telefónica, videollamada o <a href={routes.contact({ locale })}>correo electrónico</a>.
@@ -83,7 +83,7 @@ export { getStaticPaths };
               ¿Ofreces descuentos para organizaciones sin ánimo de lucro?
             </button>
           </h4>
-          <div class="faq-answer">
+          <div class="faq-answer writer">
             <p>
               ¡Por supuesto! No dudes en <a href={routes.contact({ locale })}>contactarme</a> y trabajaremos juntos para hacer del mundo un lugar mejor.
             </p>

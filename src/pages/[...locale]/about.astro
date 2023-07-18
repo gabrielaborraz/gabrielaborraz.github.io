@@ -1,6 +1,11 @@
 ---
 import { getStaticPaths } from "../../utils/staticPaths";
+import { routes } from '../../routes';
 import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
+
+import Behance from '../../components/icons/Behance.astro';
+import Instagram from '../../components/icons/Instagram.astro';
+import YouTube from '../../components/icons/YouTube.astro';
 
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
@@ -13,5 +18,57 @@ import Layout from "../../layouts/Layout.astro";
 export { getStaticPaths };
 ---
 <Layout title={title} description={description} active="about">
-  About page {locale}
+  <section class="section">
+    <div class="content">
+      <div class="about">
+        <div>
+          <h3 class="title text-large text-uppercase">
+            ¿Quién soy?
+          </h3>
+
+          <div class="content">
+            <p>¡Hola! Yo soy Gabriela Borraz y soy la creadora detrás de la pantalla, quien narra historias a través de la animación, una artesana del pixel que da vida a ilustraciones y diseños.</p>
+            <p>Me encanta colaborar con mentes creativas y apasionadas. Mi objetivo es compartir mi arte con un amplio público y despertar emociones en cada persona que se cruce con mis creaciones.</p>
+            <p>Te invito a seguirme en mis redes sociales:</p>
+
+            <div class="about-sn">
+              <a href="https://www.behance.net/GabrielaBorraz" target="_blank">
+                <Behance />
+              </a>
+              <a href="https://www.instagram.com/gabrielaborraz" target="_blank">
+                <Instagram />
+              </a>
+              <a href="https://www.youtube.com/channel/UCSZ1OnqX_LIHIr-JOWr0sFQ" target="_blank">
+                <YouTube />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="title text-large text-uppercase">
+            ¿Qué hago?
+          </h3>
+
+          <div class="content">
+            <p>Gráficos animados diseñados para transformar ideas en imágenes y despertar emociones.</p>
+            <p>Y te puedo ayudar a producir una amplia variedad de videos, por ejemplo:</p>
+
+            <ul>
+              <li>Animaciones de logotipos</li>
+              <li>Contenido para redes sociales</li>
+              <li>Videos explicativos y de presentación</li>
+              <li>Animaciones personalizadas para sitios web</li>
+              <li>Animación de personajes</li>
+              <li>Videos para tu estrategia de marketing</li>
+            </ul>
+
+            <a href={routes.contact({ locale })} class="btn">
+              Escríbeme
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </Layout>
