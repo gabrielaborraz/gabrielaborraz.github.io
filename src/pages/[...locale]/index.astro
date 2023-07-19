@@ -1,6 +1,6 @@
 ---
-import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
-import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+// import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
+// import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
 
 import { getStaticPaths } from "../../utils/staticPaths";
@@ -16,6 +16,8 @@ const description = t('home.description');
 import Layout from "../../layouts/Layout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
 import Modal from '../../components/Modal.astro';
+import ExpandLess from '../../components/icons/ExpandLess.astro';
+import ExpandMore from '../../components/icons/ExpandMore.astro';
 
 const project1 = {
   imageSrc: '/projects/magic-words.jpg',
@@ -53,9 +55,16 @@ export { getStaticPaths };
 ---
 <Layout title={title} description={description}>
   <section class="hero" slot="hero">
-    <h2 class="text-xlarge" set:html={t('home.hero')} />
+    <div>
+      <h2 class="text-xlarge" set:html={t('home.hero')} />
+    </div>
+
+    <a href="#projects">
+      <ExpandMore />
+    </a>
   </section>
 
+  <a id="projects"></a>
   <section id="featured" class="section projects">
     <div class="title">
       <p class="text-title text-uppercase">{t('home.featured.title')}</p>
@@ -159,7 +168,6 @@ export { getStaticPaths };
     </div>
 
     <div class="content">
-
       <ul class="projects-cards">
         <li>
           <ProjectCard
@@ -198,6 +206,12 @@ export { getStaticPaths };
         <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
       </div-->
     </div>
+
+    <div class="cta">
+      <a href={routes.portfolio.root({ locale })} class="btn">
+        Ir al portafolio →
+      </a>
+    </div>
   </section>
 
   <section id="contact" class="section contact-cta">
@@ -210,9 +224,17 @@ export { getStaticPaths };
         que hará que tu marca destaque
       </p>
 
-      <a href={routes.contact({ locale })} class="btn">Ir a contacto</a>
+      <a href={routes.contact({ locale })} class="btn">
+        Ir a contacto →
+      </a>
     </div>
   </section>
+
+  <div class="go-to-top">
+    <a href="#" >
+      <ExpandLess />
+    </a>
+  </div>
 
   <Modal />
 </Layout>

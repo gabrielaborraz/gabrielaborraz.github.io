@@ -50,8 +50,8 @@
   --font-size-title-desktop: 1rem;      /* 16px */
   --line-height-title-desktop: 1.5rem;  /* 24px */
   --font-weight-title-desktop: 800;
-  --font-size-title-mobile: 0.75rem;    /* 12px */
-  --line-height-title-mobile: 1.25rem;  /* 20px */
+  --font-size-title-mobile: 0.875rem;   /* 14px */
+  --line-height-title-mobile: 1.5rem;   /* 24px */
   --font-weight-title-mobile: 800;
 
   /* Font size: Subtitle */
@@ -338,7 +338,16 @@ object {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - calc(var(--rythm) * 8)); /* Total height minus nav height (64px) */
+    flex-direction: column;
+    height: calc(100vh - calc(var(--rythm) * 16));
+    padding: calc(var(--rythm) * 8) 0;
+
+    & > div {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
     & h2 {
       text-align: center;
@@ -386,6 +395,7 @@ object {
   display: flex;
   flex-direction: column;
   padding: calc(var(--rythm) * 8) 0;
+  position: relative;
 
   & > * {
     padding: calc(var(--rythm) * 3);
@@ -407,6 +417,10 @@ object {
   margin-top: calc(var(--rythm) * 8);
   margin-bottom: calc(var(--rythm) * 8);
 
+  &:first-child {
+    margin-top: 0;
+  }
+
   & .title + .content {
     display: flex;
     margin-top: calc(var(--rythm) * 6);
@@ -415,7 +429,8 @@ object {
 
 @media only screen and (min-width: 1169px) {
   .section {
-    padding: 0;
+    margin-top: calc(var(--rythm) * 16);
+    margin-bottom: calc(var(--rythm) * 16);
   }
 }
 
@@ -432,7 +447,7 @@ object {
   }
 
   & li:not(:first-child) {
-    margin-top: calc(var(--rythm) * 6);
+    margin-top: calc(var(--rythm) * 8);
   }
 
   & img {
@@ -489,6 +504,14 @@ object {
   }
 }
 
+/* Projects CTA */
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc(var(--rythm) * 8);
+}
+
 /* Clients */
 .clients {
   & .clients-cards {
@@ -499,8 +522,12 @@ object {
     align-items: center;
   }
 
+  & li:not(:first-child) {
+    margin-top: calc(var(--rythm) * 12);
+  }
+
   & object {
-    height: 144px;
+    height: 96px;
   }
 }
 
@@ -508,6 +535,14 @@ object {
   .clients {
     & .clients-cards {
       flex-direction: row;
+    }
+
+    & li:not(:first-child) {
+      margin-top: 0;
+    }
+
+    & object {
+      height: 144px;
     }
   }
 }
@@ -1084,5 +1119,15 @@ object {
 
   & li {
     list-style-type: disc;
+  }
+}
+
+.go-to-top {
+  margin: calc(var(--rythm) * 8) 0;
+  display: flex;
+  justify-content: flex-end;
+
+  & a {
+    display: inline-flex;
   }
 }
