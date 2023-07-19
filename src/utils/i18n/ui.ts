@@ -177,12 +177,12 @@ export const ui = {
     "about.title": "About | Gabriela Borraz",
     "about.description":
       "Versatile digital animator who brings ideas to life with creativity and expertise. Discover my work in animation, illustration and design",
-    "about.header1": "Who I am",
+    "about.header1": "Who I am?",
     "about.header2": "What do i do?",
     "about.content1":
-      "Hello! I'm Gabriela Borraz, the creator behind the screen, who tells stories through animation, a pixel artisan who brings illustrations and designs to life. <p>I love collaborating with creative and passionate minds. My goal is to share my art with a wide audience and arouse emotions in every person who comes across my creations.</p> <p>I invite you to follow me on my social media:</p>",
+      "<p>Hello! I'm Gabriela Borraz, the creator behind the screen, who tells stories through animation, a pixel artisan who brings illustrations and designs to life.</p> <p>I love collaborating with creative and passionate minds. My goal is to share my art with a wide audience and arouse emotions in every person who comes across my creations.</p> <p>I invite you to follow me on my social media:</p>",
     "about.content2":
-      "Animated graphics designed to transform ideas into visuals and wake up emotions.<p>And I can help you produce a wide variety of videos, such as:</p> <ul> <li>Logo animations</li> <li>Social media content</li> <li>Explainer and presentation videos </li> <li>Custom animations for websites/li> <li>Character animation</li> <li>Videos for your marketing strategy</li> </ul>",
+      "<p>Animated graphics designed to transform ideas into visuals and wake up emotions.</p><p>And I can help you produce a wide variety of videos, such as:</p> <ul> <li>Logo animations</li> <li>Social media content</li> <li>Explainer and presentation videos </li> <li>Custom animations for websites</li> <li>Character animation</li> <li>Videos for your marketing strategy</li> </ul>",
     "about.btn": "Get in touch!",
     /***********CONTACT***********/
     "contact.title": "Get in touch",

@@ -22,9 +22,15 @@ export { getStaticPaths };
     
     <div>
       <form>
-        <input type="text" placeholder={t('contact.input.name')} />
-        <input type="email" placeholder={t('contact.input.email')} />
-        <textarea placeholder={t('contact.input.message')} />
+        <div>
+          <input type="text" placeholder={t('contact.input.name')} class="input" />
+        </div>
+        <div>
+          <input type="email" placeholder={t('contact.input.email')} class="input" />
+        </div>
+        <div>
+          <textarea placeholder={t('contact.input.message')} />
+        </div>
         <button type="submit" class="btn">
           {t('contact.btn')}
         </button>   
