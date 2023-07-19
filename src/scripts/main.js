@@ -105,10 +105,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const videoButton = document.getElementById('video-player-button');
   const videoPlayer = document.getElementById('video-player');
 
-  // YouTube player
-  player = YouTubePlayer('video-player');
-
   if(videoPlayer && videoButton) {
+    // YouTube player
+    player = YouTubePlayer('video-player');
+
     // Show reel video button
     videoButton.addEventListener('click', () => {
       handleClickVideoButton(videoButton);

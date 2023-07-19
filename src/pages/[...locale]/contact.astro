@@ -11,30 +11,112 @@ const description = t('contact.description');
 
 import Layout from "../../layouts/Layout.astro";
 
+const date = new Date().toISOString()
+
 export { getStaticPaths };
 ---
 <Layout title={title} description={description} active="contact">
-  <section id="contact" class="section">
+  <section id="contact" class="section contact">
     <div class="title">
       <p class="text-title text-uppercase">{t('home.contact.title')}</p>
       <h4 class="text-large">{t('home.contact.subtitle')}</h4>
     </div>
     
-    <div>
-      <form>
-        <div>
-          <input type="text" placeholder={t('contact.input.name')} class="input" />
+    <div class="content">
+      <div class="alert alert-success" aria-hidden="true">
+        <p>¡Gracias! Tu mensaje ha sido enviado con éxito.</p>
+        <p>Nos pondremos en contacto contigo muy pronto.</p>
+      </div>
+
+      <div class="alert alert-error" aria-hidden="true">
+        <p>Ha habido un error al enviar el formulario :(</p>
+        <p>Por favor, inténtalo de nuevo más tarde.</p>
+      </div>
+
+      <form id="form" class="form">
+        <div class="input-container input-name">
+          <input
+            required
+            autofocus
+            type="text"
+            name="user"
+            placeholder={t('contact.input.name')}
+            class="input"
+          />
         </div>
-        <div>
-          <input type="email" placeholder={t('contact.input.email')} class="input" />
+
+        <div class="input-container input-email">
+          <input
+            required
+            type="email"
+            name="email"
+            placeholder={t('contact.input.email')}
+            class="input"
+          />
         </div>
-        <div>
-          <textarea placeholder={t('contact.input.message')} />
+
+        <div class="input-container input-message">
+          <textarea
+            required
+            name="message"
+            placeholder={t('contact.input.message')}
+            rows="12"
+            class="textarea"
+          />
         </div>
-        <button type="submit" class="btn">
-          {t('contact.btn')}
-        </button>   
+
+        <div class="input-container">
+          <input type="hidden" id="date" name="date" value="" />
+
+          <button type="submit" id="submit" class="btn">
+            {t('contact.btn')}
+          </button>
+        </div>
       </form>     
     </div>
   </section>
+
+  <script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById("form");
+      const submitButton = document.getElementById("submit");
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbyfQAZak3u_npVREBFyaz3yFEGvPshuciYDu76OMaLUEy0vTaXTKmzWwH-uLlVNk3qN/exec';
+
+      const success = document.getElementsByClassName('alert-success')[0];
+      const error = document.getElementsByClassName('alert-error')[0];
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        document.getElementById("date").value = new Date().toISOString();
+
+        submitButton.disabled = true;
+        submitButton.innerHTML = 'Sending...';
+
+        const requestBody = new FormData(form);
+
+        fetch(scriptURL, { method: 'POST', body: requestBody })
+          .then(response => {
+            error.classList.remove('show');
+            error.setAttribute('aria-hidden', 'true');
+            success.classList.add('show');
+            success.setAttribute('aria-hidden', 'false');
+
+            form.reset();
+
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Enviar';
+          })
+          .catch(error => {
+            success.classList.remove('show');
+            success.setAttribute('aria-hidden', 'true');
+            error.classList.add('show');
+            error.setAttribute('aria-hidden', 'false');
+
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Enviar';
+          })
+        })
+      })
+  </script>
 </Layout>
