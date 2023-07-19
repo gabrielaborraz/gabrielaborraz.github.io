@@ -63,8 +63,6 @@ export { getStaticPaths };
     </div>
 
     <div class="content">
-      <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
-
       <ul class="projects-cards">
         <li>
           <ProjectCard
@@ -95,10 +93,13 @@ export { getStaticPaths };
             client={project3.client}
             projectUrl={project3.projectUrl}
             videoUrl={project3.videoUrl} />
-          </li>
+        </li>
       </ul>
 
-      <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
+      <!--div>
+        <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
+        <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
+      </div-->
     </div>
   </section>
 
@@ -126,8 +127,6 @@ export { getStaticPaths };
     </div>
 
     <div class="content">
-      <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
-
       <ul class="clients-cards">
         <li class="client-card">
           <figure>
@@ -146,7 +145,10 @@ export { getStaticPaths };
         </li>
       </ul>
 
-      <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
+      <!--div>
+        <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
+        <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
+      </div-->
     </div>
   </section>
 
@@ -157,7 +159,6 @@ export { getStaticPaths };
     </div>
 
     <div class="content">
-      <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
 
       <ul class="projects-cards">
         <li>
@@ -189,17 +190,27 @@ export { getStaticPaths };
             client="Tutorah Kids"
             projectUrl=""
             videoUrl="https://www.youtube.com/watch?v=fYH0K5Wk6vE" />
-          </li>
+        </li>
       </ul>
 
-      <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
+      <!--div>
+        <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
+        <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
+      </div-->
     </div>
   </section>
 
-  <section id="contact" class="section">
-    <div class="title">
-      <p class="text-title text-uppercase">{t('home.contact.title')}</p>
-      <h4 class="text-large">{t('home.contact.subtitle')}</h4>
+  <section id="contact" class="section contact-cta">
+    <div class="content">
+      <h4 class="text-large text-uppercase">Escríbeme</h4>
+
+      <p class="text-title">
+        Para crear contenido visual
+        <br />
+        que hará que tu marca destaque
+      </p>
+
+      <a href={routes.contact({ locale })} class="btn">Ir a contacto</a>
     </div>
   </section>
 
