@@ -85,7 +85,7 @@ export { getStaticPaths };
       const success = document.getElementsByClassName('alert-success')[0];
       const error = document.getElementsByClassName('alert-error')[0];
 
-      form.addEventListener('submit', (e) => {
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         document.getElementById("date").value = new Date().toISOString();
@@ -95,28 +95,30 @@ export { getStaticPaths };
 
         const requestBody = new FormData(form);
 
-        fetch(scriptURL, { method: 'POST', body: requestBody })
-          .then(response => {
-            error.classList.remove('show');
-            error.setAttribute('aria-hidden', 'true');
-            success.classList.add('show');
-            success.setAttribute('aria-hidden', 'false');
+        try {
+          const response = await fetch(scriptURL, {
+            method: 'POST',
+            body:   requestBody
+          });
+          form.reset();
 
-            form.reset();
+          error.classList.remove('show');
+          error.setAttribute('aria-hidden', 'true');
 
-            submitButton.disabled = false;
-            submitButton.innerHTML = 'Enviar';
-          })
-          .catch(error => {
-            success.classList.remove('show');
-            success.setAttribute('aria-hidden', 'true');
-            error.classList.add('show');
-            error.setAttribute('aria-hidden', 'false');
+          success.classList.add('show');
+          success.setAttribute('aria-hidden', 'false');
+        }
+        catch(e) {
+          success.classList.remove('show');
+          success.setAttribute('aria-hidden', 'true');
 
-            submitButton.disabled = false;
-            submitButton.innerHTML = 'Enviar';
-          })
-        })
+          error.classList.add('show');
+          error.setAttribute('aria-hidden', 'false');
+        }
+
+        submitButton.disabled = false;
+        submitButton.innerHTML = 'Enviar';
       })
+    })
   </script>
 </Layout>
