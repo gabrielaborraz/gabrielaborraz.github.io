@@ -1,6 +1,11 @@
 ---
 const { slug } = Astro.params;
 
+import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
+
+import { routes } from "../../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../../utils/i18n/utils";
 
 const locale = getLocaleFromUrl(Astro.url);
@@ -8,8 +13,10 @@ const t = useTranslations(locale);
 
 const title = t(`portfolio.project.${slug}.title`);
 const description = t(`portfolio.project.${slug}.description`);
+const showReelUrl = 'https://www.youtube.com/watch?v=edXnSyD0NsA';
 
 import Layout from "../../../layouts/Layout.astro";
+import Modal from '../../../components/Modal.astro';
 
 export const getStaticPaths = async () => {
   return [
@@ -25,17 +32,138 @@ export const getStaticPaths = async () => {
 };
 ---
 <Layout title={title} description={description} active="portfolio">
-  <section id="header" class="section">
+  <section class="section project">
+    <ol class="breadcrumb">
+      <li>
+        <a href={routes.root({ locale })} class="text-subtitle">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a href={routes.portfolio.root({ locale })} class="text-subtitle">
+          Portafolio
+        </a>
+      </li>
+      <li>
+        <a href={routes.portfolio.multimedia({ locale })} class="text-subtitle">
+          Multimedia
+        </a>
+      </li>
+      <li>
+        <span>Palabras mágicas</span>
+      </li>
+    </ol>
+
     <div class="title">
       <p class="text-title text-uppercase">{t(`portfolio.project.${slug}.header.title`)}</p>
       <h4 class="text-large">{t(`portfolio.project.${slug}.header.subtitle`)}</h4>
     </div>
-  </section>
 
-  <section id="sinopsis" class="section">
-    <div class="title">
-      <p class="text-title text-uppercase">{t('portfolio.project.sinopsis')}</p>
-      <p class="body" set:html={t(`portfolio.project.${slug}.sinopsis`)}/>
+    <div class="content">
+      <div class="credits">
+        <div class="collaborators table">
+          <div>
+            <span class="table-header text-title text-uppercase">Año</span>
+
+            <p class="table-cell">2016</p>
+          </div>
+
+          <div>
+            <span class="table-header text-title text-uppercase">Cliente</span>
+            <p class="table-cell">Tutorah Kids</p>
+          </div>
+
+          <div>
+            <span class="table-header text-title text-uppercase">Ilustración</span>
+
+            <ul class="table-cell">
+              <li>Daniel Corkidi</li>
+              <li>Rafael Castillo</li>
+            </ul>
+          </div>
+
+          <div>
+            <span class="table-header text-title text-uppercase">Animación</span>
+
+            <ul class="table-cell">
+              <li>Alejandro Olivares</li>
+              <li>Gabriela Borraz</li>
+            </ul>
+
+          </div>
+          <div>
+            <span class="table-header text-title text-uppercase">Música</span>
+
+            <p class="table-cell">Emmanuel Miranda</p>
+          </div>
+        </div>
+
+        <div class="video">
+          <button id="video-player-button" class="video-thumbnail" data-video={showReelUrl}>
+            <img src="/show-reel/2023-cover.jpg" />
+
+            <div class="overlay video-overlay">
+              <PlayCircleOutlineRoundedIcon />
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="description">
+        <div class="synopsis">
+          <p class="text-title text-uppercase">{t('portfolio.project.sinopsis')}</p>
+
+          <p class="text" set:html={t(`portfolio.project.${slug}.sinopsis`)}/>
+
+          <a href="https://google.com" class="btn full-width" target="_blank">
+            Ver serie animada →
+          </a>
+        </div>
+
+        <div class="splide gallery" aria-label="Palabras Mágicas – Imágenes del proyecto">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="/projects/magic-words/slide_1.jpg"  />
+              </li>
+              <li class="splide__slide">
+                <img src="/projects/magic-words/slide_2.jpg" />
+              </li>
+              <li class="splide__slide">
+                <img src="/projects/magic-words/slide_3.jpg"  />
+              </li>
+              <li class="splide__slide">
+                <img src="/projects/magic-words/slide_4.jpg"  />
+              </li>
+            </ul>
+          </div>
+
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+              <ArrowForwardIosRoundedIcon />
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+              <ArrowForwardIosRoundedIcon />
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <Modal />
+
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        const splide = new Splide('.splide', {
+          type: 'fade',
+          rewind: true,
+          pagination: false,
+          height: '240px',
+          cover: true
+        });
+
+        splide.mount();
+      });
+    </script>
   </section>
 </Layout>
