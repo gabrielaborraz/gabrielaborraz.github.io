@@ -954,10 +954,13 @@ button.btn {
 
   & .video-overlay {
     height: calc(100% - 1px); /* 624px height - 1px border top */
-    border-top: 1px solid   var(--grey-ghost-white);
-    border-right: 1px solid var(--grey-ghost-white);
-    border-left: 1px solid  var(--grey-ghost-white);
     border-radius: var(--border-radius);
+
+    &:hover {
+      border-top: 1px solid   var(--grey-ghost-white);
+      border-right: 1px solid var(--grey-ghost-white);
+      border-left: 1px solid  var(--grey-ghost-white);
+    }
 
     & .MuiSvgIcon-fontSizeMedium {
       width: calc(var(--rythm) * 15);

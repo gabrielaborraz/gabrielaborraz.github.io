@@ -1,9 +1,5 @@
 ---
-import ExpandMoreRoundedIcon from '@mui/icons-material/ExpandMoreRounded';
-import ExpandLessRoundedIcon from '@mui/icons-material/ExpandLessRounded';
-
 import { getStaticPaths } from "../../utils/staticPaths";
-import { routes } from "../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 
 const locale = getLocaleFromUrl(Astro.url);
@@ -16,6 +12,8 @@ import Layout from "../../layouts/Layout.astro";
 
 export { getStaticPaths };
 ---
+<script src="/src/scripts/faq.js"></script>
+
 <Layout title={title} description={description} active="faq">
   <section class="section">
     <div class="title">

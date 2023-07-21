@@ -36,6 +36,8 @@ export const getStaticPaths = async () => {
   }, [])
 };
 ---
+<script src="/src/scripts/video.js"></script>
+
 <Layout title={title} description={description} active="portfolio">
   <section class="section project">
     <ol class="breadcrumb">
@@ -186,15 +188,19 @@ export const getStaticPaths = async () => {
 
     <script is:inline>
       document.addEventListener('DOMContentLoaded', () => {
-        const splide = new Splide('.splide', {
-          type: 'fade',
-          rewind: true,
-          pagination: false,
-          height: '240px',
-          cover: true
-        });
+        const elements = document.getElementsByClassName('.splide');
 
-        splide.mount();
+        if(elements.length) {
+          const splide = new Splide('.splide', {
+            type: 'fade',
+            rewind: true,
+            pagination: false,
+            height: '240px',
+            cover: true
+          });
+
+          splide.mount();
+        }
       });
     </script>
   </section>
