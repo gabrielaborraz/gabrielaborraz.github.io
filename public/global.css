@@ -1247,6 +1247,10 @@ button.btn {
   vertical-align: middle;
 }
 
+.MuiSvgIcon-root[aria-hidden="true"], svg[aria-hidden="true"] {
+  display: flow-root;
+}
+
 & svg.icon {
   fill: var(--black-space-cadet);
 
