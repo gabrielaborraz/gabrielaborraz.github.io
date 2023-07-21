@@ -38,18 +38,18 @@ export const routes = {
       return localizePath({ locale, path });
     },
   },
-  blog: {
-    root: ({ locale }: { locale: Locale }) => {
-      const path = "/blog";
+  // blog: {
+  //   root: ({ locale }: { locale: Locale }) => {
+  //     const path = "/blog";
 
-      return localizePath({ locale, path });
-    },
-    post: ({ slug, locale }: { slug: string; locale: Locale }) => {
-      const path = `/blog/${slug}`;
+  //     return localizePath({ locale, path });
+  //   },
+  //   post: ({ slug, locale }: { slug: string; locale: Locale }) => {
+  //     const path = `/blog/${slug}`;
 
-      return localizePath({ locale, path });
-    },
-  },
+  //     return localizePath({ locale, path });
+  //   },
+  // },
   faq: ({ locale }: { locale: Locale }) => {
     const path = "/faq";
 
