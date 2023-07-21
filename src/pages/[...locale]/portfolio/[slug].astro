@@ -1,34 +1,39 @@
 ---
 const { slug } = Astro.params;
 
-import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
 
+import type { GetStaticTypePathsType, Locale, Project } from '../../../types';
+
 import { routes } from "../../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../../utils/i18n/utils";
+import { projects } from '../../../utils/content/projects';
 
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
 const title = t(`portfolio.project.${slug}.title`);
 const description = t(`portfolio.project.${slug}.description`);
-const showReelUrl = 'https://www.youtube.com/watch?v=edXnSyD0NsA';
+
+const project: Project = projects[slug]({ locale });
 
 import Layout from "../../../layouts/Layout.astro";
 import Modal from '../../../components/Modal.astro';
+import { DEFAULT_LOCALE, LOCALES } from '../../../constants';
 
 export const getStaticPaths = async () => {
-  return [
-    { params: { slug: "magic-words", locale: undefined } },
-    { params: { slug: "magic-words", locale: 'en' } },
-    { params: { slug: "midot-power-kids", locale: undefined } },
-    { params: { slug: "midot-power-kids", locale: 'en' } },
-    { params: { slug: "milly-cohen-tales", locale: undefined } },
-    { params: { slug: "milly-cohen-tales", locale: 'en' } },
-    { params: { slug: "viola-from-newspain-to-chiapas", locale: undefined } },
-    { params: { slug: "viola-from-newspain-to-chiapas", locale: 'en' } },
-  ];
+  const keys = Object.keys(projects || {});
+
+  return keys.reduce<GetStaticTypePathsType[]>((accumulator, slug) => {
+    LOCALES.forEach((lokale) => {
+      const l = lokale === DEFAULT_LOCALE ? undefined : lokale;
+
+      accumulator.push({ params: { slug, locale: l } });
+    })
+
+    return accumulator;
+  }, [])
 };
 ---
 <Layout title={title} description={description} active="portfolio">
@@ -45,12 +50,17 @@ export const getStaticPaths = async () => {
         </a>
       </li>
       <li>
-        <a href={routes.portfolio.multimedia({ locale })} class="text-subtitle">
-          Multimedia
-        </a>
+        {project.section === 'multimedia' &&
+          <a href={routes.portfolio.multimedia({ locale })} class="text-subtitle">
+            Multimedia
+          </a>}
+        {project.section === 'design' &&
+          <a href={routes.portfolio.design({ locale })} class="text-subtitle">
+            Diseño
+          </a>}
       </li>
       <li>
-        <span>Palabras mágicas</span>
+        <span>{project.name}</span>
       </li>
     </ol>
 
@@ -63,44 +73,70 @@ export const getStaticPaths = async () => {
       <div class="credits">
         <div class="collaborators table">
           <div>
-            <span class="table-header text-title text-uppercase">Año</span>
+            <span class="table-header text-title text-uppercase">
+              Año
+            </span>
 
-            <p class="table-cell">2016</p>
+            <p class="table-cell">{project.year}</p>
           </div>
 
           <div>
-            <span class="table-header text-title text-uppercase">Cliente</span>
-            <p class="table-cell">Tutorah Kids</p>
+            <span class="table-header text-title text-uppercase">
+              Cliente
+            </span>
+
+            <p class="table-cell">{project.client}</p>
           </div>
 
-          <div>
-            <span class="table-header text-title text-uppercase">Ilustración</span>
+          {project.illustration && project.illustration.length > 0 &&
+            <div>
+              <span class="table-header text-title text-uppercase">
+                Ilustración
+              </span>
 
-            <ul class="table-cell">
-              <li>Daniel Corkidi</li>
-              <li>Rafael Castillo</li>
-            </ul>
-          </div>
+              {project.illustration.length > 1 &&
+                <ul class="table-cell">
+                  {project.illustration.map((illustrator) => { return <li>{illustrator}</li> })}
+                </ul>}
 
-          <div>
-            <span class="table-header text-title text-uppercase">Animación</span>
+              {project.illustration.length === 1 &&
+                <p class="table-cell">{project.illustration[0]}</p>}
+            </div>}
 
-            <ul class="table-cell">
-              <li>Alejandro Olivares</li>
-              <li>Gabriela Borraz</li>
-            </ul>
+          {project.animation && project.animation.length > 0 &&
+            <div>
+              <span class="table-header text-title text-uppercase">
+                Animación
+              </span>
 
-          </div>
-          <div>
-            <span class="table-header text-title text-uppercase">Música</span>
+              {project.animation.length > 1 &&
+                <ul class="table-cell">
+                  {project.animation.map((animator) => { return <li>{animator}</li> })}
+                </ul>}
 
-            <p class="table-cell">Emmanuel Miranda</p>
-          </div>
+              {project.animation.length === 1 &&
+                <p class="table-cell">{project.animation[0]}</p>}
+            </div>}
+
+          {project.music && project.music.length > 0 &&
+            <div>
+              <span class="table-header text-title text-uppercase">
+                Música
+              </span>
+
+              {project.music.length > 1 &&
+                <ul class="table-cell">
+                  {project.music.map((musician) => { return <li>{musician}</li> })}
+                </ul>}
+
+              {project.music.length === 1 &&
+                <p class="table-cell">{project.music[0]}</p>}
+            </div>}
         </div>
 
         <div class="video">
-          <button id="video-player-button" class="video-thumbnail" data-video={showReelUrl}>
-            <img src="/show-reel/2023-cover.jpg" />
+          <button id="video-player-button" class="video-thumbnail" data-video={project.videoUrl}>
+            <img src={project.imageSrc} />
 
             <div class="overlay video-overlay">
               <PlayCircleOutlineRoundedIcon />
@@ -111,42 +147,38 @@ export const getStaticPaths = async () => {
 
       <div class="description">
         <div class="synopsis">
-          <p class="text-title text-uppercase">{t('portfolio.project.sinopsis')}</p>
+          <p class="text-title text-uppercase">
+            {t('portfolio.project.synopsis')}
+          </p>
 
-          <p class="text" set:html={t(`portfolio.project.${slug}.sinopsis`)}/>
+          <p class="text" set:html={project.synopsis}/>
 
-          <a href="https://google.com" class="btn full-width" target="_blank">
+          <a href={project.externalLink} class="btn full-width" target="_blank">
             Ver serie animada →
           </a>
         </div>
 
-        <div class="splide gallery" aria-label="Palabras Mágicas – Imágenes del proyecto">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <img src="/projects/magic-words/slide_1.jpg"  />
-              </li>
-              <li class="splide__slide">
-                <img src="/projects/magic-words/slide_2.jpg" />
-              </li>
-              <li class="splide__slide">
-                <img src="/projects/magic-words/slide_3.jpg"  />
-              </li>
-              <li class="splide__slide">
-                <img src="/projects/magic-words/slide_4.jpg"  />
-              </li>
-            </ul>
-          </div>
+        {project.slides && project.slides.length > 0 &&
+          <div class="splide gallery">
+            <div class="splide__track">
+              <ul class="splide__list">
+                {project.slides.map((slide) => {
+                  return <li class="splide__slide">
+                    <img src={slide}  />
+                  </li>
+                })}
+              </ul>
+            </div>
 
-          <div class="splide__arrows">
-            <button class="splide__arrow splide__arrow--prev">
-              <ArrowForwardIosRoundedIcon />
-            </button>
-            <button class="splide__arrow splide__arrow--next">
-              <ArrowForwardIosRoundedIcon />
-            </button>
-          </div>
-        </div>
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <ArrowForwardIosRoundedIcon />
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <ArrowForwardIosRoundedIcon />
+              </button>
+            </div>
+          </div>}
       </div>
     </div>
 

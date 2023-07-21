@@ -1,15 +1,15 @@
-import type { Locale } from "../../types";
+import type { Locale, Project, Projects } from "../../types";
 import { DEFAULT_LOCALE } from "../../constants";
 
 import { routes } from "../../routes";
 import { useTranslations } from "../i18n/utils";
 
-type ProjectType = {
+type ProjectArgsType = {
   slug: string;
   locale?: Locale;
 };
 
-const project = (args: ProjectType) => {
+const project = (args: ProjectArgsType): Project => {
   const locale = args?.locale || DEFAULT_LOCALE;
   const slug = args.slug;
   const t = useTranslations(locale);
@@ -27,6 +27,13 @@ const project = (args: ProjectType) => {
     synopsis: t(`projects.${slug}.synopsis`),
     imageSrc: `/projects/${slug}.jpg`,
     projectUrl: routes.portfolio.project({ project: slug, locale }),
+    videoUrl: "",
+    illustration: [],
+    animation: [],
+    music: [],
+    section: "multimedia",
+    externalLink: "",
+    slides: [],
   };
 };
 
@@ -39,6 +46,16 @@ export const projectMagicWords = (args?: { locale?: Locale }) => {
   return {
     ...info,
     videoUrl: "https://www.youtube.com/watch?v=PxmXOsvjJx8",
+    illustration: ["Daniel Corkidi", "Rafael Castillo"],
+    animation: ["Alejandro Olivares", "Gabriela Borraz"],
+    music: ["Emmanuel Miranda"],
+    section: "design",
+    externalLink: "https://google.com",
+    slides: [
+      "/projects/magic-words/slide_1.jpg",
+      "/projects/magic-words/slide_2.jpg",
+      "/projects/magic-words/slide_4.jpg",
+    ],
   };
 };
 
@@ -51,6 +68,12 @@ export const projectMillyCohenTales = (args?: { locale?: Locale }) => {
   return {
     ...info,
     videoUrl: "https://www.youtube.com/watch?v=fYH0K5Wk6vE",
+    illustration: [],
+    animation: [],
+    music: [],
+    section: "multimedia",
+    externalLink: "",
+    slides: [],
   };
 };
 
@@ -63,6 +86,12 @@ export const projectMidotPowerKids = (args?: { locale?: Locale }) => {
   return {
     ...info,
     videoUrl: "https://www.youtube.com/watch?v=-jO1qc-euZg",
+    illustration: [],
+    animation: [],
+    music: [],
+    section: "multimedia",
+    externalLink: "",
+    slides: [],
   };
 };
 
@@ -75,5 +104,18 @@ export const projectTheViolaJourney = (args?: { locale?: Locale }) => {
   return {
     ...info,
     videoUrl: "",
+    illustration: [],
+    animation: [],
+    music: [],
+    section: "multimedia",
+    externalLink: "",
+    slides: [],
   };
+};
+
+export const projects: Projects = {
+  "magic-words": projectMagicWords,
+  "midot-power-kids": projectMidotPowerKids,
+  "milly-cohen-tales": projectMillyCohenTales,
+  "the-viola-journey": projectTheViolaJourney,
 };
