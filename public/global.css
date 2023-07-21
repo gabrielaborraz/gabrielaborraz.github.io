@@ -890,6 +890,19 @@ button.btn {
     height: 180px;
     border-top-right-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius);
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.8);
+
+      & .MuiSvgIcon-fontSizeMedium {
+        visibility: visible;
+      }
+    }
+
+    & .MuiSvgIcon-fontSizeMedium {
+      visibility: hidden;
+    }
   }
 
   & .project-link {
@@ -971,12 +984,11 @@ button.btn {
   & .video-overlay {
     height: calc(100% - 1px); /* 624px height - 1px border top */
     border-radius: var(--border-radius);
-
-    &:hover {
-      border-top: 1px solid   var(--grey-ghost-white);
-      border-right: 1px solid var(--grey-ghost-white);
-      border-left: 1px solid  var(--grey-ghost-white);
-    }
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-top: 1px solid   var(--grey-ghost-white);
+    border-right: 1px solid var(--grey-ghost-white);
+    border-left: 1px solid  var(--grey-ghost-white);
 
     & .MuiSvgIcon-fontSizeMedium {
       width: calc(var(--rythm) * 15);
@@ -1269,20 +1281,10 @@ button.btn {
   left: 0;
   z-index: 1;
 
-  &:hover {
-    cursor: pointer;
-    background-color: rgba(255, 255, 255, 0.8);
-
-    & .MuiSvgIcon-fontSizeMedium {
-      visibility: visible;
-    }
-  }
-
   & .MuiSvgIcon-fontSizeMedium {
     width: calc(var(--rythm) * 5);
     height: calc(var(--rythm) * 5);
     fill: var(--blue-neon);
-    visibility: hidden;
   }
 }
 
