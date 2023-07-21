@@ -972,31 +972,12 @@ button.btn {
   & .content {
     background-color: var(--grey-seasalt);
     border-radius: var(--border-radius);
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: space-between;
-    padding: calc(var(--rythm) * 4);
+    padding: calc(var(--rythm) * 10);
     text-align: center;
-
-    & :last-child {
-      margin-top: calc(var(--rythm) * 3);
-    }
   }
-}
 
-@media only screen and (min-width: 1169px) {
-  .contact-cta {
-    & .content {
-      grid-template-columns: repeat(3, 1fr);
-      padding: calc(var(--rythm) * 8);
-      text-align: left;
-      gap: calc(var(--rythm) * 2);
-
-      & :last-child {
-        margin-top: 0;
-      }
-    }
+  & .btn {
+    margin-top: calc(var(--rythm) * 6);
   }
 }
 /* ---------------------------------------------------------------------------*/
