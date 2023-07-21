@@ -485,7 +485,6 @@ object {
   }
 
   & .title + .content {
-    display: flex;
     margin-top: calc(var(--rythm) * 8);
   }
 }
@@ -837,14 +836,14 @@ button.btn {
 .projects {
   & .projects-cards {
     flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-  }
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: calc(var(--rythm) * 8);
 
-  & li:not(:first-child) {
-    margin-top: calc(var(--rythm) * 8);
+    & li {
+      margin: 0 auto;
+    }
   }
 
   & img {
@@ -887,16 +886,7 @@ button.btn {
 @media only screen and (min-width: 1169px) {
   .projects {
     & .projects-cards {
-      flex-direction: row;
-      align-items: flex-start;
-    }
-
-    & li:not(:first-child) {
-      margin-top: 0;
-    }
-
-    & .project-card {
-      padding: 0;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

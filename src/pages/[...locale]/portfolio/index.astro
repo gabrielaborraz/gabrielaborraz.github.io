@@ -9,15 +9,16 @@ import {
   projectMillyCohenTales
 } from "../../../utils/content/projects";
 
+import Layout from "../../../layouts/Layout.astro";
+import ProjectCard from "../../../components/ProjectCard.astro";
+import Modal from '../../../components/Modal.astro';
+import ExpandMore from '../../../components/icons/ExpandMore.astro';
+
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
 const title = t('portfolio.index.title');
 const description = t('portfolio.index.description');
-
-import Layout from "../../../layouts/Layout.astro";
-import ProjectCard from "../../../components/ProjectCard.astro";
-import Modal from '../../../components/Modal.astro';
 
 const magicWords = projectMagicWords({ locale });
 const midotPowerKids = projectMidotPowerKids({ locale });
@@ -27,9 +28,16 @@ export { getStaticPaths };
 ---
 <Layout title= {title} description={description} active="portfolio">
   <section class="hero" slot="hero">
-    <h2 class="text-xlarge" set:html={t('portfolio.hero')}/>
+    <div>
+      <h2 class="text-xlarge" set:html={t('portfolio.hero')}/>
+    </div>
+
+    <a href="#go-to-content">
+      <ExpandMore />
+    </a>
   </section>
 
+  <a id="go-to-content"></a>
   <section id="multimedia" class="section projects">
     <div class="title">
       <p class="text-title text-uppercase">{t('portfolio.multimedia.title')}</p>
@@ -90,6 +98,12 @@ export { getStaticPaths };
         </li>
       </ul>
     </div>
+
+    <div class="cta">
+      <a href={routes.portfolio.multimedia({ locale })} class="btn">
+        Ver todos los proyectos multimedia →
+      </a>
+    </div>
   </section>
 
   <section id="design" class="section projects">
@@ -131,6 +145,12 @@ export { getStaticPaths };
             videoUrl={midotPowerKids.videoUrl} />
         </li>
       </ul>
+    </div>
+
+    <div class="cta">
+      <a href={routes.portfolio.design({ locale })} class="btn">
+        Ver todos los proyectos de diseño →
+      </a>
     </div>
   </section>
 

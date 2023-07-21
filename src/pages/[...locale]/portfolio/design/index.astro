@@ -1,6 +1,17 @@
 ---
 import { getStaticPaths } from "../../../../utils/staticPaths";
+import { routes } from "../../../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../../../utils/i18n/utils";
+
+import {
+  projectMagicWords,
+  projectMidotPowerKids,
+  projectMillyCohenTales
+} from "../../../../utils/content/projects";
+
+import Layout from "../../../../layouts/Layout.astro";
+import ProjectCard from "../../../../components/ProjectCard.astro";
+import Modal from '../../../../components/Modal.astro'
 
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
@@ -8,15 +19,90 @@ const t = useTranslations(locale);
 const title = t('portfolio.design.index.title');
 const description = t('portfolio.design.index.description');
 
-import Layout from "../../../../layouts/Layout.astro";
+const magicWords = projectMagicWords({ locale });
+const midotPowerKids = projectMidotPowerKids({ locale });
+const millyCohenTales = projectMillyCohenTales({ locale });
 
 export { getStaticPaths };
 ---
 <Layout title= {title} description={description} active="portfolio"> 
-      <section id="design" class="section">
-        <div class="title">
-          <p class="text-title text-uppercase">{t('portfolio.design.title')}</p>
-          <h4 class="text-large">{t('portfolio.design.subtitle')}</h4>
-        </div>
-      </section>
+  <section id="design" class="section projects">
+    <ol class="breadcrumb">
+      <li>
+        <a href={routes.root({ locale })} class="text-subtitle">
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a href={routes.portfolio.root({ locale })} class="text-subtitle">
+          Portafolio
+        </a>
+      </li>
+      <li>
+        <span>Diseño</span>
+      </li>
+    </ol>
+
+    <div class="title">
+      <p class="text-title text-uppercase">{t('portfolio.design.title')}</p>
+      <h4 class="text-large">{t('portfolio.design.subtitle')}</h4>
+    </div>
+
+    <div class="content">
+      <ul class="projects-cards">
+        <li>
+          <ProjectCard
+            imageSrc={magicWords.imageSrc}
+            name={magicWords.name}
+            summary={magicWords.summary}
+            year={magicWords.year}
+            client={magicWords.client}
+            projectUrl={magicWords.projectUrl}
+            videoUrl={magicWords.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={millyCohenTales.imageSrc}
+            name={millyCohenTales.name}
+            summary={millyCohenTales.summary}
+            year={millyCohenTales.year}
+            client={millyCohenTales.client}
+            projectUrl={millyCohenTales.projectUrl}
+            videoUrl={millyCohenTales.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={midotPowerKids.imageSrc}
+            name={midotPowerKids.name}
+            summary={midotPowerKids.summary}
+            year={midotPowerKids.year}
+            client={midotPowerKids.client}
+            projectUrl={midotPowerKids.projectUrl}
+            videoUrl={midotPowerKids.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={midotPowerKids.imageSrc}
+            name={midotPowerKids.name}
+            summary={midotPowerKids.summary}
+            year={midotPowerKids.year}
+            client={midotPowerKids.client}
+            projectUrl={midotPowerKids.projectUrl}
+            videoUrl={midotPowerKids.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={midotPowerKids.imageSrc}
+            name={midotPowerKids.name}
+            summary={midotPowerKids.summary}
+            year={midotPowerKids.year}
+            client={midotPowerKids.client}
+            projectUrl={midotPowerKids.projectUrl}
+            videoUrl={midotPowerKids.videoUrl} />
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <Modal />
 </Layout>
