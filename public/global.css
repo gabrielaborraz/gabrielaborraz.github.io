@@ -180,6 +180,14 @@ object {
   width: 100%;
   display: block;
 }
+
+[aria-hidden="true"] {
+  display: none;
+}
+
+[aria-hidden="false"] {
+  display: block;
+}
 /* ---------------------------------------------------------------------------*/
 
 /* ----------------------------------------------------------------------------,
@@ -532,6 +540,10 @@ object {
     gap: calc(var(--rythm) * 4);
     padding: calc(var(--rythm) * 2) 0;
   }
+
+  & .alert {
+    margin-bottom: calc(var(--rythm) * 2);
+  }
 }
 
 @media only screen and (min-width: 1169px) {
@@ -601,6 +613,10 @@ button.btn {
  * ---------------------------------------------------------------------------*/
 .input-container {
   position: relative;
+
+  &:not(:first-child) {
+    margin-top: calc(var(--rythm) * 2)
+  }
 }
 
 & .input, & .textarea {
@@ -1193,12 +1209,7 @@ button.btn {
   }
 
   & .alert {
-    display: none;
     margin-bottom: calc(var(--rythm) * 6);
-
-    &.show {
-      display: block;
-    }
   }
 
   & .form {
@@ -1207,10 +1218,6 @@ button.btn {
 
   & .input-container {
     display: flex;
-
-    &:not(:first-child) {
-      margin-top: calc(var(--rythm) * 2)
-    }
   }
 
   & .input, .textarea {

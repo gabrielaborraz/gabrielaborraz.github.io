@@ -1,6 +1,5 @@
 ---
 import { getStaticPaths } from "../../utils/staticPaths";
-import { routes } from '../../routes';
 import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 
 const locale = getLocaleFromUrl(Astro.url);
@@ -11,10 +10,10 @@ const description = t('contact.description');
 
 import Layout from "../../layouts/Layout.astro";
 
-const date = new Date().toISOString()
-
 export { getStaticPaths };
 ---
+<script src="/src/scripts/contact.js"></script>
+
 <Layout title={title} description={description} active="contact">
   <section id="contact" class="section contact">
     <div class="title">
@@ -33,7 +32,7 @@ export { getStaticPaths };
         <p>Por favor, inténtalo de nuevo más tarde.</p>
       </div>
 
-      <form id="form" class="form">
+      <form id="contact-form" class="form" data-sending="Enviando..." data-send="Enviar →">
         <div class="input-container input-name">
           <input
             required
@@ -66,59 +65,13 @@ export { getStaticPaths };
         </div>
 
         <div class="input-container">
-          <input type="hidden" id="date" name="date" value="" />
+          <input type="hidden" class="date" name="date" value="" />
 
-          <button type="submit" id="submit" class="btn full-width">
+          <button type="submit" id="contact-submit" class="btn full-width">
             {t('contact.btn')}
           </button>
         </div>
-      </form>     
+      </form>
     </div>
   </section>
-
-  <script is:inline>
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById("form");
-      const submitButton = document.getElementById("submit");
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyfQAZak3u_npVREBFyaz3yFEGvPshuciYDu76OMaLUEy0vTaXTKmzWwH-uLlVNk3qN/exec';
-
-      const success = document.getElementsByClassName('alert-success')[0];
-      const error = document.getElementsByClassName('alert-error')[0];
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        document.getElementById("date").value = new Date().toISOString();
-
-        submitButton.disabled = true;
-        submitButton.innerHTML = 'Sending...';
-
-        const requestBody = new FormData(form);
-
-        try {
-          const response = await fetch(scriptURL, {
-            method: 'POST',
-            body:   requestBody
-          });
-          form.reset();
-
-          error.classList.remove('show');
-          error.setAttribute('aria-hidden', 'true');
-
-          success.classList.add('show');
-          success.setAttribute('aria-hidden', 'false');
-        }
-        catch(e) {
-          success.classList.remove('show');
-          success.setAttribute('aria-hidden', 'true');
-
-          error.classList.add('show');
-          error.setAttribute('aria-hidden', 'false');
-        }
-
-        submitButton.disabled = false;
-        submitButton.innerHTML = 'Enviar';
-      })
-    })
-  </script>
 </Layout>

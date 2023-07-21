@@ -1,8 +1,9 @@
 ---
 import { routes } from "../routes";
-import { getLocaleFromUrl } from "../utils/i18n/utils";
+import { getLocaleFromUrl, useTranslations } from "../utils/i18n/utils";
 
 const locale = getLocaleFromUrl(Astro.url);
+const t = useTranslations(locale);
 const year = new Date().getFullYear();
 ---
 <footer class="footer">
@@ -49,10 +50,40 @@ const year = new Date().getFullYear();
 
     <div>
       <p class="text-title text-uppercase">Suscríbete</p>
+
+      <div class="alert alert-success" aria-hidden="true">
+        ¡Registrado!
+      </div>
+
+      <div class="alert alert-error" aria-hidden="true">
+        Error :(
+      </div>
+
+      <form id="newsletter-form" class="form" data-sending="Enviando..." data-send="Enviar →">
+        <div class="input-container input-email">
+          <input
+            required
+            type="email"
+            name="email"
+            placeholder={t('contact.input.email')}
+            class="input"
+          />
+        </div>
+
+        <div class="input-container">
+          <input type="hidden" class="date" name="date" value="" />
+
+          <button type="submit" id="newsletter-submit" class="btn full-width">
+            {t('contact.btn')}
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 
   <h6 class="text-small">
-    © {year} by Gabriela Borraz. Powered and secured by <a href="https://kenaro.co" target="_blank">Kenaro Ltd.</a>
+    © {year} by Gabriela Borraz. Powered and secured by <a href="https://kenaro.co" target="_blank">
+      Kenaro Ltd.
+    </a>
   </h6>
 </footer>
