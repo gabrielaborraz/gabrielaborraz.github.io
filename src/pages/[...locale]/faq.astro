@@ -24,45 +24,45 @@ export { getStaticPaths };
     <div class="content">
       <ul class="faqs">
         <li class="faq">
-          <h4 class="text-subtitle">
-            <button class="faq-question">
+          <h4 class="faq-question text-subtitle">
+            <button id="q1" aria-expanded="false" aria-controls="a1">
               {t('faq.question1')}
             </button>
           </h4>
-          <div class="faq-answer writer">
+          <div id="a1" aria-labelledby="q1" class="faq-answer writer" hidden>
             <p set:html={t('faq.answer1')} />
           </div>
         </li>
 
         <li class="faq">
-          <h4 class="text-subtitle">
-            <button class="faq-question">
+          <h4 class="faq-question text-subtitle">
+            <button id="q2" aria-expanded="false" aria-controls="a2">
               {t('faq.question2')}
             </button>
           </h4>
-          <div class="faq-answer writer">
+          <div id="a2" aria-labelledby="q2" class="faq-answer writer" hidden>
             <p set:html={t('faq.answer2')} /> 
           </div>
         </li>
 
         <li class="faq">
-          <h4 class="text-subtitle">
-            <button class="faq-question">
+          <h4 class="faq-question text-subtitle">
+            <button id="q3" aria-expanded="false" aria-controls="a3">
               {t('faq.question3')}
             </button>
           </h4>
-          <div class="faq-answer writer">
+          <div id="a3" aria-labelledby="q3" class="faq-answer writer" hidden>
             <p set:html={t('faq.answer3')} />
           </div>
         </li>
 
         <li class="faq">
-          <h4 class="text-subtitle">
-            <button class="faq-question">
+          <h4 class="faq-question text-subtitle">
+            <button id="q4" aria-expanded="false" aria-controls="a4">
               {t('faq.question4')}
             </button>
           </h4>
-          <div class="faq-answer writer">
+          <div id="a4" aria-labelledby="q4" class="faq-answer writer" hidden>
             <p set:html={t('faq.answer4')} />
           </div>
         </li>

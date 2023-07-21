@@ -104,6 +104,9 @@
   --border-radius-input: 4px;
   --border-radius-slider: 4px;
 
+  /* Image size */
+  --image-background-size: 16px;
+
   /* Breakpoints widths */
   --medium-screen: 1169px;
 }
@@ -648,8 +651,8 @@ button.btn {
 .input-name, .input-email, .input-message {
   &::before {
     content: '';
-    width: 16px;
-    height: 16px;
+    width: var(--image-background-size);
+    height: var(--image-background-size);
     position: absolute;
     left: calc(var(--rythm) * 1);
     top: 12px;
@@ -758,8 +761,8 @@ button.btn {
 
     & .MuiSvgIcon-fontSizeMedium {
       fill: var(--white);
-      height: 32px;
       width: 32px;
+      height: 32px;
       opacity: .8;
 
       &:hover {
@@ -782,8 +785,8 @@ button.btn {
 
   &::before {
     content: '';
-    width: 16px;
-    height: 16px;
+    width: var(--image-background-size);
+    height: var(--image-background-size);
     position: absolute;
     left: calc(var(--rythm) * 2);
     top: calc(50% - 8px);
@@ -1161,51 +1164,48 @@ button.btn {
  *                                                                             |
  * ---------------------------------------------------------------------------*/
 .faqs {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  & button {
+    flex: 1;
+    position: relative;
+    text-align: left;
+    padding: calc(var(--rythm) * 2);
+    padding-right: calc(var(--image-background-size) + var(--rythm)); /* background width */
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - var(--rythm));
+      right: calc(var(--rythm) * 2);
+      width: var(--image-background-size);
+      height: var(--image-background-size);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    &[aria-expanded="false"] {
+      &::after {
+        background-image: url('data:image/svg+xml, %3Csvg%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.01757%2012.8889C7.87692%2012.8889%207.74798%2012.8659%207.63077%2012.82C7.51355%2012.774%207.39634%2012.6937%207.27911%2012.5788L0.316483%205.75711C0.105494%205.55039%200%205.30922%200%205.03359C0%204.75796%200.105494%204.5168%200.316483%204.31008C0.527472%204.10336%200.779484%204%201.07253%204C1.36557%204%201.61758%204.10336%201.82857%204.31008L8.01757%2010.3738L14.2066%204.31008C14.4176%204.10336%2014.6637%204%2014.9451%204C15.2264%204%2015.4725%204.10336%2015.6835%204.31008C15.8945%204.5168%2016%204.76371%2016%205.05082C16%205.33792%2015.8945%205.58484%2015.6835%205.79156L8.75603%2012.5788C8.63882%2012.6937%208.5216%2012.774%208.40439%2012.82C8.28717%2012.8659%208.15824%2012.8889%208.01757%2012.8889Z%22%20fill%3D%22%23060C28%22%2F%3E%3C%2Fsvg%3E');
+      }
+    }
+
+    &[aria-expanded="true"] {
+      &::after {
+        background-image: url('data:image/svg+xml, %3Csvg%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.00829%206.50996L1.82646%2012.5613C1.61571%2012.7676%201.36399%2012.8765%201.07128%2012.888C0.778581%2012.8994%200.526862%2012.802%200.316117%2012.5957C0.105372%2012.3894%200%2012.143%200%2011.8565C0%2011.57%200.105372%2011.3236%200.316117%2011.1173L7.27069%204.30945C7.38778%204.19484%207.50486%204.11461%207.62193%204.06877C7.73901%204.02292%207.8678%204%208.00829%204C8.1488%204%208.27758%204.02292%208.39466%204.06877C8.51174%204.11461%208.62882%204.19484%208.7459%204.30945L15.6654%2011.0829C15.8761%2011.2892%2015.9873%2011.5299%2015.9991%2011.8049C16.0108%2012.08%2015.9112%2012.3207%2015.7005%2012.527C15.4897%2012.7333%2015.238%2012.8364%2014.9454%2012.8364C14.6526%2012.8364%2014.4009%2012.7333%2014.1902%2012.527L8.00829%206.50996Z%22%20fill%3D%22%23060C28%22%2F%3E%3C%2Fsvg%3E');
+      }
+    }
+  }
 
   & .faq {
-    padding: calc(var(--rythm) * 1);
     box-shadow: inset 0px -1px 0px 0px var(--grey-ghost-white);
   }
 
   & .faq-question {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    position: relative;
-    width: 100%;
-    height: calc(var(--rythm) * 7);
-    padding-right: 32px; /* background width */
-    text-align: left;
-
-    &::after {
-      content: '';
-      width: 32px;
-      height: 32px;
-      position: absolute;
-      right: 0;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-image: url('data:image/svg+xml, %3Csvg%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.01757%2012.8889C7.87692%2012.8889%207.74798%2012.8659%207.63077%2012.82C7.51355%2012.774%207.39634%2012.6937%207.27911%2012.5788L0.316483%205.75711C0.105494%205.55039%200%205.30922%200%205.03359C0%204.75796%200.105494%204.5168%200.316483%204.31008C0.527472%204.10336%200.779484%204%201.07253%204C1.36557%204%201.61758%204.10336%201.82857%204.31008L8.01757%2010.3738L14.2066%204.31008C14.4176%204.10336%2014.6637%204%2014.9451%204C15.2264%204%2015.4725%204.10336%2015.6835%204.31008C15.8945%204.5168%2016%204.76371%2016%205.05082C16%205.33792%2015.8945%205.58484%2015.6835%205.79156L8.75603%2012.5788C8.63882%2012.6937%208.5216%2012.774%208.40439%2012.82C8.28717%2012.8659%208.15824%2012.8889%208.01757%2012.8889Z%22%20fill%3D%22%23060C28%22%2F%3E%3C%2Fsvg%3E');
-    }
-
-    &.faq-question-open {
-      &::after {
-        background-image: url('data:image/svg+xml, %3Csvg%20focusable%3D%22false%22%20aria-hidden%3D%22true%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.01757%2012.8889C7.87692%2012.8889%207.74798%2012.8659%207.63077%2012.82C7.51355%2012.774%207.39634%2012.6937%207.27911%2012.5788L0.316483%205.75711C0.105494%205.55039%200%205.30922%200%205.03359C0%204.75796%200.105494%204.5168%200.316483%204.31008C0.527472%204.10336%200.779484%204%201.07253%204C1.36557%204%201.61758%204.10336%201.82857%204.31008L8.01757%2010.3738L14.2066%204.31008C14.4176%204.10336%2014.6637%204%2014.9451%204C15.2264%204%2015.4725%204.10336%2015.6835%204.31008C15.8945%204.5168%2016%204.76371%2016%205.05082C16%205.33792%2015.8945%205.58484%2015.6835%205.79156L8.75603%2012.5788C8.63882%2012.6937%208.5216%2012.774%208.40439%2012.82C8.28717%2012.8659%208.15824%2012.8889%208.01757%2012.8889Z%22%20fill%3D%22%23060C28%22%2F%3E%3C%2Fsvg%3E');
-      }
-    }
   }
 
   & .faq-answer {
-    display: none;
-    margin-top: calc(var(--rythm) * 2);
-    margin-bottom: calc(var(--rythm) * 2);
-
-    &.show {
-      display: block;
-    }
+    padding: calc(var(--rythm) * 2);
   }
 }
 /* ---------------------------------------------------------------------------*/
