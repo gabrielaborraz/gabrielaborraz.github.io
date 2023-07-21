@@ -7,7 +7,14 @@ import { getStaticPaths } from "../../utils/staticPaths";
 import { routes } from "../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 
+import {
+  projectMagicWords,
+  projectMillyCohenTales,
+  projectMidotPowerKids
+} from '../../utils/content/projects';
+
 const locale = getLocaleFromUrl(Astro.url);
+
 const t = useTranslations(locale);
 
 const title = t('home.title');
@@ -19,35 +26,9 @@ import Modal from '../../components/Modal.astro';
 import ExpandLess from '../../components/icons/ExpandLess.astro';
 import ExpandMore from '../../components/icons/ExpandMore.astro';
 
-const project1 = {
-  imageSrc: '/projects/magic-words.jpg',
-  title: t('home.project1.title'),
-  description: t('home.project1.description'),
-  year: t('home.project1.year'),
-  client: t('home.project1.client'),
-  projectUrl: routes.portfolio.project({ project: 'magic-words', locale }),
-  videoUrl: 'https://www.youtube.com/watch?v=PxmXOsvjJx8'
-}
-
-const project2 = {
-  imageSrc: '/projects/milly-cohen-tales.jpg',
-  title: t('home.project2.title'),
-  description: t('home.project2.description'),
-  year: t('home.project2.year'),
-  client: t('home.project2.client'),
-  projectUrl: routes.portfolio.project({ project: 'milly-cohen-tales', locale }),
-  videoUrl: 'https://www.youtube.com/watch?v=fYH0K5Wk6vE',
-}
-
-const project3 = {
-  imageSrc: '/projects/midot-power-kids.jpg',
-  title: t('home.project3.title'),
-  description: t('home.project3.description'),
-  year: t('home.project3.year'),
-  client: t('home.project3.client'),
-  projectUrl: routes.portfolio.project({ project: 'midot-power-kids', locale }),
-  videoUrl: 'https://www.youtube.com/watch?v=-jO1qc-euZg',
-}
+const magicWords = projectMagicWords({ locale });
+const midotPowerKids = projectMidotPowerKids({ locale });
+const millyCohenTales = projectMillyCohenTales({ locale });
 
 const showReelUrl = 'https://www.youtube.com/watch?v=edXnSyD0NsA'
 
@@ -75,33 +56,33 @@ export { getStaticPaths };
       <ul class="projects-cards">
         <li>
           <ProjectCard
-            imageSrc={project1.imageSrc}
-            title={project1.title}
-            description={project1.description}
-            year={project1.year}
-            client={project1.client}
-            projectUrl={project1.projectUrl}
-            videoUrl={project1.videoUrl} />
+            imageSrc={magicWords.imageSrc}
+            name={magicWords.name}
+            summary={magicWords.summary}
+            year={magicWords.year}
+            client={magicWords.client}
+            projectUrl={magicWords.projectUrl}
+            videoUrl={magicWords.videoUrl} />
         </li>
         <li>
           <ProjectCard
-            imageSrc={project2.imageSrc}
-            title={project2.title}
-            description={project2.description}
-            year={project2.year}
-            client={project2.client}
-            projectUrl={project2.projectUrl}
-            videoUrl={project2.videoUrl} />
+            imageSrc={millyCohenTales.imageSrc}
+            name={millyCohenTales.name}
+            summary={millyCohenTales.summary}
+            year={millyCohenTales.year}
+            client={millyCohenTales.client}
+            projectUrl={millyCohenTales.projectUrl}
+            videoUrl={millyCohenTales.videoUrl} />
         </li>
         <li>
           <ProjectCard
-            imageSrc={project3.imageSrc}
-            title={project3.title}
-            description={project3.description}
-            year={project3.year}
-            client={project3.client}
-            projectUrl={project3.projectUrl}
-            videoUrl={project3.videoUrl} />
+            imageSrc={midotPowerKids.imageSrc}
+            name={midotPowerKids.name}
+            summary={midotPowerKids.summary}
+            year={midotPowerKids.year}
+            client={midotPowerKids.client}
+            projectUrl={midotPowerKids.projectUrl}
+            videoUrl={midotPowerKids.videoUrl} />
         </li>
       </ul>
 
@@ -171,13 +152,13 @@ export { getStaticPaths };
       <ul class="projects-cards">
         <li>
           <ProjectCard
-            imageSrc={project1.imageSrc}
-            title={project1.title}
-            description={project1.description}
-            year={project1.year}
-            client={project1.client}
-            projectUrl={project1.projectUrl}
-            videoUrl={project1.videoUrl} />
+            imageSrc={magicWords.imageSrc}
+            title={magicWords.title}
+            description={magicWords.description}
+            year={magicWords.year}
+            client={magicWords.client}
+            projectUrl={magicWords.projectUrl}
+            videoUrl={magicWords.videoUrl} />
         </li>
         <li>
           <ProjectCard

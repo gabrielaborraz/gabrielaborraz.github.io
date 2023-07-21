@@ -2,7 +2,9 @@
 import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
 import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
 
-const { imageSrc, title, description, year, client, projectUrl } = Astro.props;
+const { imageSrc, year, client, projectUrl } = Astro.props;
+const name = Astro.props.name || Astro.props.title;
+const summary = Astro.props.summary || Astro.props.description;
 const videoUrl = Astro.props.videoUrl;
 ---
 
@@ -27,8 +29,8 @@ const videoUrl = Astro.props.videoUrl;
 
   <a href={projectUrl} class="project-link">
     <p>
-      <span class="text-subtitle">{title}</span>
-      {description}
+      <span class="text-subtitle">{name}</span>
+      {summary}
     </p>
   </a>
 
