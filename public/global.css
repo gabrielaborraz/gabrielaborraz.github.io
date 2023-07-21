@@ -180,14 +180,6 @@ object {
   width: 100%;
   display: block;
 }
-
-[aria-hidden="true"] {
-  display: none;
-}
-
-[aria-hidden="false"] {
-  display: block;
-}
 /* ---------------------------------------------------------------------------*/
 
 /* ----------------------------------------------------------------------------,
@@ -798,6 +790,14 @@ button.btn {
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  &[aria-hidden="false"] {
+    display: flow-root;
+  }
 }
 
 .alert-success {
@@ -1257,10 +1257,6 @@ button.btn {
   width: 24px;
   height: 24px;
   vertical-align: middle;
-}
-
-.MuiSvgIcon-root[aria-hidden="true"], svg[aria-hidden="true"] {
-  display: flow-root;
 }
 
 & svg.icon {
