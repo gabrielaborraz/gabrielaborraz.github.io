@@ -197,15 +197,13 @@ export const getStaticPaths = async () => {
 
     <script is:inline>
       document.addEventListener('DOMContentLoaded', () => {
-        const elements = document.getElementsByClassName('.splide');
+        const elements = document.getElementsByClassName('splide__slide');
 
         if(elements.length) {
           const splide = new Splide('.splide', {
             type: 'fade',
             rewind: true,
             pagination: false,
-            height: '240px',
-            cover: true
           });
 
           splide.mount();
