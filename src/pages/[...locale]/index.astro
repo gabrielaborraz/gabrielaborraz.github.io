@@ -10,15 +10,18 @@ import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 import {
   projectMagicWords,
   projectMillyCohenTales,
-  projectMidotPowerKids
+  projectMidotPowerKids,
+  projectTheViolaJourney,
+  projectIntorahsante,
+  projectNitzaStorytime,
 } from '../../utils/content/projects';
 
 const locale = getLocaleFromUrl(Astro.url);
 
 const t = useTranslations(locale);
 
-const title = t('home.title');
-const description = t('home.description');
+const title = t('home.seo.title');
+const description = t('home.seo.description');
 
 import Layout from "../../layouts/Layout.astro";
 import ProjectCard from "../../components/ProjectCard.astro";
@@ -29,6 +32,9 @@ import ExpandMore from '../../components/icons/ExpandMore.astro';
 const magicWords = projectMagicWords({ locale });
 const midotPowerKids = projectMidotPowerKids({ locale });
 const millyCohenTales = projectMillyCohenTales({ locale });
+const theViolaJourney = projectTheViolaJourney({ locale });
+const intorahsante = projectIntorahsante({ locale });
+const nitzaStorytime = projectNitzaStorytime({ locale });
 
 const showReelUrl = 'https://www.youtube.com/watch?v=edXnSyD0NsA'
 
@@ -155,33 +161,33 @@ export { getStaticPaths };
       <ul class="projects-cards">
         <li>
           <ProjectCard
-            imageSrc={magicWords.imageSrc}
-            name={magicWords.name}
-            summary={magicWords.summary}
-            year={magicWords.year}
-            client={magicWords.client}
-            projectUrl={magicWords.projectUrl}
-            videoUrl={magicWords.videoUrl} />
+          imageSrc={theViolaJourney.imageSrc}
+          name={theViolaJourney.name}
+          summary={theViolaJourney.summary}
+          year={theViolaJourney.year}
+          client={theViolaJourney.client}
+          projectUrl={theViolaJourney.projectUrl}
+          videoUrl={theViolaJourney.videoUrl} />
         </li>
         <li>
           <ProjectCard
-            imageSrc="/projects/midot-power-kids.jpg"
-            name="Midot Power Kids"
-            summary="Lorem Ipsum"
-            year="2022"
-            client="Tutorah Kids"
-            projectUrl=""
-            videoUrl="https://www.youtube.com/watch?v=-jO1qc-euZg" />
+          imageSrc={intorahsante.imageSrc}
+          name={intorahsante.name}
+          summary={intorahsante.summary}
+          year={intorahsante.year}
+          client={intorahsante.client}
+          projectUrl={intorahsante.projectUrl}
+          videoUrl={intorahsante.videoUrl} />
         </li>
         <li>
           <ProjectCard
-            imageSrc="/projects/milly-cohen-tales.jpg"
-            name="Cuentos de Mily Cohen"
-            summary="Lorem Ipsum"
-            year="2021"
-            client="Tutorah Kids"
-            projectUrl=""
-            videoUrl="https://www.youtube.com/watch?v=fYH0K5Wk6vE" />
+          imageSrc={nitzaStorytime.imageSrc}
+          name={nitzaStorytime.name}
+          summary={nitzaStorytime.summary}
+          year={nitzaStorytime.year}
+          client={nitzaStorytime.client}
+          projectUrl={nitzaStorytime.projectUrl}
+          videoUrl={nitzaStorytime.videoUrl} />
         </li>
       </ul>
 
@@ -193,23 +199,19 @@ export { getStaticPaths };
 
     <div class="cta">
       <a href={routes.portfolio.root({ locale })} class="btn">
-        Ir al portafolio →
+        {t('home.newest.btn')}
       </a>
     </div>
   </section>
 
   <section id="contact" class="section contact-cta">
     <div class="content">
-      <h4 class="text-title text-uppercase">Escríbeme</h4>
+      <h4 class="text-title text-uppercase">{t('contact.header.title')}</h4>
 
-      <p class="text-large">
-        Para crear contenido visual
-        <br />
-        que hará que tu marca destaque
-      </p>
+      <p class="text-large" set:html={t('home.cta.text')} />
 
-      <a href={routes.contact({ locale })} class="btn">
-        Contacta conmigo →
+           <a href={routes.contact({ locale })} class="btn">
+        {t('home.cta.btn')}
       </a>
     </div>
   </section>
