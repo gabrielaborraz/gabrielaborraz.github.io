@@ -4,7 +4,8 @@ const { slug } = Astro.params;
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
 
-import type { GetStaticTypePathsType, Locale, Project } from '../../../types';
+import type { GetStaticTypePathsType, Project } from '../../../types';
+import { DEFAULT_LOCALE, LOCALES } from '../../../constants';
 
 import { routes } from "../../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../../utils/i18n/utils";
@@ -17,9 +18,9 @@ const project: Project = projects[slug]({ locale });
 const title = project.seo.title;
 const description = project.seo.description;
 
+console.log(project)
 import Layout from "../../../layouts/Layout.astro";
 import Modal from '../../../components/Modal.astro';
-import { DEFAULT_LOCALE, LOCALES } from '../../../constants';
 
 export const getStaticPaths = async () => {
   const keys = Object.keys(projects || {});
@@ -157,7 +158,8 @@ export const getStaticPaths = async () => {
       <div class="description">
         <div class="synopsis">
           <p class="text-title text-uppercase">
-            {t('portfolio.project.synopsis')}
+            {project.section === 'multimedia' ?
+              t('portfolio.project.synopsis') : t('portfolio.project.description')}
           </p>
 
           <p class="text" set:html={project.synopsis}/>
@@ -173,7 +175,7 @@ export const getStaticPaths = async () => {
               <ul class="splide__list">
                 {project.slides.map((slide) => {
                   return <li class="splide__slide">
-                    <img src={slide}  />
+                    <img src={slide} />
                   </li>
                 })}
               </ul>
