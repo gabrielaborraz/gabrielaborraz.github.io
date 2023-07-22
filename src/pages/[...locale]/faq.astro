@@ -5,8 +5,8 @@ import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
-const title = t('faq.title');
-const description = t('faq.description');
+const title = t('faq.seo.title');
+const description = t('faq.seo.description');
 
 import Layout from "../../layouts/Layout.astro";
 
