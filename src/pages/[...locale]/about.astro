@@ -10,8 +10,8 @@ import YouTube from '../../components/icons/YouTube.astro';
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
-const title = t('about.title');
-const description = t('about.description');
+const title = t('about.seo.title');
+const description = t('about.seo.description');
 
 import Layout from "../../layouts/Layout.astro";
 
@@ -48,7 +48,7 @@ export { getStaticPaths };
         <div set:html={t('about.content2')} /> 
 
         <a href={routes.contact({ locale })} class="btn full-width">
-          {t('about.btn')}
+          {t('contact.header.title')}
         </a>
       </div>
     </div>
