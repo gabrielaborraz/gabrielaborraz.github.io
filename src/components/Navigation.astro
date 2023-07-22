@@ -1,6 +1,6 @@
 ---
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded';
+import MenuRounded from './icons/MenuRounded.astro';
+import CloseRounded from './icons/CloseRounded.astro';
 
 import { routes } from "../routes";
 import { getLocaleFromUrl, useTranslations } from "../utils/i18n/utils";
@@ -18,11 +18,11 @@ const activeClass = (item: string): string => {
 
 <nav id="nav" class="nav">
   <button id="nav-trigger" aria-controls="nav-list">
-    <MenuRoundedIcon client:only />
+    <MenuRounded />
   </button>
 
   <button id="nav-close">
-    <CloseRoundedIcon client:only />
+    <CloseRounded />
   </button>
 
   <ul id="nav-list">

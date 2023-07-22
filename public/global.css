@@ -839,6 +839,10 @@ a.btn {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: calc(var(--rythm) * 8);
+
+    & li {
+      margin: 0 auto;
+    }
   }
 
   & .project-card {
