@@ -806,6 +806,7 @@ a.btn {
     }
   }
 }
+
 .table-header {
   display: block;
   box-shadow: inset 0px -1px 0px 0px var(--grey-lavander-web);
@@ -824,37 +825,30 @@ a.btn {
  * ---------------------------------------------------------------------------*/
 /* Projects */
 .projects {
-  & .projects-cards {
-    flex: 1;
-    align-items: center;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: calc(var(--rythm) * 8);
-
-    & li {
-      margin: 0 auto;
-    }
+  & li {
+    margin: 0 auto;
   }
 
   & img {
     height: 180px;
-    display: block;
     border-top-right-radius: var(--border-radius);
     border-top-left-radius: var(--border-radius);
+  }
+
+  & a {
+    text-decoration: none;
+  }
+
+  & .projects-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: calc(var(--rythm) * 8);
   }
 
   & .project-card {
     display: flex;
     flex-direction: column;
     width: 320px;
-
-    & a {
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
   }
 
   & .project-thumbnail {
@@ -883,6 +877,10 @@ a.btn {
   & .project-link {
     display: block;
     margin: calc(var(--rythm) * 2) 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -896,20 +894,15 @@ a.btn {
 
 /* Clients */
 .clients {
+  & object {
+    height: 96px;
+  }
+
   & .clients-cards {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-  }
-
-  & li:not(:first-child) {
-    margin-top: calc(var(--rythm) * 12);
-  }
-
-  & object {
-    height: 96px;
+    gap: calc(var(--rythm) * 12);
   }
 }
 
@@ -917,10 +910,6 @@ a.btn {
   .clients {
     & .clients-cards {
       flex-direction: row;
-    }
-
-    & li:not(:first-child) {
-      margin-top: 0;
     }
 
     & object {
@@ -985,10 +974,6 @@ a.btn {
  *                                                                             |
  * ---------------------------------------------------------------------------*/
 .project {
-  & .content {
-    flex-direction: column;
-  }
-
   & .credits {
     display: flex;
     flex-direction: column;
@@ -1009,10 +994,10 @@ a.btn {
   }
 
   & .description {
-    margin-top: calc(var(--rythm) * 18);
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: calc(var(--rythm) * 12);
+    margin-top: calc(var(--rythm) * 18);
   }
 
   & .text {
@@ -1033,10 +1018,6 @@ a.btn {
 
 @media only screen and (min-width: 1169px) {
   .project {
-    & .credits {
-      flex-direction: row;
-    }
-
     & .collaborators {
       order: 1;
     }
