@@ -6,7 +6,10 @@ import { getLocaleFromUrl, useTranslations } from "../../../../utils/i18n/utils"
 import {
   projectMagicWords,
   projectMidotPowerKids,
-  projectMillyCohenTales
+  projectMillyCohenTales,
+  projectTheViolaJourney,
+  projectIntorahsante,
+  projectNitzaStorytime
 } from "../../../../utils/content/projects";
 
 import Layout from "../../../../layouts/Layout.astro";
@@ -22,6 +25,9 @@ const description = t('portfolio.multimedia.index.description');
 const magicWords = projectMagicWords({ locale });
 const midotPowerKids = projectMidotPowerKids({ locale });
 const millyCohenTales = projectMillyCohenTales({ locale });
+const theViolaJourney = projectTheViolaJourney({ locale });
+const intorahsante = projectIntorahsante({ locale });
+const nitzaStorytime = projectNitzaStorytime({ locale });
 
 export { getStaticPaths };
 ---
@@ -84,23 +90,33 @@ export { getStaticPaths };
         </li>
         <li>
           <ProjectCard
-            imageSrc={midotPowerKids.imageSrc}
-            name={midotPowerKids.name}
-            summary={midotPowerKids.summary}
-            year={midotPowerKids.year}
-            client={midotPowerKids.client}
-            projectUrl={midotPowerKids.projectUrl}
-            videoUrl={midotPowerKids.videoUrl} />
+            imageSrc={theViolaJourney.imageSrc}
+            name={theViolaJourney.name}
+            summary={theViolaJourney.summary}
+            year={theViolaJourney.year}
+            client={theViolaJourney.client}
+            projectUrl={theViolaJourney.projectUrl}
+            videoUrl={theViolaJourney.videoUrl} />
         </li>
         <li>
           <ProjectCard
-            imageSrc={midotPowerKids.imageSrc}
-            name={midotPowerKids.name}
-            summary={midotPowerKids.summary}
-            year={midotPowerKids.year}
-            client={midotPowerKids.client}
-            projectUrl={midotPowerKids.projectUrl}
-            videoUrl={midotPowerKids.videoUrl} />
+            imageSrc={intorahsante.imageSrc}
+            name={intorahsante.name}
+            summary={intorahsante.summary}
+            year={intorahsante.year}
+            client={intorahsante.client}
+            projectUrl={intorahsante.projectUrl}
+            videoUrl={intorahsante.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={nitzaStorytime.imageSrc}
+            name={nitzaStorytime.name}
+            summary={nitzaStorytime.summary}
+            year={nitzaStorytime.year}
+            client={nitzaStorytime.client}
+            projectUrl={nitzaStorytime.projectUrl}
+            videoUrl={nitzaStorytime.videoUrl} />
         </li>
       </ul>
     </div>

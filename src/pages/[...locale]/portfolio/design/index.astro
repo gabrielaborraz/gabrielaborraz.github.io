@@ -4,9 +4,8 @@ import { routes } from "../../../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../../../utils/i18n/utils";
 
 import {
-  projectMagicWords,
-  projectMidotPowerKids,
-  projectMillyCohenTales
+  projectHelloAPI,
+  projectIxkik,
 } from "../../../../utils/content/projects";
 
 import Layout from "../../../../layouts/Layout.astro";
@@ -19,10 +18,10 @@ const t = useTranslations(locale);
 const title = t('portfolio.design.index.title');
 const description = t('portfolio.design.index.description');
 
-const magicWords = projectMagicWords({ locale });
-const midotPowerKids = projectMidotPowerKids({ locale });
-const millyCohenTales = projectMillyCohenTales({ locale });
+const helloAPI = projectHelloAPI({ locale });
+const ixkik = projectIxkik({ locale });
 
+console.log(helloAPI);
 export { getStaticPaths };
 ---
 <script src="/src/scripts/projects.js"></script>
@@ -54,53 +53,23 @@ export { getStaticPaths };
       <ul class="projects-cards">
         <li>
           <ProjectCard
-            imageSrc={magicWords.imageSrc}
-            name={magicWords.name}
-            summary={magicWords.summary}
-            year={magicWords.year}
-            client={magicWords.client}
-            projectUrl={magicWords.projectUrl}
-            videoUrl={magicWords.videoUrl} />
+            imageSrc={helloAPI.imageSrc}
+            name={helloAPI.name}
+            summary={helloAPI.summary}
+            year={helloAPI.year}
+            client={helloAPI.client}
+            projectUrl={helloAPI.projectUrl}
+            videoUrl={helloAPI.videoUrl} />
         </li>
         <li>
           <ProjectCard
-            imageSrc={millyCohenTales.imageSrc}
-            name={millyCohenTales.name}
-            summary={millyCohenTales.summary}
-            year={millyCohenTales.year}
-            client={millyCohenTales.client}
-            projectUrl={millyCohenTales.projectUrl}
-            videoUrl={millyCohenTales.videoUrl} />
-        </li>
-        <li>
-          <ProjectCard
-            imageSrc={midotPowerKids.imageSrc}
-            name={midotPowerKids.name}
-            summary={midotPowerKids.summary}
-            year={midotPowerKids.year}
-            client={midotPowerKids.client}
-            projectUrl={midotPowerKids.projectUrl}
-            videoUrl={midotPowerKids.videoUrl} />
-        </li>
-        <li>
-          <ProjectCard
-            imageSrc={midotPowerKids.imageSrc}
-            name={midotPowerKids.name}
-            summary={midotPowerKids.summary}
-            year={midotPowerKids.year}
-            client={midotPowerKids.client}
-            projectUrl={midotPowerKids.projectUrl}
-            videoUrl={midotPowerKids.videoUrl} />
-        </li>
-        <li>
-          <ProjectCard
-            imageSrc={midotPowerKids.imageSrc}
-            name={midotPowerKids.name}
-            summary={midotPowerKids.summary}
-            year={midotPowerKids.year}
-            client={midotPowerKids.client}
-            projectUrl={midotPowerKids.projectUrl}
-            videoUrl={midotPowerKids.videoUrl} />
+            imageSrc={ixkik.imageSrc}
+            name={ixkik.name}
+            summary={ixkik.summary}
+            year={ixkik.year}
+            client={ixkik.client}
+            projectUrl={ixkik.projectUrl}
+            videoUrl={ixkik.videoUrl} />
         </li>
       </ul>
     </div>
