@@ -606,17 +606,21 @@ a.btn {
 /* ---------------------------------------------------------------------------*/
 
 /* ----------------------------------------------------------------------------,
- * Inputs                                                                      |
+ * Forms & inputs                                                              |
  * ---------------------------------------------------------------------------*/
-.input-container {
-  position: relative;
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--rythm) * 3);
+}
 
-  &:not(:first-child) {
-    margin-top: calc(var(--rythm) * 2)
-  }
+.input-container {
+  display: flex;
+  position: relative;
 }
 
 & .input, & .textarea {
+  flex: 1;
   padding-top: calc(var(--rythm) * 1);
   padding-right: calc(var(--rythm) * 2);
   padding-bottom: calc(var(--rythm) * 1);
@@ -1203,35 +1207,19 @@ a.btn {
  *                                                                             |
  * ---------------------------------------------------------------------------*/
 .contact {
-  & .content {
-    flex-direction: column;
-  }
-
   & .alert {
     margin-bottom: calc(var(--rythm) * 6);
-  }
-
-  & .form {
-    flex: 1;
-  }
-
-  & .input-container {
-    display: flex;
-  }
-
-  & .input, .textarea {
-    flex: 1;
   }
 }
 
 @media only screen and (min-width: 1169px) {
   .contact {
     & .alert {
-      width: calc(var(--rythm) * 58);
+      width: 50%;
     }
 
     & .form {
-      width: calc(var(--rythm) * 65);
+      width: 50%;
     }
   }
 }
