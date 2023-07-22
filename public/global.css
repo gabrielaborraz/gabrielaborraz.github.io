@@ -242,8 +242,8 @@ object {
   text-transform: uppercase;
 }
 
-.text-default-color {
-  color: var(--black-space-cadet);
+.text-header-color {
+  color: var(--black-oxford-blue);
 }
 
 .text-highlight-color {
@@ -485,10 +485,6 @@ object {
   &:first-child {
     margin-top: 0;
   }
-
-  & .title + .content {
-    margin-top: calc(var(--rythm) * 8);
-  }
 }
 
 @media only screen and (min-width: 1169px) {
@@ -497,6 +493,15 @@ object {
     margin-bottom: calc(var(--rythm) * 16);
   }
 }
+
+& .title {
+  margin-bottom: calc(var(--rythm) * 8);
+}
+
+& .cta {
+  margin-top: calc(var(--rythm) * 8);
+}
+
 /* ---------------------------------------------------------------------------*/
 
 /* ----------------------------------------------------------------------------,
@@ -557,9 +562,9 @@ object {
  * ---------------------------------------------------------------------------*/
 .btn {
   display: inline-block;
+  padding: calc(var(--rythm) * 1) calc(var(--rythm) * 2);
   text-decoration: none;
   text-align: center;
-  padding: calc(var(--rythm) * 1) calc(var(--rythm) * 2);
   font-size: var(--font-size-subtitle);
   font-weight: 700;
   color: var(--white);
@@ -587,18 +592,14 @@ object {
     background-color: var(--grey-ghost-white);
     box-shadow: inset 0px 0px 0px 1px var(--grey-lavander-web);
   }
-}
 
-a.btn {
-  &.full-width {
-    display: block;
-  }
-}
-
-button.btn {
   &.full-width {
     width: 100%;
   }
+}
+
+a.btn {
+  display: block;
 }
 /* ---------------------------------------------------------------------------*/
 
@@ -1121,30 +1122,15 @@ button.btn {
     gap: calc(var(--rythm) * 8);
   }
 
-  & .title {
-    margin-bottom: calc(var(--rythm) * 4);
-  }
-
-  & .text-large {
-    color: var(--black-oxford-blue);
-  }
-
-  & .about-sn {
+  & .about-social-networks {
     display: flex;
+    gap: calc(var(--rythm) * 4);
     margin-top: calc(var(--rythm) * 4);
 
     & a {
       display: flex;
       text-decoration: none;
-
-      &:not(:first-child) {
-        margin-left: calc(var(--rythm) * 4);
-      }
     }
-  }
-
-  & .btn {
-    margin-top: calc(var(--rythm) * 4);
   }
 }
 
