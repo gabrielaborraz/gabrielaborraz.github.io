@@ -123,9 +123,6 @@
   outline: none;
 }
 
-html, body {
-}
-
 html {
   scroll-behavior: smooth;
   min-height: 100%;
@@ -151,8 +148,6 @@ h2, h3, h4, h5, h6 {
 
 p {
   margin: 0;
-  margin-block-start: auto;
-  margin-block-end: auto;
 }
 
 ul, ol {
@@ -189,66 +184,70 @@ object {
  * Text styling                                                                |
  * ---------------------------------------------------------------------------*/
 .text-xlarge {
-  font-family: var(--font-family-heading);
-  font-weight: 800;
-  font-size: var(--font-size-xlarge-mobile);
   line-height: var(--line-height-xlarge-mobile);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xlarge-mobile);
+  font-weight: 800;
   color: var(--black-oxford-blue);
-
-  & span {
-    color: var(--blue-neon);
-  }
 }
 
 .text-large {
-  font-family: var(--font-family-heading);
-  font-weight: 800;
-  font-size: var(--font-size-large-mobile);
   line-height: var(--line-height-large-mobile);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-large-mobile);
+  font-weight: 800;
   color: var(--blue-neon);
 }
 
 .text-title {
-  font-family: var(--font-family-heading);
-  font-weight: 700;
-  font-size: var(--font-size-title-mobile);
   line-height: var(--line-height-title-mobile);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-title-mobile);
+  font-weight: 700;
   color: var(--black-oxford-blue);
 }
 
 @media only screen and (min-width: 1169px) {
   .text-xlarge {
-    font-size: var(--font-size-xlarge-desktop);
     line-height: var(--line-height-xlarge-desktop);
+    font-size: var(--font-size-xlarge-desktop);
   }
 
   .text-large {
-    font-size: var(--font-size-large-desktop);
     line-height: var(--line-height-large-desktop);
+    font-size: var(--font-size-large-desktop);
   }
 
   .text-title {
-    font-size: var(--font-size-title-desktop);
     line-height: var(--line-height-title-desktop);
+    font-size: var(--font-size-title-desktop);
   }
 }
 
 .text-subtitle {
-  font-family: var(--font-family-heading);
-  font-weight: 700;
-  font-size: var(--font-size-subtitle);
   line-height: var(--line-height-subtitle);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-subtitle);
+  font-weight: 700;
 }
 
 .text-small {
-  font-family: var(--font-family-body);
-  font-weight: normal;
-  font-size: var(--font-size-small);
   line-height: var(--line-height-small);
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-small);
+  font-weight: normal;
 }
 
 .text-uppercase {
   text-transform: uppercase;
+}
+
+.text-default-color {
+  color: var(--black-space-cadet);
+}
+
+.text-highlight-color {
+  color: var(--blue-neon);
 }
 /* ---------------------------------------------------------------------------*/
 

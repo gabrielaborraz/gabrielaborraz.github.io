@@ -4,7 +4,7 @@ export const home = {
     "home.description":
       "Bienvenidos al sitio web de Gabriela Borraz, donde las ideas creativas cobran vida para comunicar, inspirar y conectar",
     "home.hero":
-      "Las ideas cobran vida <span>para comunicar / inspirar / conectar</span>",
+      "Las ideas cobran vida <span class='text-highlight-color'>para comunicar / inspirar / conectar</span>",
     "home.featured.title": "Lo más destacado",
     "home.featured.subtitle": "Proyectos de animación",
     "home.show-reel.title": "Video",
@@ -21,7 +21,7 @@ export const home = {
     "home.description":
       "Welcome to Gabriela Borraz's website, where creative ideas come to life to communicate, inspire and connect",
     "home.hero":
-      "Creative ideas come to life <span>to communicate / inspire / connect</span>",
+      "Creative ideas come to life <span class='text-highlight-color'>to communicate / inspire / connect</span>",
     "home.featured.title": "The most outstanding",
     "home.featured.subtitle": "Animation projects",
     "home.show-reel.title": "Video",

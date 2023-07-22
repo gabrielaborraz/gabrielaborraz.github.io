@@ -4,7 +4,7 @@ export const portfolio = {
     "portfolio.index.description":
       "Explora mi portafolio de proyectos y descubre cómo puedo ayudarte a producir una amplia variedad de videos y dar vida a tus ideas",
     "portfolio.hero":
-      "La magia de los videos animados <span>comienza con una idea creativa</span>",
+      "La magia de los videos animados <span class='text-highlight-color'>comienza con una idea creativa</span>",
     "portfolio.multimedia.title": "Explora",
     "portfolio.multimedia.subtitle": "Mi portafolio multimedia",
     "portfolio.design.title": "Descubre",
@@ -24,7 +24,7 @@ export const portfolio = {
     "portfolio.index.description":
       "Explore my portfolio of projects and discover how I can help you to produce a wide variety of videos and bring your ideas to life",
     "portfolio.hero":
-      "The magic of animated videos<span>starts with a creative idea</span>",
+      "The magic of animated videos<span class='text-highlight-color'>starts with a creative idea</span>",
     "portfolio.multimedia.title": "Explore",
     "portfolio.multimedia.subtitle": "My multimedia portfolio",
     "portfolio.design.title": "Discover",
