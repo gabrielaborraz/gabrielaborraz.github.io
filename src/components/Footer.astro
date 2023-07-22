@@ -9,18 +9,18 @@ const year = new Date().getFullYear();
 <footer class="footer">
   <div class="content">
     <div>
-      <p class="text-title text-uppercase">Menú</p>
+      <p class="text-title text-uppercase">{t('footer.menu')}</p>
 
       <ul>
-        <li><a href={routes.root({ locale })}>Inicio</a></li>
-        <li><a href={routes.about({ locale })}>Acerca de</a></li>
-        <li><a href={routes.portfolio.root({ locale })}>Portafolio</a></li>
+        <li><a href={routes.root({ locale })}>{t('footer.home')}</a></li>
+        <li><a href={routes.about({ locale })}>{t('footer.about')}</a></li>
+        <li><a href={routes.portfolio.root({ locale })}>{t('footer.portfolio')}</a></li>
         <!-- li><a href={routes.blog.root({ locale })}>Blog</a></li-->
       </ul>
     </div>
 
     <div>
-      <p class="text-title text-uppercase">Sígueme</p>
+      <p class="text-title text-uppercase">{t('footer.follow')}</p>
 
       <ul>
         <li><a target="_blank" href="https://www.instagram.com/gabrielaborraz/">Instagram</a></li>
@@ -31,16 +31,16 @@ const year = new Date().getFullYear();
     </div>
 
     <div>
-      <p class="text-title text-uppercase">Te respondo</p>
+      <p class="text-title text-uppercase">{t('footer.answer')}</p>
 
       <ul>
-        <li><a href={routes.contact({ locale })}>Contacto</a></li>
+        <li><a href={routes.contact({ locale })}>{t('footer.contact')}</a></li>
         <li><a href={routes.faq({ locale })}>FAQ</a></li>
       </ul>
     </div>
 
     <div>
-      <p class="text-title text-uppercase">Idioma</p>
+      <p class="text-title text-uppercase">{t('footer.language')}</p>
 
       <ul>
         <li><a href={routes.root({ locale: 'es' })}>Español</a></li>
@@ -49,7 +49,7 @@ const year = new Date().getFullYear();
     </div>
 
     <div>
-      <p class="text-title text-uppercase">Suscríbete</p>
+      <p class="text-title text-uppercase">{t('footer.subscribe')}</p>
 
       <div class="alert alert-success" aria-hidden="true">
         ¡Registrado!
@@ -59,7 +59,7 @@ const year = new Date().getFullYear();
         Error :(
       </div>
 
-      <form id="newsletter-form" class="form" data-sending="Enviando..." data-send="Enviar →">
+      <form id="newsletter-form" class="form" data-sending={t('contact.data-sendig')} data-send={t('contact.btn')}>
         <div class="input-container input-email">
           <input
             required
