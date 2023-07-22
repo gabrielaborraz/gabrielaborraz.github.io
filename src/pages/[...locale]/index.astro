@@ -1,5 +1,5 @@
 ---
-import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
+import PlayCircleOutlineRounded from '../../components/icons/PlayCircleOutlineRounded.astro';
 
 import { getStaticPaths } from "../../utils/staticPaths";
 import { routes } from "../../routes";
@@ -105,7 +105,7 @@ export { getStaticPaths };
         <img src="/show-reel/2023-cover.jpg" />
 
         <div class="overlay video-overlay">
-          <PlayCircleOutlineRoundedIcon client:only />
+          <PlayCircleOutlineRounded />
         </div>
       </button>
     </div>

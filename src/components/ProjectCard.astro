@@ -1,6 +1,6 @@
 ---
-import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
-import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
+import PlayCircleOutlineRounded from './icons/PlayCircleOutlineRounded.astro';
+import ImageOutlined from './icons/ImageOutlined.astro';
 
 const { imageSrc, name, summary, year, client, projectUrl } = Astro.props;
 const videoUrl = Astro.props.videoUrl;
@@ -12,7 +12,7 @@ const videoUrl = Astro.props.videoUrl;
       <img src={imageSrc} />
 
       <div class="overlay project-overlay">
-        <PlayCircleOutlineRoundedIcon client:only />
+        <PlayCircleOutlineRounded />
       </div>
     </button>}
 
@@ -21,7 +21,7 @@ const videoUrl = Astro.props.videoUrl;
       <img src={imageSrc} />
 
       <div class="overlay project-overlay">
-        <ImageOutlinedIcon client:only />
+        <ImageOutlined />
       </div>
     </a>}
 
