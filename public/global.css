@@ -499,9 +499,11 @@ object {
 }
 
 & .cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: calc(var(--rythm) * 8);
 }
-
 /* ---------------------------------------------------------------------------*/
 
 /* ----------------------------------------------------------------------------,
@@ -926,14 +928,6 @@ a.btn {
       grid-template-columns: repeat(3, 1fr);
     }
   }
-}
-
-/* Projects CTA */
-.cta {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: calc(var(--rythm) * 8);
 }
 
 /* Clients */
