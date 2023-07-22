@@ -165,7 +165,7 @@ export const getStaticPaths = async () => {
           <p class="text" set:html={project.synopsis}/>
 
           <a href={project.externalLink} class="btn full-width" target="_blank">
-            {t('portfolio.external-btn')}
+            {t(`portfolio.external-btn.${project.section}`)}
           </a>
         </div>
 
