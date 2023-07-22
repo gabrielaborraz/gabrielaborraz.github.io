@@ -19,12 +19,15 @@ export const portfolio = {
     /***********BUTTONS AND BREADCRUMB***********/
     "portfolio.project.synopsis": "Sinopsis",
     "portfolio.project.description": "Descripción",
+    "portfolio.btn.multimedia": "Ver todos los proyectos multimedia →",
+    "portfolio.btn.design": "Ver todos los proyectos de diseño →",
     "breadcrumb.home": "Inicio",
     "breadcrumb.portfolio": "Portafolio",
     "breadcrumb.multimedia": "Multimedia",
     "breadcrumb.design": "Diseño",
     "portfolio.external-btn.multimedia": "Ver multimedia →",
     "portfolio.external-btn.design": "Ver en Behance →",
+
     /***********CREDIT TABLE***********/
     "portfolio.table-cell.year": "Año",
     "portfolio.table-cell.client": "Cliente",
@@ -52,6 +55,8 @@ export const portfolio = {
     /***********BUTTONS AND BREADCRUMB***********/
     "portfolio.project.synopsis": "Synopsis",
     "portfolio.project.description": "Description",
+    "portfolio.btn.multimedia": "View all multimedia projects →",
+    "portfolio.btn.design": "View all design projects →",
     "breadcrumb.home": "Home",
     "breadcrumb.portfolio": "Portfolio",
     "breadcrumb.multimedia": "Multimedia",

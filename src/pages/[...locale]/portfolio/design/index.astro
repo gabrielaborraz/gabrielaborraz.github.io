@@ -30,16 +30,16 @@ export { getStaticPaths };
     <ol class="breadcrumb">
       <li>
         <a href={routes.root({ locale })} class="text-subtitle">
-          Inicio
+          {t('breadcrumb.home')}
         </a>
       </li>
       <li>
         <a href={routes.portfolio.root({ locale })} class="text-subtitle">
-          Portafolio
+          {t('breadcrumb.portfolio')}
         </a>
       </li>
       <li>
-        <span>Diseño</span>
+        <span>{t('breadcrumb.design')}</span>
       </li>
     </ol>
 
