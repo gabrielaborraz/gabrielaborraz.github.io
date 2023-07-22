@@ -1,6 +1,4 @@
 ---
-// import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
-// import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import PlayCircleOutlineRoundedIcon from '@mui/icons-material/PlayCircleOutlineRounded';
 
 import { getStaticPaths } from "../../utils/staticPaths";
@@ -17,7 +15,6 @@ import {
 } from '../../utils/content/projects';
 
 const locale = getLocaleFromUrl(Astro.url);
-
 const t = useTranslations(locale);
 
 const title = t('home.seo.title');
@@ -94,11 +91,6 @@ export { getStaticPaths };
             videoUrl={midotPowerKids.videoUrl} />
         </li>
       </ul>
-
-      <!--div>
-        <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
-        <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
-      </div-->
     </div>
   </section>
 
@@ -143,11 +135,6 @@ export { getStaticPaths };
           </figure>
         </li>
       </ul>
-
-      <!--div>
-        <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
-        <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
-      </div-->
     </div>
   </section>
 
@@ -191,16 +178,11 @@ export { getStaticPaths };
         </li>
       </ul>
 
-      <!--div>
-        <button class="projects-prev"><ArrowBackIosNewRoundedIcon /></button>
-        <button class="projects-next"><ArrowForwardIosRoundedIcon /></button>
-      </div-->
-    </div>
-
-    <div class="cta">
-      <a href={routes.portfolio.root({ locale })} class="btn">
-        {t('home.newest.btn')}
-      </a>
+      <div class="cta">
+        <a href={routes.portfolio.root({ locale })} class="btn">
+          {t('home.newest.btn')}
+        </a>
+      </div>
     </div>
   </section>
 

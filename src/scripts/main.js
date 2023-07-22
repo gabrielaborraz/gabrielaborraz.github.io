@@ -1,24 +1,27 @@
 import { DESKTOP_WIDTH } from "../constants";
 
-const handleToggleMenu = (element) => {
+
+const handleToggleMenu = (nav) => {
   if(window.innerWidth < DESKTOP_WIDTH) return;
 
-  element.classList.remove('nav-mobile-open');
+  nav.classList.remove('nav-mobile-open');
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Navigation
   const nav = document.getElementById('nav');
-  const burgerButton = document.getElementById('nav-burger');
+  const triggerButton = document.getElementById('nav-trigger');
   const closeButton = document.getElementById('nav-close');
 
-  window.addEventListener('resize', () => { handleToggleMenu(nav) });
+  window.addEventListener('resize', () => {
+    handleToggleMenu(nav);
+  });
 
-  burgerButton.addEventListener('click', () => {
+  triggerButton.addEventListener('click', () => {
     nav.classList.add('nav-mobile-open');
   });
 
   closeButton.addEventListener('click', () => {
     nav.classList.remove('nav-mobile-open');
   });
+
 });

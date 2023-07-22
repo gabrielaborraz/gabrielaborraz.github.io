@@ -16,14 +16,16 @@ const activeClass = (item: string): string => {
 }
 ---
 
-<nav id="nav">
-  <ul>
-    <li id="nav-burger">
-      <button><MenuRoundedIcon /></button>
-    </li>
-    <li id="nav-close">
-      <button><CloseRoundedIcon /></button>
-    </li>
+<nav id="nav" class="nav">
+  <button id="nav-trigger" aria-controls="nav-list">
+    <MenuRoundedIcon />
+  </button>
+
+  <button id="nav-close">
+    <CloseRoundedIcon />
+  </button>
+
+  <ul id="nav-list">
     <li class={`nav-item ${activeClass('root')}`}>
       <a href={routes.root({ locale })}>{t('navigation.home')}</a>
     </li>
