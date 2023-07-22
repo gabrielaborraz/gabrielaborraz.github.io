@@ -5,8 +5,8 @@ import { getLocaleFromUrl, useTranslations } from "../../utils/i18n/utils";
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
-const title = t('contact.title');
-const description = t('contact.description');
+const title = t('contact.seo.title');
+const description = t('contact.seo.description');
 
 import Layout from "../../layouts/Layout.astro";
 
@@ -17,22 +17,20 @@ export { getStaticPaths };
 <Layout title={title} description={description} active="contact">
   <section id="contact" class="section contact">
     <div class="title">
-      <p class="text-title text-uppercase">{t('home.contact.title')}</p>
-      <h4 class="text-large">{t('home.contact.subtitle')}</h4>
+      <p class="text-title text-uppercase">{t('contact.header.title')}</p>
+      <h4 class="text-large">{t('contact.header.subtitle')}</h4>
     </div>
     
     <div class="content">
       <div class="alert alert-success" aria-hidden="true">
-        <p>¡Gracias! Tu mensaje ha sido enviado con éxito.</p>
-        <p>Nos pondremos en contacto contigo muy pronto.</p>
+        <p set:html={t('contact.alert-success')} />
       </div>
 
       <div class="alert alert-error" aria-hidden="true">
-        <p>Ha habido un error al enviar el formulario :(</p>
-        <p>Por favor, inténtalo de nuevo más tarde.</p>
+        <p set:html={t('contact.alert-error')} />
       </div>
 
-      <form id="contact-form" class="form" data-sending="Enviando..." data-send="Enviar →">
+      <form id="contact-form" class="form" data-sending="Enviando..." data-send={t('contact.btn')}>
         <div class="input-container input-name">
           <input
             required
