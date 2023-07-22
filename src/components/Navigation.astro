@@ -18,11 +18,11 @@ const activeClass = (item: string): string => {
 
 <nav id="nav" class="nav">
   <button id="nav-trigger" aria-controls="nav-list">
-    <MenuRoundedIcon />
+    <MenuRoundedIcon client:only />
   </button>
 
   <button id="nav-close">
-    <CloseRoundedIcon />
+    <CloseRoundedIcon client:only />
   </button>
 
   <ul id="nav-list">

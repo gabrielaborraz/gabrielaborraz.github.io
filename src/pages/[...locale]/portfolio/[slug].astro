@@ -141,7 +141,7 @@ export const getStaticPaths = async () => {
               <img src={project.imageSrc} />
 
               <div class="overlay video-overlay">
-                <PlayCircleOutlineRoundedIcon />
+                <PlayCircleOutlineRoundedIcon client:only />
               </div>
             </button>
           </div>}
@@ -182,10 +182,10 @@ export const getStaticPaths = async () => {
 
             <div class="splide__arrows">
               <button class="splide__arrow splide__arrow--prev">
-                <ArrowForwardIosRoundedIcon />
+                <ArrowForwardIosRoundedIcon client:only />
               </button>
               <button class="splide__arrow splide__arrow--next">
-                <ArrowForwardIosRoundedIcon />
+                <ArrowForwardIosRoundedIcon client:only />
               </button>
             </div>
           </div>}
