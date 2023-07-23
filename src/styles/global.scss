@@ -676,7 +676,6 @@ a.btn {
  * Modals                                                                      |
  * ---------------------------------------------------------------------------*/
 #modal-container {
-  width: 100%;
   position: fixed;
   inset: 0 0 0 0;
   background-color: rgba(28, 33, 60, 0.9); /* space-cadet */
@@ -690,10 +689,10 @@ a.btn {
   }
 
   .modal {
-    overflow-x: auto;
     display: flex;
     flex-direction: column;
     margin: calc(var(--rythm) * 2);
+    overflow-x: auto;
   }
 
   .modal-header, .modal-footer {
@@ -744,6 +743,12 @@ a.btn {
         fill: var(--blue-neon);
       }
     }
+  }
+}
+
+@media only screen and (min-width: 1169px) {
+  #modal-container {
+    width: 100%;
   }
 }
 /* ---------------------------------------------------------------------------*/
