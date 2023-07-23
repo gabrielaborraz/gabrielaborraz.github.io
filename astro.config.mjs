@@ -3,5 +3,5 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
   integrations: [],
-  site: 'https://gabrielaborraz.github.io'
+  site: 'https://gabrielaborraz.com'
 });
