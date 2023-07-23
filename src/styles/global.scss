@@ -758,6 +758,7 @@ a.btn {
  * Alerts                                                                      |
  * ---------------------------------------------------------------------------*/
 .alert {
+  box-sizing: border-box;
   padding: calc(var(--rythm) * 1);
   padding-left: calc(var(--rythm) * 6);
   position: relative;
