@@ -842,6 +842,10 @@ a.btn {
     text-decoration: none;
   }
 
+  .breadcrumb {
+    display: none;
+  }
+
   .projects-cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -893,6 +897,10 @@ a.btn {
 
 @media only screen and (min-width: 1169px) {
   .projects {
+    .breadcrumb {
+      display: flex;
+    }
+
     .projects-cards {
       grid-template-columns: repeat(3, 1fr);
     }
@@ -995,6 +1003,18 @@ iframe.video-thumbnail {
  *                                                                             |
  * ---------------------------------------------------------------------------*/
 .project {
+  .breadcrumb {
+    li:nth-child(1), li:nth-child(2) {
+      display: none;
+    }
+
+    li:not(:last-of-type) {
+      &::before {
+        content: none;
+      }
+    }
+  }
+
   .credits {
     display: flex;
     flex-direction: column;
@@ -1039,6 +1059,18 @@ iframe.video-thumbnail {
 
 @media only screen and (min-width: 1169px) {
   .project {
+    .breadcrumb {
+      li:nth-child(1), li:nth-child(2) {
+        display: block;
+      }
+
+      li:not(:first-of-type) {
+        &::before {
+          content: '/';
+        }
+      }
+    }
+
     .credits {
       flex-direction: row;
     }
