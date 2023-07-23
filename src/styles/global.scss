@@ -567,6 +567,7 @@ object {
 
 a.btn {
   &.full-width {
+    box-sizing: border-box;
     display: block;
   }
 }
