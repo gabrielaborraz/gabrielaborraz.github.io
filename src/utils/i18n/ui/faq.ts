@@ -8,7 +8,7 @@ export const faq = {
     "faq.header.subtitle": "A preguntas frecuentes",
     "faq.question1": "¿Cuánto cuesta un vídeo?",
     "faq.question2": "¿Qué tipo de vídeos puedes crear?",
-    "faq.question3": "¿Cómo funciona?",
+    "faq.question3": "¿Cómo se lleva a cabo el proceso de trabajo?",
     "faq.question4": "¿Ofreces descuentos para organizaciones sin ánimo de lucro?",
     "faq.answer1": `Depende de la complejidad, la cantidad de videos a realizar, la duración y el plazo de entrega. Estos son algunos de los factores que influyen en el precio. Cuéntame cuál es tu <a href="${routes.contact(
       { locale: "es" })}">proyecto/presupuesto</a> y te ayudaré a encontrar una solución que se ajuste a tus objetivos.`,
@@ -23,7 +23,7 @@ export const faq = {
     "faq.header.subtitle": "Frequently Asked Questions",
     "faq.question1": "How much does a video cost?",
     "faq.question2": "What types of videos can you create?",
-    "faq.question3": "How does it work?",
+    "faq.question3": "How is the work process carried out?",
     "faq.question4": "Do you offer discounts for non-profit organizations?",
     "faq.answer1": `It depends on the complexity, the number of videos to be produced, the duration and the delivery timeline. These are some of the factors that influence the price. Let me know your <a href="${routes.contact(
       { locale: "en" })}">project/budget</a> and I will help you find a solution that fits your goals.`,
