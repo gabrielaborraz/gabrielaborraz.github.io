@@ -10,7 +10,7 @@ export const projects = {
       "¡Prepárate para reír y aprender! Cada episodio está lleno de diversión, amistad y valiosas lecciones.",
     "projects.magic-words.category": "Serie animada infantil",
     "projects.magic-words.synopsis":
-      "Bajo la brillante Dirección de Arte de Daniel Corkidi, se crearon un total de 24 episodios que se distribuyeron en 2 temporadas. Esta serie animada dio vida a los entrañables personajes de Livy, Summy y Koby, quienes comparten inolvidables momentos con su abuela y que a través de sus vivencias, descubrirán el poder que tiene una sola palabra para cambiar el mundo.",
+      "Bajo la brillante Dirección de Arte de Daniel Corkidi, se crearon un total de 24 episodios que se distribuyeron en 2 temporadas. <br/> Esta serie animada dio vida a los entrañables personajes de Livy, Summy y Koby, quienes comparten inolvidables momentos con su abuela y que a través de sus vivencias, descubrirán el poder que tiene una sola palabra para cambiar el mundo.",
     // Midot Power Kids: midot-power-kids
     "projects.midot-power-kids.seo.title":
       "Midot Power Kids | Serie animada infantil",
@@ -69,11 +69,10 @@ export const projects = {
     // IXKIK: ixkik
     "projects.ixkik.seo.title": "IXKIK | Diseño de logo",
     "projects.ixkik.seo.description": "Diseño de logo para IXKIK",
-    "projects.ixkik.name": "IXKIK Arte Textil marcando nuestra identidad",
-    "projects.ixkik.summary":
-      "IXKIK es una marca impregnada de la fuerza y esencia de la cultura mexicana.",
+    "projects.ixkik.name": "IXKIK",
+    "projects.ixkik.summary": "Arte Textil marcando nuestra identidad, IXKIK es una marca impregnada de la fuerza y esencia de la cultura mexicana.",
     "projects.ixkik.category": "Diseño de logo",
-    "projects.ixkik.synopsis": "Lorem Ipsum",
+    "projects.ixkik.synopsis": "Marca mexicana concebida con la fuerza y esencia de la cultura mexicana. IXKIK comparte con el mundo sus textiles artesanales, que reflejan la belleza y talento de los artesanos mexicanos.",
     // Hello API: hello-API
     "projects.hello-api.seo.title": "Hello API | Diseño de logo",
     "projects.hello-api.seo.description": "Diseño de logo para Hello API",
@@ -149,11 +148,10 @@ export const projects = {
     // IXKIK: ixkik
     "projects.ixkik.seo.title": "IXKIK | Logo design",
     "projects.ixkik.seo.description": "Logo design for IXKIK",
-    "projects.ixkik.name": "IXKIK Textile art shaping our identity",
-    "projects.ixkik.summary":
-      "IXKIK is a brand infused with the strength and essence of Mexican culture.",
+    "projects.ixkik.name": "IXKIK",
+    "projects.ixkik.summary": "Textile art shaping our identity, IXKIK is a brand infused with the strength and essence of Mexican culture.",
     "projects.ixkik.category": "Logo design",
-    "projects.ixkik.synopsis": "Lorem Ipsum",
+    "projects.ixkik.synopsis": "Mexican brand conceived with the strength and essence of Mexican culture. IXKIK shares with the world its artisanal textiles, which reflect the beauty and talent of Mexican artisans.",
     // Hello API: hello-api
     "projects.hello-api.seo.title": "Hello API | Logo design",
     "projects.hello-api.seo.description": "Logo design for Hello API",

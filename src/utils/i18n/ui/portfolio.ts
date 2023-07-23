@@ -1,6 +1,6 @@
 export const portfolio = {
   es: {
-    "portfolio.seo.title": "Portafolio de Proyectos",
+    "portfolio.seo.title": "Portafolio de Proyectos | Gabriela Borraz",
     "portfolio.seo.description":
       "Explora mi portafolio de proyectos y descubre cómo puedo ayudarte a producir una amplia variedad de videos y dar vida a tus ideas",
     "portfolio.hero":
@@ -10,21 +10,24 @@ export const portfolio = {
     "portfolio.design.title": "Descubre",
     "portfolio.design.subtitle": "Mi portafolio de diseño",
     /***********DESIGN***********/
-    "porfolio.design.seo.title": "Portafolio de diseño",
+    "porfolio.design.seo.title": "Portafolio de diseño | Gabriela Borraz",
     "porfolio.design.seo.description": "Explora mis proyectos de diseño",
     /***********MULTIMEDIA***********/
-    "portfolio.multimedia.seo.title": "Portafolio multimedia",
+    "portfolio.multimedia.seo.title": "Portafolio multimedia | Gabriela Borraz",
     "portfolio.multimedia.seo.description":
       "Descubre la magia de los videos animados",
     /***********BUTTONS AND BREADCRUMB***********/
     "portfolio.project.synopsis": "Sinopsis",
     "portfolio.project.description": "Descripción",
+    "portfolio.btn.multimedia": "Ver todos los proyectos multimedia →",
+    "portfolio.btn.design": "Ver todos los proyectos de diseño →",
     "breadcrumb.home": "Inicio",
     "breadcrumb.portfolio": "Portafolio",
     "breadcrumb.multimedia": "Multimedia",
     "breadcrumb.design": "Diseño",
     "portfolio.external-btn.multimedia": "Ver multimedia →",
     "portfolio.external-btn.design": "Ver en Behance →",
+
     /***********CREDIT TABLE***********/
     "portfolio.table-cell.year": "Año",
     "portfolio.table-cell.client": "Cliente",
@@ -33,7 +36,7 @@ export const portfolio = {
     "portfolio.table-cell.music": "Música",
   },
   en: {
-    "portfolio.seo.title": "Project Portfolio ",
+    "portfolio.seo.title": "Project Portfolio | Gabriela Borraz",
     "portfolio.seo.description":
       "Explore my portfolio of projects and discover how I can help you to produce a wide variety of videos and bring your ideas to life",
     "portfolio.hero":
@@ -43,15 +46,17 @@ export const portfolio = {
     "portfolio.design.title": "Discover",
     "portfolio.design.subtitle": "My design portfolio",
     /***********DESIGN***********/
-    "porfolio.design.seo.title": "Design Portfolio",
+    "porfolio.design.seo.title": "Design Portfolio | Gabriela Borraz",
     "porfolio.design.seo.description": "Explore my design projects",
     /***********MULTIMEDIA***********/
-    "portfolio.multimedia.seo.title": "Multimedia Portfolio",
+    "portfolio.multimedia.seo.title": "Multimedia Portfolio | Gabriela Borraz",
     "portfolio.multimedia.seo.description":
       "Discover the magic of animated videos",
     /***********BUTTONS AND BREADCRUMB***********/
     "portfolio.project.synopsis": "Synopsis",
     "portfolio.project.description": "Description",
+    "portfolio.btn.multimedia": "View all multimedia projects →",
+    "portfolio.btn.design": "View all design projects →",
     "breadcrumb.home": "Home",
     "breadcrumb.portfolio": "Portfolio",
     "breadcrumb.multimedia": "Multimedia",

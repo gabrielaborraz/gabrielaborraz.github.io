@@ -190,7 +190,7 @@ export const projectHelloAPI = (args?: { locale?: Locale }) => {
     year: "2023",
     client: "Hello API",
     section: "design",
-    externalLink: "",
+    externalLink: "https://www.behance.net/GabrielaBorraz",
     slides: [
        "/projects/hello-api/slide_1.jpg",
       "/projects/hello-api/slide_2.jpg"
@@ -209,7 +209,7 @@ export const projectIxkik = (args?: { locale?: Locale }) => {
     year: "2017",
     client: " Creative Lab",
     section: "design",
-    externalLink: "",
+    externalLink: "https://www.behance.net/GabrielaBorraz",
     slides: [
       "/projects/ixkik/slide_1.jpg",
       "/projects/ixkik/slide_2.jpg"

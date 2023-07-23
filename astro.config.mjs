@@ -14,5 +14,5 @@ export default defineConfig({
       },
     })
   ],
-  site: 'https://gabrielaborraz.github.io'
+  site: 'https://gabrielaborraz.com'
 });

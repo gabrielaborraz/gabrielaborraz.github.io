@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   triggerButton.addEventListener('click', () => {
+    console.log('hola')
     nav.classList.add('nav-mobile-open');
   });
 

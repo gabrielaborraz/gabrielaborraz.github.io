@@ -22,8 +22,8 @@ import ExpandMore from '../../../components/icons/ExpandMore.astro';
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
-const title = t('portfolio.index.title');
-const description = t('portfolio.index.description');
+const title = t('portfolio.seo.title');
+const description = t('portfolio.seo.description');
 
 const magicWords = projectMagicWords({ locale });
 const midotPowerKids = projectMidotPowerKids({ locale });
@@ -31,7 +31,6 @@ const millyCohenTales = projectMillyCohenTales({ locale });
 const theViolaJourney = projectTheViolaJourney({ locale });
 const intorahsante = projectIntorahsante({ locale });
 const nitzaStorytime = projectNitzaStorytime({ locale });
-const helloAPI = projectHelloAPI({ locale });
 const ixkik = projectIxkik({ locale });
 
 export { getStaticPaths };
@@ -122,7 +121,7 @@ export { getStaticPaths };
 
       <div class="cta">
         <a href={routes.portfolio.multimedia({ locale })} class="btn">
-          Ver todos los proyectos multimedia →
+          {t('portfolio.btn.multimedia')}
         </a>
       </div>
     </div>
@@ -136,17 +135,6 @@ export { getStaticPaths };
 
     <div class="content">
       <ul class="projects-cards">
-        <li>
-          <ProjectCard
-            imageSrc={helloAPI.imageSrc}
-            name={helloAPI.name}
-            summary={helloAPI.summary}
-            year={helloAPI.year}
-            client={helloAPI.client}
-            projectUrl={helloAPI.projectUrl}
-            videoUrl={helloAPI.videoUrl} />
-        </li>
-        <li>
           <ProjectCard
             imageSrc={ixkik.imageSrc}
             name={ixkik.name}
@@ -160,7 +148,7 @@ export { getStaticPaths };
 
       <div class="cta">
         <a href={routes.portfolio.design({ locale })} class="btn">
-          Ver todos los proyectos de diseño →
+          {t('portfolio.btn.design')}
         </a>
       </div>
     </div>

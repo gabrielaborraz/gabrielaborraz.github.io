@@ -15,10 +15,9 @@ import Modal from '../../../../components/Modal.astro'
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
-const title = t('portfolio.design.index.title');
-const description = t('portfolio.design.index.description');
+const title = t('porfolio.design.seo.title');
+const description = t('porfolio.design.seo.description');
 
-const helloAPI = projectHelloAPI({ locale });
 const ixkik = projectIxkik({ locale });
 
 export { getStaticPaths };
@@ -30,16 +29,16 @@ export { getStaticPaths };
     <ol class="breadcrumb">
       <li>
         <a href={routes.root({ locale })} class="text-subtitle">
-          Inicio
+          {t('breadcrumb.home')}
         </a>
       </li>
       <li>
         <a href={routes.portfolio.root({ locale })} class="text-subtitle">
-          Portafolio
+          {t('breadcrumb.portfolio')}
         </a>
       </li>
       <li>
-        <span>Diseño</span>
+        <span>{t('breadcrumb.design')}</span>
       </li>
     </ol>
 
@@ -50,16 +49,6 @@ export { getStaticPaths };
 
     <div class="content">
       <ul class="projects-cards">
-        <li>
-          <ProjectCard
-            imageSrc={helloAPI.imageSrc}
-            name={helloAPI.name}
-            summary={helloAPI.summary}
-            year={helloAPI.year}
-            client={helloAPI.client}
-            projectUrl={helloAPI.projectUrl}
-            videoUrl={helloAPI.videoUrl} />
-        </li>
         <li>
           <ProjectCard
             imageSrc={ixkik.imageSrc}

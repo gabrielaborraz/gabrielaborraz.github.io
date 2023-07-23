@@ -19,8 +19,8 @@ import Modal from '../../../../components/Modal.astro'
 const locale = getLocaleFromUrl(Astro.url);
 const t = useTranslations(locale);
 
-const title = t('portfolio.multimedia.index.title');
-const description = t('portfolio.multimedia.index.description');
+const title = t('portfolio.multimedia.seo.title');
+const description = t('portfolio.multimedia.seo.description');
 
 const magicWords = projectMagicWords({ locale });
 const midotPowerKids = projectMidotPowerKids({ locale });
@@ -38,16 +38,16 @@ export { getStaticPaths };
     <ol class="breadcrumb">
       <li>
         <a href={routes.root({ locale })} class="text-subtitle">
-          Inicio
+          {t('breadcrumb.home')}
         </a>
       </li>
       <li>
         <a href={routes.portfolio.root({ locale })} class="text-subtitle">
-          Portafolio
+          {t('breadcrumb.portfolio')}
         </a>
       </li>
       <li>
-        <span>Multimedia</span>
+        <span> {t('breadcrumb.multimedia')}</span>
       </li>
     </ol>
 
