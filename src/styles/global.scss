@@ -320,7 +320,7 @@ object {
   #nav-close { display: none; }
   #nav-list { display: none; }
 
-  .nav-mobile-open {
+  &.nav-mobile-open {
     bottom: 0;
 
     #nav-trigger { display: none; }
@@ -685,6 +685,10 @@ a.btn {
   align-items: center;
   z-index: 100;
 
+  &.none {
+    display: none;
+  }
+
   .modal {
     overflow-x: auto;
     display: flex;
@@ -742,11 +746,6 @@ a.btn {
     }
   }
 }
-
-#modal-container.none {
-  display: none;
-}
-
 /* ---------------------------------------------------------------------------*/
 
 /* ----------------------------------------------------------------------------,
