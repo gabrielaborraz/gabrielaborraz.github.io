@@ -37,6 +37,33 @@ const project = (args: ProjectArgsType): Project => {
   };
 };
 
+/* ----------------------------------------------------------------------------,
+ * Multimedia                                                                  |
+ * ---------------------------------------------------------------------------*/
+export const projectPixelArtGniusClub = (args?: { locale?: Locale }) => {
+  const locale = args?.locale;
+  const slug = "pixelart-gniusclub";
+
+  const info = project({ slug, locale });
+
+  return {
+    ...info,
+    year: "2016",
+    client: "Gnius Club",
+    videoUrl: "https://www.youtube.com/watch?v=OzXnwRvTau0",
+    illustration: ["Michel Solórzano", "Alejandro Cadenas"],
+    animation: ["Alejandro Olivares", "Gabriela Borraz"],
+    music: ["Daniel Araujo"],
+    section: "multimedia",
+    externalLink: "https://gnius.club/",
+    slides: [
+      "/projects/pixelart-gniusclub/slide_1.jpg",
+      "/projects/pixelart-gniusclub/slide_2.jpg",
+      "/projects/pixelart-gniusclub/slide_3.jpg"
+    ],
+  };
+};
+
 export const projectMagicWords = (args?: { locale?: Locale }) => {
   const locale = args?.locale;
   const slug = "magic-words";
@@ -56,6 +83,30 @@ export const projectMagicWords = (args?: { locale?: Locale }) => {
     slides: [
       "/projects/magic-words/slide_1.jpg",
       "/projects/magic-words/slide_2.jpg"
+    ],
+  };
+};
+
+export const projectMidotPowerKids = (args?: { locale?: Locale }) => {
+  const locale = args?.locale;
+  const slug = "midot-power-kids";
+
+  const info = project({ slug, locale });
+
+  return {
+    ...info,
+    year: "2019",
+    client: "Tutorah Kids",
+    videoUrl: "https://www.youtube.com/watch?v=-jO1qc-euZg",
+    illustration: ["Rafael Castillo"],
+    animation: ["Alejandro Olivares", "Gabriela Borraz"],
+    music: ["Emmanuel Miranda"],
+    section: "multimedia",
+    externalLink: "https://tutorahkids.tv/midot-power-kids",
+    slides: [
+      "/projects/midot-power-kids/slide_1.jpg",
+      "/projects/midot-power-kids/slide_2.jpg",
+      "/projects/midot-power-kids/slide_3.jpg"
     ],
   };
 };
@@ -85,49 +136,26 @@ export const projectMillyCohenTales = (args?: { locale?: Locale }) => {
   };
 };
 
-export const projectMidotPowerKids = (args?: { locale?: Locale }) => {
+export const projectNitzaStorytime = (args?: { locale?: Locale }) => {
   const locale = args?.locale;
-  const slug = "midot-power-kids";
-
-  const info = project({ slug, locale });
-
-  return {
-    ...info,
-    year: "2019",
-    client: "Tutorah Kids",
-    videoUrl: "https://www.youtube.com/watch?v=-jO1qc-euZg",
-    illustration: ["Rafael Castillo"],
-    animation: ["Alejandro Olivares", "Gabriela Borraz"],
-    music: ["Emmanuel Miranda"],
-    section: "multimedia",
-    externalLink: "https://tutorahkids.tv/midot-power-kids",
-    slides: [
-      "/projects/midot-power-kids/slide_1.jpg",
-      "/projects/midot-power-kids/slide_2.jpg",
-      "/projects/midot-power-kids/slide_3.jpg"
-    ],
-  };
-};
-
-export const projectTheViolaJourney = (args?: { locale?: Locale }) => {
-  const locale = args?.locale;
-  const slug = "the-viola-journey";
+  const slug = "nitza-storytime";
 
   const info = project({ slug, locale });
 
   return {
     ...info,
     year: "2020",
-    client: "El Arte Ayuda",
-    videoUrl: "https://www.youtube.com/watch?v=TWjibLoA78U",
-    animation: ["Gabriela Borraz"],
-    music: ["Fermín Rodríguez"],
+    client: "Tutorah Kids",
+    videoUrl: "https://www.youtube.com/watch?v=0W9YGO_3FnQ",
+    illustration: ["Rafael Castillo"],
+    animation: ["Alejandro Olivares", "Gabriela Borraz"],
+    music: ["Alberto Camillin"],
     section: "multimedia",
-    externalLink: "https://www.youtube.com/watch?v=gk_ZNO4zX7o",
+    externalLink: "https://tutorahkids.tv/%C2%BFcuantos-cuentos-cuentas?",
     slides: [
-      "/projects/the-viola-journey/slide_1.jpg",
-      "/projects/the-viola-journey/slide_2.jpg",
-      "/projects/the-viola-journey/slide_3.jpg"
+      "/projects/nitza-storytime/slide_1.jpg",
+      "/projects/nitza-storytime/slide_2.jpg",
+      "/projects/nitza-storytime/slide_3.jpg"
     ],
   };
 };
@@ -155,26 +183,49 @@ export const projectIntorahsante = (args?: { locale?: Locale }) => {
   };
 };
 
-export const projectNitzaStorytime = (args?: { locale?: Locale }) => {
+export const projectTheViolaJourney = (args?: { locale?: Locale }) => {
   const locale = args?.locale;
-  const slug = "nitza-storytime";
+  const slug = "the-viola-journey";
 
   const info = project({ slug, locale });
 
   return {
     ...info,
     year: "2020",
-    client: "Tutorah Kids",
-    videoUrl: "https://www.youtube.com/watch?v=0W9YGO_3FnQ",
-    illustration: ["Rafael Castillo"],
-    animation: ["Alejandro Olivares", "Gabriela Borraz"],
-    music: ["Alberto Camillin"],
+    client: "El Arte Ayuda",
+    videoUrl: "https://www.youtube.com/watch?v=TWjibLoA78U",
+    animation: ["Gabriela Borraz"],
+    music: ["Fermín Rodríguez"],
     section: "multimedia",
-    externalLink: "https://tutorahkids.tv/%C2%BFcuantos-cuentos-cuentas?",
+    externalLink: "https://www.youtube.com/watch?v=gk_ZNO4zX7o",
     slides: [
-      "/projects/nitza-storytime/slide_1.jpg",
-      "/projects/nitza-storytime/slide_2.jpg",
-      "/projects/nitza-storytime/slide_3.jpg"
+      "/projects/the-viola-journey/slide_1.jpg",
+      "/projects/the-viola-journey/slide_2.jpg",
+      "/projects/the-viola-journey/slide_3.jpg"
+    ],
+  };
+};
+
+/* ----------------------------------------------------------------------------,
+ * Design                                                                      |
+ * ---------------------------------------------------------------------------*/
+export const projectIxkik = (args?: { locale?: Locale }) => {
+  const locale = args?.locale;
+  const slug = "ixkik";
+
+  const info = project({ slug, locale });
+
+  return {
+    ...info,
+    year: "2017",
+    client: " Creative Lab",
+    section: "design",
+    externalLink: "https://www.behance.net/gallery/81122411/IXKIK-Mexican-Logo-Design",
+    slides: [
+      "/projects/ixkik/slide_1.jpg",
+      "/projects/ixkik/slide_2.jpg",
+      "/projects/ixkik/slide_3.jpg",
+      "/projects/ixkik/slide_4.jpg"
     ],
   };
 };
@@ -198,34 +249,16 @@ export const projectHelloAPI = (args?: { locale?: Locale }) => {
   };
 };
 
-export const projectIxkik = (args?: { locale?: Locale }) => {
-  const locale = args?.locale;
-  const slug = "ixkik";
-
-  const info = project({ slug, locale });
-
-  return {
-    ...info,
-    year: "2017",
-    client: " Creative Lab",
-    section: "design",
-    externalLink: "https://www.behance.net/gallery/81122411/IXKIK-Mexican-Logo-Design",
-    slides: [
-      "/projects/ixkik/slide_1.jpg",
-      "/projects/ixkik/slide_2.jpg",
-      "/projects/ixkik/slide_3.jpg",
-      "/projects/ixkik/slide_4.jpg"
-    ],
-  };
-};
-
 export const projects: Projects = {
+  // Multimedia projects
+  "pixelart-gniusclub" : projectPixelArtGniusClub,
   "magic-words": projectMagicWords,
   "midot-power-kids": projectMidotPowerKids,
   "milly-cohen-tales": projectMillyCohenTales,
   "the-viola-journey": projectTheViolaJourney,
-  "intorahsante":projectIntorahsante,
   "nitza-storytime": projectNitzaStorytime,
-  "hello-api": projectHelloAPI,
+  "intorahsante":projectIntorahsante,
+  // Design projects  
   "ixkik": projectIxkik,
+  "hello-api": projectHelloAPI,
 };

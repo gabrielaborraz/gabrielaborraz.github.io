@@ -28,9 +28,10 @@ const description = t('portfolio.seo.description');
 const magicWords = projectMagicWords({ locale });
 const midotPowerKids = projectMidotPowerKids({ locale });
 const millyCohenTales = projectMillyCohenTales({ locale });
-const theViolaJourney = projectTheViolaJourney({ locale });
-const intorahsante = projectIntorahsante({ locale });
 const nitzaStorytime = projectNitzaStorytime({ locale });
+const intorahsante = projectIntorahsante({ locale });
+const theViolaJourney = projectTheViolaJourney({ locale });
+
 const ixkik = projectIxkik({ locale });
 
 export { getStaticPaths };
@@ -57,36 +58,6 @@ export { getStaticPaths };
 
     <div class="content">
       <ul class="projects-cards">
-        <li>
-          <ProjectCard
-            imageSrc={magicWords.imageSrc}
-            name={magicWords.name}
-            summary={magicWords.summary}
-            year={magicWords.year}
-            client={magicWords.client}
-            projectUrl={magicWords.projectUrl}
-            videoUrl={magicWords.videoUrl} />
-        </li>
-        <li>
-          <ProjectCard
-            imageSrc={millyCohenTales.imageSrc}
-            name={millyCohenTales.name}
-            summary={millyCohenTales.summary}
-            year={millyCohenTales.year}
-            client={millyCohenTales.client}
-            projectUrl={millyCohenTales.projectUrl}
-            videoUrl={millyCohenTales.videoUrl} />
-        </li>
-        <li>
-          <ProjectCard
-            imageSrc={midotPowerKids.imageSrc}
-            name={midotPowerKids.name}
-            summary={midotPowerKids.summary}
-            year={midotPowerKids.year}
-            client={midotPowerKids.client}
-            projectUrl={midotPowerKids.projectUrl}
-            videoUrl={midotPowerKids.videoUrl} />
-        </li>
         <li>
           <ProjectCard
             imageSrc={theViolaJourney.imageSrc}
@@ -116,6 +87,36 @@ export { getStaticPaths };
             client={nitzaStorytime.client}
             projectUrl={nitzaStorytime.projectUrl}
             videoUrl={nitzaStorytime.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={millyCohenTales.imageSrc}
+            name={millyCohenTales.name}
+            summary={millyCohenTales.summary}
+            year={millyCohenTales.year}
+            client={millyCohenTales.client}
+            projectUrl={millyCohenTales.projectUrl}
+            videoUrl={millyCohenTales.videoUrl} />
+        </li>        
+        <li>
+          <ProjectCard
+            imageSrc={midotPowerKids.imageSrc}
+            name={midotPowerKids.name}
+            summary={midotPowerKids.summary}
+            year={midotPowerKids.year}
+            client={midotPowerKids.client}
+            projectUrl={midotPowerKids.projectUrl}
+            videoUrl={midotPowerKids.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={magicWords.imageSrc}
+            name={magicWords.name}
+            summary={magicWords.summary}
+            year={magicWords.year}
+            client={magicWords.client}
+            projectUrl={magicWords.projectUrl}
+            videoUrl={magicWords.videoUrl} />
         </li>
       </ul>
 

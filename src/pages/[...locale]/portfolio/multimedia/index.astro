@@ -9,7 +9,8 @@ import {
   projectMillyCohenTales,
   projectTheViolaJourney,
   projectIntorahsante,
-  projectNitzaStorytime
+  projectNitzaStorytime,
+  projectPixelArtGniusClub
 } from "../../../../utils/content/projects";
 
 import Layout from "../../../../layouts/Layout.astro";
@@ -22,12 +23,13 @@ const t = useTranslations(locale);
 const title = t('portfolio.multimedia.seo.title');
 const description = t('portfolio.multimedia.seo.description');
 
-const magicWords = projectMagicWords({ locale });
-const midotPowerKids = projectMidotPowerKids({ locale });
-const millyCohenTales = projectMillyCohenTales({ locale });
 const theViolaJourney = projectTheViolaJourney({ locale });
 const intorahsante = projectIntorahsante({ locale });
 const nitzaStorytime = projectNitzaStorytime({ locale });
+const millyCohenTales = projectMillyCohenTales({ locale });
+const midotPowerKids = projectMidotPowerKids({ locale });
+const magicWords = projectMagicWords({ locale });
+const pixelartGniusclub = projectPixelArtGniusClub({ locale });
 
 export { getStaticPaths };
 ---
@@ -60,36 +62,6 @@ export { getStaticPaths };
       <ul class="projects-cards">
         <li>
           <ProjectCard
-            imageSrc={magicWords.imageSrc}
-            name={magicWords.name}
-            summary={magicWords.summary}
-            year={magicWords.year}
-            client={magicWords.client}
-            projectUrl={magicWords.projectUrl}
-            videoUrl={magicWords.videoUrl} />
-        </li>
-        <li>
-          <ProjectCard
-            imageSrc={millyCohenTales.imageSrc}
-            name={millyCohenTales.name}
-            summary={millyCohenTales.summary}
-            year={millyCohenTales.year}
-            client={millyCohenTales.client}
-            projectUrl={millyCohenTales.projectUrl}
-            videoUrl={millyCohenTales.videoUrl} />
-        </li>
-        <li>
-          <ProjectCard
-            imageSrc={midotPowerKids.imageSrc}
-            name={midotPowerKids.name}
-            summary={midotPowerKids.summary}
-            year={midotPowerKids.year}
-            client={midotPowerKids.client}
-            projectUrl={midotPowerKids.projectUrl}
-            videoUrl={midotPowerKids.videoUrl} />
-        </li>
-        <li>
-          <ProjectCard
             imageSrc={theViolaJourney.imageSrc}
             name={theViolaJourney.name}
             summary={theViolaJourney.summary}
@@ -117,6 +89,46 @@ export { getStaticPaths };
             client={nitzaStorytime.client}
             projectUrl={nitzaStorytime.projectUrl}
             videoUrl={nitzaStorytime.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={millyCohenTales.imageSrc}
+            name={millyCohenTales.name}
+            summary={millyCohenTales.summary}
+            year={millyCohenTales.year}
+            client={millyCohenTales.client}
+            projectUrl={millyCohenTales.projectUrl}
+            videoUrl={millyCohenTales.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={midotPowerKids.imageSrc}
+            name={midotPowerKids.name}
+            summary={midotPowerKids.summary}
+            year={midotPowerKids.year}
+            client={midotPowerKids.client}
+            projectUrl={midotPowerKids.projectUrl}
+            videoUrl={midotPowerKids.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={magicWords.imageSrc}
+            name={magicWords.name}
+            summary={magicWords.summary}
+            year={magicWords.year}
+            client={magicWords.client}
+            projectUrl={magicWords.projectUrl}
+            videoUrl={magicWords.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={pixelartGniusclub.imageSrc}
+            name={pixelartGniusclub.name}
+            summary={pixelartGniusclub.summary}
+            year={pixelartGniusclub.year}
+            client={pixelartGniusclub.client}
+            projectUrl={pixelartGniusclub.projectUrl}
+            videoUrl={pixelartGniusclub.videoUrl} />
         </li>
       </ul>
     </div>
