@@ -209,10 +209,12 @@ export const projectIxkik = (args?: { locale?: Locale }) => {
     year: "2017",
     client: " Creative Lab",
     section: "design",
-    externalLink: "https://www.behance.net/GabrielaBorraz",
+    externalLink: "https://www.behance.net/gallery/81122411/IXKIK-Mexican-Logo-Design",
     slides: [
       "/projects/ixkik/slide_1.jpg",
-      "/projects/ixkik/slide_2.jpg"
+      "/projects/ixkik/slide_2.jpg",
+      "/projects/ixkik/slide_3.jpg",
+      "/projects/ixkik/slide_4.jpg"
     ],
   };
 };

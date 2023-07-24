@@ -72,7 +72,7 @@ export const projects = {
     "projects.ixkik.name": "IXKIK",
     "projects.ixkik.summary": "Arte Textil marcando nuestra identidad, IXKIK es una marca impregnada de la fuerza y esencia de la cultura mexicana.",
     "projects.ixkik.category": "Diseño de logo",
-    "projects.ixkik.synopsis": "Marca mexicana concebida con la fuerza y esencia de la cultura mexicana. IXKIK comparte con el mundo sus textiles artesanales, que reflejan la belleza y talento de los artesanos mexicanos.",
+    "projects.ixkik.synopsis": "IXKIK es una marca mexicana que celebra la diversidad y riqueza de la cultura mexicana a través de sus textiles artesanales. Su logo representado por una mariposa tejida, encarna la tradición y la identidad de los artesanos, transmitiendo la belleza y talento de nuestras raíces.",
     // Hello API: hello-API
     "projects.hello-api.seo.title": "Hello API | Diseño de logo",
     "projects.hello-api.seo.description": "Diseño de logo para Hello API",
@@ -151,7 +151,7 @@ export const projects = {
     "projects.ixkik.name": "IXKIK",
     "projects.ixkik.summary": "Textile art shaping our identity, IXKIK is a brand infused with the strength and essence of Mexican culture.",
     "projects.ixkik.category": "Logo design",
-    "projects.ixkik.synopsis": "Mexican brand conceived with the strength and essence of Mexican culture. IXKIK shares with the world its artisanal textiles, which reflect the beauty and talent of Mexican artisans.",
+    "projects.ixkik.synopsis": "IXKIK is a Mexican brand that celebrates the diversity and richness of Mexican culture through its artisanal textiles. Its logo, represented by a woven butterfly, embodies tradition and the identity of artisans, conveying the beauty and talent of our roots.",
     // Hello API: hello-api
     "projects.hello-api.seo.title": "Hello API | Logo design",
     "projects.hello-api.seo.description": "Logo design for Hello API",
