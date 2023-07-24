@@ -2,11 +2,11 @@ export const projects = {
   es: {
     "portfolio.project.synopsis": "Sinopsis",
     // Pixel Art Gnius Club: pixelart-gniusclub
-    "projects.pixelart-gniusclub.seo.title": " Animación Pixel Art",
+    "projects.pixelart-gniusclub.seo.title": "Pixel art clips | Contenido educativo",
     "projects.pixelart-gniusclub.seo.description": "Una colección de clips cortos que presentan mi trabajo de animación para Gnius Club.",
-    "projects.pixelart-gniusclub.name": "Animación Pixel Art ",
-    "projects.pixelart-gniusclub.summary": "Colección de clips cortos que muestran mi trabajo de animación con pixel art.",
-    "projects.pixelart-gniusclub.category": "Pixel Art Clips",
+    "projects.pixelart-gniusclub.name": "Animación pixel art ",
+    "projects.pixelart-gniusclub.summary": "Colección de clips cortos que muestran mi trabajo de animación con pixel art para Gnius Club.",
+    "projects.pixelart-gniusclub.category": "Contenido educativo",
     "projects.pixelart-gniusclub.synopsis": "<p>El pixel art es un estilo de animación inspirado en los primeros gráficos de videojuegos. Es valorada en la actualidad por su estética y sonido retro y como una forma de expresión artística y narrativa que evoca la nostalgia de las consolas y computadoras antiguas.</p> <p>En esta recopilación de clips cortos, presento parte de mi trabajo de animación para Gnius Club.</p>",
     // Magic words: magic-words
     "projects.magic-words.seo.title": "Palabras Mágicas | Serie animada infantil",
@@ -68,11 +68,11 @@ export const projects = {
   en: {
     "portfolio.project.synopsis": "Synopsis",
     // Pixel Art Gnius Club: pixelart-gniusclub
-    "projects.pixelart-gniusclub.seo.title": "Pixel Art animation",
+    "projects.pixelart-gniusclub.seo.title": "Pixel art clips | Educational content",
     "projects.pixelart-gniusclub.seo.description": "A collection of short clips featuring my animation work for Gnius Club.",
     "projects.pixelart-gniusclub.name": "Pixel art animation",
-    "projects.pixelart-gniusclub.summary": "Collection of short clips showcasing my pixel art animation work.",
-    "projects.pixelart-gniusclub.category": "Pixel Art short clips",
+    "projects.pixelart-gniusclub.summary": "Collection of short clips showcasing my pixel art animation work for Gnius Club.",
+    "projects.pixelart-gniusclub.category": "Educational content",
     "projects.pixelart-gniusclub.synopsis": "<p>Pixel art is an animation style inspired by early video game graphics. It is highly appreciated today for its retro aesthetics and sound, serving as a form of artistic and narrative expression that evokes nostalgia for old gaming consoles and computers.</p> <p>In this compilation of short clips, I present part of my animation work for Gnius Club.</p>",
     // Magic words: magic-words
     "projects.magic-words.seo.title": "Magic Words | Kids animation",
