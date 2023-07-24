@@ -14,7 +14,7 @@ export const about = {
   en: {
     "about.seo.title": "About | Gabriela Borraz",
     "about.seo.description":
-      "Versatile digital animator who brings ideas to life with creativity and expertise. Discover my work in animation, illustration and design",
+      "Versatile digital animator who brings ideas to life with creativity and proficiency. Discover my work in animation, illustration and design",
     "about.header1": "Who I am?",
     "about.header2": "What do i do?",
     "about.content1":
