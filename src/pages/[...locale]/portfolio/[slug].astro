@@ -66,8 +66,8 @@ export const getStaticPaths = async () => {
     </ol>
 
     <div class="title">
-      <p class="text-title text-uppercase">{projects.category}</p>
-      <h4 class="text-large">{projects.name}</h4>
+      <p class="text-title text-uppercase">{project.category}</p>
+      <h4 class="text-large">{project.name}</h4>
     </div>
 
     <div class="content">
@@ -161,7 +161,7 @@ export const getStaticPaths = async () => {
               t('portfolio.project.synopsis') : t('portfolio.project.description')}
           </p>
 
-          <p class="text" set:html={project.synopsis}/>
+          <div class="text writer" set:html={project.synopsis} />
 
           <a href={project.externalLink} class="btn full-width" target="_blank">
             {t(`portfolio.external-btn.${project.section}`)}
