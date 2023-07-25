@@ -4,13 +4,12 @@ import { routes } from "../../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../../utils/i18n/utils";
 
 import {
-  projectMagicWords,
+  projectHabibMistery,
   projectMidotPowerKids,
   projectMillyCohenTales,
   projectTheViolaJourney,
   projectIntorahsante,
   projectNitzaStorytime,
-  projectHelloAPI,
   projectIxkik
 } from "../../../utils/content/projects";
 
@@ -25,7 +24,7 @@ const t = useTranslations(locale);
 const title = t('portfolio.seo.title');
 const description = t('portfolio.seo.description');
 
-const magicWords = projectMagicWords({ locale });
+const habibMistery = projectHabibMistery({ locale });
 const midotPowerKids = projectMidotPowerKids({ locale });
 const millyCohenTales = projectMillyCohenTales({ locale });
 const nitzaStorytime = projectNitzaStorytime({ locale });
@@ -110,13 +109,13 @@ export { getStaticPaths };
         </li>
         <li>
           <ProjectCard
-            imageSrc={magicWords.imageSrc}
-            name={magicWords.name}
-            summary={magicWords.summary}
-            year={magicWords.year}
-            client={magicWords.client}
-            projectUrl={magicWords.projectUrl}
-            videoUrl={magicWords.videoUrl} />
+            imageSrc={habibMistery.imageSrc}
+            name={habibMistery.name}
+            summary={habibMistery.summary}
+            year={habibMistery.year}
+            client={habibMistery.client}
+            projectUrl={habibMistery.projectUrl}
+            videoUrl={habibMistery.videoUrl} />
         </li>
       </ul>
 

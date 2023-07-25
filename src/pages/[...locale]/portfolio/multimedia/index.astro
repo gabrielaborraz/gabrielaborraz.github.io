@@ -10,7 +10,8 @@ import {
   projectTheViolaJourney,
   projectIntorahsante,
   projectNitzaStorytime,
-  projectPixelArtGniusClub
+  projectPixelArtGniusClub,
+projectHabibMistery
 } from "../../../../utils/content/projects";
 
 import Layout from "../../../../layouts/Layout.astro";
@@ -28,6 +29,7 @@ const intorahsante = projectIntorahsante({ locale });
 const nitzaStorytime = projectNitzaStorytime({ locale });
 const millyCohenTales = projectMillyCohenTales({ locale });
 const midotPowerKids = projectMidotPowerKids({ locale });
+const habibMistery = projectHabibMistery({ locale });
 const magicWords = projectMagicWords({ locale });
 const pixelartGniusclub = projectPixelArtGniusClub({ locale });
 
@@ -109,6 +111,16 @@ export { getStaticPaths };
             client={midotPowerKids.client}
             projectUrl={midotPowerKids.projectUrl}
             videoUrl={midotPowerKids.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={habibMistery.imageSrc}
+            name={habibMistery.name}
+            summary={habibMistery.summary}
+            year={habibMistery.year}
+            client={habibMistery.client}
+            projectUrl={habibMistery.projectUrl}
+            videoUrl={habibMistery.videoUrl} />
         </li>
         <li>
           <ProjectCard

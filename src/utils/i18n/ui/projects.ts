@@ -15,6 +15,13 @@ export const projects = {
     "projects.magic-words.summary": "¡Prepárate para reír y aprender! Cada episodio está lleno de diversión, amistad y valiosas lecciones.",
     "projects.magic-words.category": "Serie animada infantil",
     "projects.magic-words.synopsis": "<p>Bajo la brillante Dirección de Arte de Daniel Corkidi, se crearon un total de 24 episodios que se distribuyeron en 2 temporadas. </p> <p>Esta serie animada dio vida a los entrañables personajes de Livy, Summy y Koby, quienes comparten inolvidables momentos con su abuela y que a través de sus vivencias, descubrirán el poder que tiene una sola palabra para cambiar el mundo.</p>",
+    // The Mistery of Habib: habib-mistery
+    "projects.habib-mistery.seo.title": "El Misterio de Habib | Serie animada infantil",
+    "projects.habib-mistery.seo.description": "Serie animada infantil para Tutorah Kids",
+    "projects.habib-mistery.name": "El Misterio de Habib",
+    "projects.habib-mistery.summary": "Únete a Ariel en una extraordinaria búsqueda para rescatar a su padre y cumplir la misión de Moaj Net.",
+    "projects.habib-mistery.category": "Serie animada infantil",
+    "projects.habib-mistery.synopsis": "<p>Te invito a ver 'El Misterio de Habib', una serie original de Tutorah Kids creada en el 2018 con el guión de Carlos Amiga y la destacada participación de Rubén Moya, quien da vida a la voz de Habib.</p> <p>Acompaña a Ariel en una emocionante aventura junto a David, Samuel y Mordi para rescatar a su padre y cumplir con la misión de Moaj Net.</p> <p>¡Vive con ellos ésta apasionante travesía llena de intriga, amistad y valentía!</p>", 
     // Midot Power Kids: midot-power-kids
     "projects.midot-power-kids.seo.title": "Midot Power Kids | Serie animada infantil",
     "projects.midot-power-kids.seo.description": "Serie animada infantil para Tutorah Kids",
@@ -81,6 +88,13 @@ export const projects = {
     "projects.magic-words.summary": "Get ready to laugh and learn! Each episode is filled with fun, friendship and valuable lessons.",
     "projects.magic-words.category": "Kids animation",
     "projects.magic-words.synopsis": "<p>Under the brilliant Art Direction of Daniel Corkidi, a total of 24 episodes were created and distributed over 2 seasons.</p> <p>This animated series brought to life the beloved characters of Livy, Summy, and Koby, who share unforgettable moments with their grandmother and through their experiences, they will discover the power that a single word has to change the world.</p>",
+    // The Mistery of Habib: habib-mistery
+    "projects.habib-mistery.seo.title": "The Mistery of Habib | Kids animation",
+    "projects.habib-mistery.seo.description": "Animated show for Tutorah Kids",
+    "projects.habib-mistery.name": "The Mistery of Habib",
+    "projects.habib-mistery.summary": "Join Ariel on an extraordinary quest to rescue his dad and complete Moaj Net's mission.",
+    "projects.habib-mistery.category": "Kids animation",
+    "projects.habib-mistery.synopsis": "<p>I invite you to watch 'The Mystery of Habib', an original series by Tutorah Kids created in 2018 with the script by Carlos Amiga and the outstanding performance of Rubén Moya, who brings the voice of Habib to life.</p> <p>Join Ariel on an exciting adventure alongside David, Samuel and Mordi to rescue his father and fulfill Moaj Net's mission.</p> <p>Experience this thrilling journey filled with intrigue, friendship and bravery with them!</p>",
     // Midot Power Kids: midot-power-kids
     "projects.midot-power-kids.seo.title": "Midot Power Kids | Kids animation",
     "projects.midot-power-kids.seo.description": "Animated show for Tutorah Kids",

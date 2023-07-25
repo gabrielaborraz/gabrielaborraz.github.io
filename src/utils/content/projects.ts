@@ -87,6 +87,31 @@ export const projectMagicWords = (args?: { locale?: Locale }) => {
   };
 };
 
+export const projectHabibMistery = (args?: { locale?: Locale }) => {
+  const locale = args?.locale;
+  const slug = "habib-mistery";
+
+  const info = project({ slug, locale });
+
+  return {
+    ...info,
+    year: "2018",
+    client: "Tutorah Kids",
+    videoUrl: "https://www.youtube.com/watch?v=rWyoKom8XCQ",
+    illustration: ["Ibán Santillán", "Karla Castañeda"],
+    animation: ["Alejandro Olivares", "Alejandro Reyes", "Gabriela Borraz"],
+    music: ["Emmanuel Miranda"],
+    section: "multimedia",
+    externalLink: "https://tutorahkids.tv/el-misterio-de-habib",
+    slides: [
+      "/projects/habib-mistery/slide_1.jpg",
+      "/projects/habib-mistery/slide_2.jpg",
+      "/projects/habib-mistery/slide_3.jpg",
+      "/projects/habib-mistery/slide_4.jpg"
+    ],
+  };
+};
+
 export const projectMidotPowerKids = (args?: { locale?: Locale }) => {
   const locale = args?.locale;
   const slug = "midot-power-kids";
@@ -253,6 +278,7 @@ export const projects: Projects = {
   // Multimedia projects
   "pixelart-gniusclub" : projectPixelArtGniusClub,
   "magic-words": projectMagicWords,
+  "habib-mistery" : projectHabibMistery,
   "midot-power-kids": projectMidotPowerKids,
   "milly-cohen-tales": projectMillyCohenTales,
   "the-viola-journey": projectTheViolaJourney,
