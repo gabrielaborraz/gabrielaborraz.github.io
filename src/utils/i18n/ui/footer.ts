@@ -14,6 +14,8 @@ export const footer = {
     "footer.language": "Idioma",
     //SUBSCRIBE
     "footer.subscribe": "Suscríbete",
+    "footer.btn":"Suscribirse →",
+    "footer.alert.success": "Registrado",
   },
   en: {
     //MENU
@@ -30,5 +32,7 @@ export const footer = {
     "footer.language": "Language",
     //SUBSCRIBE
     "footer.subscribe": "Subscribe",
+    "footer.btn":"Subscribe →",
+    "footer.alert.success:": "Registered",
   },
 };

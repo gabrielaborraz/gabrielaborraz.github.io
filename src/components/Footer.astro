@@ -23,10 +23,10 @@ const year = new Date().getFullYear();
       <p class="text-title text-uppercase">{t('footer.follow')}</p>
 
       <ul>
-        <li><a target="_blank" href="https://www.instagram.com/gabrielaborraz/">Instagram</a></li>
+        <li><a target="_blank" href="https://www.instagram.com/gabrielaborraz">Instagram</a></li>
         <li><a target="_blank" href="https://www.youtube.com/channel/UCSZ1OnqX_LIHIr-JOWr0sFQ">YouTube</a></li>
-        <li><a target="_blank" href="https://www.behance.net/GabrielaBorraz">Behance</a></li>
-        <li><a target="_blank" href="https://www.linkedin.com/in/gabrielaborraz/">LinkedIn</a></li>
+        <li><a target="_blank" href="https://www.behance.net/gabrielaborraz">Behance</a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/gabrielaborraz">LinkedIn</a></li>
       </ul>
     </div>
 
@@ -52,11 +52,11 @@ const year = new Date().getFullYear();
       <p class="text-title text-uppercase">{t('footer.subscribe')}</p>
 
       <div class="alert alert-success" aria-hidden="true">
-        ¡Registrado!
+        {t('footer.alert.success')}
       </div>
 
       <div class="alert alert-error" aria-hidden="true">
-        Error :(
+        Error
       </div>
 
       <form id="newsletter-form" class="form" data-sending={t('contact.data-sendig')} data-send={t('contact.btn')}>
@@ -74,7 +74,7 @@ const year = new Date().getFullYear();
           <input type="hidden" class="date" name="date" value="" />
 
           <button type="submit" id="newsletter-submit" class="btn full-width">
-            {t('contact.btn')}
+            {t('footer.btn')}
           </button>
         </div>
       </form>
