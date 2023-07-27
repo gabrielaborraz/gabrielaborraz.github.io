@@ -4,14 +4,16 @@ import { routes } from "../../../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../../../utils/i18n/utils";
 
 import {
-  projectMagicWords,
-  projectMidotPowerKids,
-  projectMillyCohenTales,
-  projectTheViolaJourney,
-  projectIntorahsante,
-  projectNitzaStorytime,
   projectPixelArtGniusClub,
-projectHabibMistery
+  projectMagicWords,
+  projectBedtimeStories,
+  projectHabibMistery,
+  projectMidotPowerKids,
+  projectPositiveActions,
+  projectMillyCohenTales,
+  projectNitzaStorytime,
+  projectIntorahsante,
+  projectTheViolaJourney  
 } from "../../../../utils/content/projects";
 
 import Layout from "../../../../layouts/Layout.astro";
@@ -24,14 +26,16 @@ const t = useTranslations(locale);
 const title = t('portfolio.multimedia.seo.title');
 const description = t('portfolio.multimedia.seo.description');
 
-const theViolaJourney = projectTheViolaJourney({ locale });
-const intorahsante = projectIntorahsante({ locale });
-const nitzaStorytime = projectNitzaStorytime({ locale });
-const millyCohenTales = projectMillyCohenTales({ locale });
-const midotPowerKids = projectMidotPowerKids({ locale });
-const habibMistery = projectHabibMistery({ locale });
-const magicWords = projectMagicWords({ locale });
 const pixelartGniusclub = projectPixelArtGniusClub({ locale });
+const magicWords = projectMagicWords({ locale });
+const bedtimeStories = projectBedtimeStories({ locale });
+const habibMistery = projectHabibMistery({ locale });
+const midotPowerKids = projectMidotPowerKids({ locale });
+const positiveActions = projectPositiveActions({ locale });
+const millyCohenTales = projectMillyCohenTales({ locale });
+const nitzaStorytime = projectNitzaStorytime({ locale });
+const intorahsante = projectIntorahsante({ locale });
+const theViolaJourney = projectTheViolaJourney({ locale });
 
 export { getStaticPaths };
 ---
@@ -104,6 +108,16 @@ export { getStaticPaths };
         </li>
         <li>
           <ProjectCard
+            imageSrc={positiveActions.imageSrc}
+            name={positiveActions.name}
+            summary={positiveActions.summary}
+            year={positiveActions.year}
+            client={positiveActions.client}
+            projectUrl={positiveActions.projectUrl}
+            videoUrl={positiveActions.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
             imageSrc={midotPowerKids.imageSrc}
             name={midotPowerKids.name}
             summary={midotPowerKids.summary}
@@ -121,6 +135,16 @@ export { getStaticPaths };
             client={habibMistery.client}
             projectUrl={habibMistery.projectUrl}
             videoUrl={habibMistery.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={bedtimeStories.imageSrc}
+            name={bedtimeStories.name}
+            summary={bedtimeStories.summary}
+            year={bedtimeStories.year}
+            client={bedtimeStories.client}
+            projectUrl={bedtimeStories.projectUrl}
+            videoUrl={bedtimeStories.videoUrl} />
         </li>
         <li>
           <ProjectCard

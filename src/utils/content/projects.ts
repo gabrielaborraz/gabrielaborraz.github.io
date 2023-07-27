@@ -87,6 +87,29 @@ export const projectMagicWords = (args?: { locale?: Locale }) => {
   };
 };
 
+export const projectBedtimeStories = (args?: { locale?: Locale }) => {
+  const locale = args?.locale;
+  const slug = "bedtime-stories";
+
+  const info = project({ slug, locale });
+
+  return {
+    ...info,
+    year: "2018",
+    client: "Tutorah Kids",
+    videoUrl: "https://www.youtube.com/watch?v=IXotjTdVoMQ",
+    illustration: ["Daniel Corkidi"],
+    animation: ["Gabriela Borraz"],
+    music: ["Adán Silva"],
+    section: "multimedia",
+    externalLink: "https://tutorahkids.tv/cuentos-antes-de-dormir ",
+    slides: [
+      "/projects/bedtime-stories/slide_1.jpg",
+      "/projects/bedtime-stories/slide_2.jpg"
+    ],
+  };
+};
+
 export const projectHabibMistery = (args?: { locale?: Locale }) => {
   const locale = args?.locale;
   const slug = "habib-mistery";
@@ -132,6 +155,30 @@ export const projectMidotPowerKids = (args?: { locale?: Locale }) => {
       "/projects/midot-power-kids/slide_1.jpg",
       "/projects/midot-power-kids/slide_2.jpg",
       "/projects/midot-power-kids/slide_3.jpg"
+    ],
+  };
+};
+
+export const projectPositiveActions = (args?: { locale?: Locale }) => {
+  const locale = args?.locale;
+  const slug = "positive-actions";
+
+  const info = project({ slug, locale });
+
+  return {
+    ...info,
+    year: "2020",
+    client: "Tutorah Kids",
+    videoUrl: "https://www.youtube.com/watch?v=o3kK4joKGnY",
+    illustration: ["Alejandro Olivares"],
+    animation: ["Alejandro Olivares", "Gabriela Borraz"],
+    music: ["Emmanuel Miranda"],
+    section: "multimedia",
+    externalLink: "https://tutorahkids.tv/acciones-positivas",
+    slides: [
+      "/projects/positive-actions/slide_1.jpg",
+      "/projects/positive-actions/slide_2.jpg",
+      "/projects/positive-actions/slide_3.jpg"
     ],
   };
 };
@@ -266,7 +313,7 @@ export const projectHelloAPI = (args?: { locale?: Locale }) => {
     year: "2023",
     client: "Hello API",
     section: "design",
-    externalLink: "https://www.behance.net/GabrielaBorraz",
+    externalLink: "https://www.behance.net/gabrielaborraz",
     slides: [
        "/projects/hello-api/slide_1.jpg",
       "/projects/hello-api/slide_2.jpg"
@@ -278,8 +325,10 @@ export const projects: Projects = {
   // Multimedia projects
   "pixelart-gniusclub" : projectPixelArtGniusClub,
   "magic-words": projectMagicWords,
+  "bedtime-stories": projectBedtimeStories,
   "habib-mistery" : projectHabibMistery,
   "midot-power-kids": projectMidotPowerKids,
+  "positive-actions": projectPositiveActions,
   "milly-cohen-tales": projectMillyCohenTales,
   "the-viola-journey": projectTheViolaJourney,
   "nitza-storytime": projectNitzaStorytime,

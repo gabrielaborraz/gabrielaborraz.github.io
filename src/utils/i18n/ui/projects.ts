@@ -15,6 +15,13 @@ export const projects = {
     "projects.magic-words.summary": "¡Prepárate para reír y aprender! Cada episodio está lleno de diversión, amistad y valiosas lecciones.",
     "projects.magic-words.category": "Serie animada infantil",
     "projects.magic-words.synopsis": "<p>Bajo la brillante Dirección de Arte de Daniel Corkidi, se crearon un total de 24 episodios que se distribuyeron en 2 temporadas. </p> <p>Esta serie animada dio vida a los entrañables personajes de Livy, Summy y Koby, quienes comparten inolvidables momentos con su abuela y que a través de sus vivencias, descubrirán el poder que tiene una sola palabra para cambiar el mundo.</p>",
+    //Bedtime Stories: bedtime-stories
+    "projects.bedtime-stories.seo.title": "Cuentos antes de dormir | Programa infantil",
+    "projects.bedtime-stories.seo.description": "Cortinilla de entrada para el programa 'Cuentos antes de dormir' de Tutorah Kids",
+    "projects.bedtime-stories.name": "Cuentos antes de dormir",
+    "projects.bedtime-stories.summary": "Imagina, aprende y sueña dulces sueños con los mejores cuentos que la abuelita Pola tiene para ti.",
+    "projects.bedtime-stories.category": "Cortinilla de entrada",
+    "projects.bedtime-stories.synopsis": "Acompaña a la abuelita Pola, interpretada por Pola Maya, mientras cautiva con sus relatos a la dulce Sharon, cuya voz es de Priscila Rentería. Cada episodio presenta breves historias llenas de encanto y enseñanzas.",
     // The Mistery of Habib: habib-mistery
     "projects.habib-mistery.seo.title": "El Misterio de Habib | Serie animada infantil",
     "projects.habib-mistery.seo.description": "Serie animada infantil para Tutorah Kids",
@@ -29,6 +36,13 @@ export const projects = {
     "projects.midot-power-kids.summary": "Embárcate en una mágica aventura junto a tus midots favoritos y descubre sus valiosas enseñanzas.",
     "projects.midot-power-kids.category": "Serie animada infantil",
     "projects.midot-power-kids.synopsis": "<p>¡Prepárate para emocionantes aventuras junto a los Midot Power Kids! Esta serie animada te llevará a través de sus 12 increíbles episodios a un mundo lleno de personajes entrañables y divertidos. </p> <p>Con la idea y guion de Olga Rosenberg, esta serie te sumergirá en maravillosas historias donde aprenderás valiosas lecciones sobre las emociones y cómo aplicarlas en la vida diaria.</p> <p>¡Únete a los Midot Power Kids en sus travesías y déjate inspirar por su increíble poder!</p>",
+    //Positive Actions: positive-actions
+    "projects.positive-actions.seo.title": "Acciones Positivas | Serie animada infantil",
+    "projects.positive-actions.seo.description": "Serie animada infantil para Tutorah Kids",
+    "projects.positive-actions.name": "Acciones Positivas",
+    "projects.positive-actions.summary": "Es un programa infantil donde los valores cotidianos como la gratitud y la amabilidad son los protagonistas.",
+    "projects.positive-actions.category": "Serie animada infantil",
+    "projects.positive-actions.synopsis": "Cada día nos encontramos frente a la posibilidad de elegir cómo actuar. En este programa, te animaremos a tomar decisiones correctas y a llevar a cabo acciones positivas de acuerdo con la Torá.",
     // Milly Cohen tales: milly-cohen-tales
     "projects.milly-cohen-tales.seo.title": "Cuentos de Milly Cohen | Serie animada infantil",
     "projects.milly-cohen-tales.seo.description": "Serie animada infantil para Tutorah Kids",
@@ -88,6 +102,13 @@ export const projects = {
     "projects.magic-words.summary": "Get ready to laugh and learn! Each episode is filled with fun, friendship and valuable lessons.",
     "projects.magic-words.category": "Kids animation",
     "projects.magic-words.synopsis": "<p>Under the brilliant Art Direction of Daniel Corkidi, a total of 24 episodes were created and distributed over 2 seasons.</p> <p>This animated series brought to life the beloved characters of Livy, Summy, and Koby, who share unforgettable moments with their grandmother and through their experiences, they will discover the power that a single word has to change the world.</p>",
+    //Bedtime Stories: bedtime-stories
+    "projects.bedtime-stories.seo.title": "Bedtime Stories | Kids show",
+    "projects.bedtime-stories.seo.description": "Opening sequence for the program 'Bedtime Stories' on Tutorah Kids",
+    "projects.bedtime-stories.name": "Bedtime Stories",
+    "projects.bedtime-stories.summary": "Imagine, learn and dream sweet dreams with the best bedtime stories that Granny Pola has for you.",
+    "projects.bedtime-stories.category": "Opening sequence",
+    "projects.bedtime-stories.synopsis": "Join Granny Pola, portrayed by Pola Maya, as she captivates sweet Sharon with her stories, voiced by Priscila Rentería. Each episode presents brief tales full of charm and teachings.",
     // The Mistery of Habib: habib-mistery
     "projects.habib-mistery.seo.title": "The Mistery of Habib | Kids animation",
     "projects.habib-mistery.seo.description": "Animated show for Tutorah Kids",
@@ -102,6 +123,13 @@ export const projects = {
     "projects.midot-power-kids.summary": "Begin a magical adventure with your favorite midots and discover their valuable teachings.",
     "projects.midot-power-kids.category": "Kids animation",
     "projects.midot-power-kids.synopsis": "<p>Get ready for exciting adventures with the Midot Power Kids! This animated series will take you through its 12 incredible episodes to a world full of charming and fun characters.</p> <p>With the concept and script by Olga Rosenberg, this series will immerse you in wonderful stories where you will learn valuable lessons about emotions and how to apply them in everyday life.</p> <p>Join the Midot Power Kids on their journeys and let yourself be inspired by their incredible power!</p>",
+    //Positive Actions: positive-actions
+    "projects.positive-actions.seo.title": "Positive Actions | Kids animation",
+    "projects.positive-actions.seo.description": "Animated show for Tutorah Kids",
+    "projects.positive-actions.name": "Positive Actions",
+    "projects.positive-actions.summary": "Is a children's program where everyday values like gratitude and kindness take center stage.",
+    "projects.positive-actions.category": "Kids animation",
+    "projects.positive-actions.synopsis": "Every day, we are faced with the possibility of deciding how to act. In this program, we will encourage you to act rightly and to take positive actions in accordance with the Torah.",
     // Milly Cohen tales: milly-cohen-tales
     "projects.milly-cohen-tales.seo.title": "The Tales of Milly Cohen | Kids animation",
     "projects.milly-cohen-tales.seo.description": "Animated show for Tutorah Kids",
