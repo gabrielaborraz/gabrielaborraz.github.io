@@ -10,7 +10,8 @@ import {
   projectTheViolaJourney,
   projectIntorahsante,
   projectNitzaStorytime,
-  projectIxkik
+  projectIxkik,
+  projectEmNeurology,
 } from "../../../utils/content/projects";
 
 import Layout from "../../../layouts/Layout.astro";
@@ -31,6 +32,7 @@ const nitzaStorytime = projectNitzaStorytime({ locale });
 const intorahsante = projectIntorahsante({ locale });
 const theViolaJourney = projectTheViolaJourney({ locale });
 const ixkik = projectIxkik({ locale });
+const emNeurology = projectEmNeurology({ locale });
 
 export { getStaticPaths };
 ---
@@ -134,6 +136,17 @@ export { getStaticPaths };
 
     <div class="content">
       <ul class="projects-cards">
+        <li>
+          <ProjectCard
+            imageSrc={emNeurology.imageSrc}
+            name={emNeurology.name}
+            summary={emNeurology.summary}
+            year={emNeurology.year}
+            client={emNeurology.client}
+            projectUrl={emNeurology.projectUrl}
+            videoUrl={emNeurology.videoUrl} />
+        </li>
+        <li>
           <ProjectCard
             imageSrc={ixkik.imageSrc}
             name={ixkik.name}

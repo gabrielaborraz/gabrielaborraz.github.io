@@ -78,6 +78,13 @@ export const projects = {
     "projects.ixkik.summary": "Arte Textil marcando nuestra identidad, IXKIK es una marca impregnada de la fuerza y esencia de la cultura mexicana.",
     "projects.ixkik.category": "Diseño de logo",
     "projects.ixkik.synopsis": "<p>IXKIK es una marca mexicana que celebra la diversidad y riqueza de la cultura mexicana a través de sus textiles artesanales.</p> <p>Su logo representado por una mariposa tejida, encarna la tradición y la identidad de los artesanos, transmitiendo la belleza y talento de nuestras raíces.</p>",
+    // Stationery Design for a Neurologist: em-neurology
+    "projects.em-neurology.seo.title": "Diseño de papelería para neuróloga",
+    "projects.em-neurology.seo.description": "Diseño de logo, tarjetas de presentación, recetario médico, hoja de seguimiento de pacientes y sello oficial.",
+    "projects.em-neurology.name": "Neurología para adultos",
+    "projects.em-neurology.summary": "Diseño de logo, tarjetas de presentación, recetario médico, hoja de seguimiento de pacientes y sello.",
+    "projects.em-neurology.category": "Diseño para impresión",
+    "projects.em-neurology.synopsis": "<p>Diseño del logo y papelería para la Dra. Fernanda Flores Alfaro, una destacada especialista en el campo de la neurología para adultos. Su tarjeta de presentación resalta su profesionalismo, mientras que el logo busca reflejar su humanismo y excelencia, manteniéndose siempre a la vanguardia de la ciencia médica.</p> <p>Es un honor haber colaborado en este proyecto y contribuir a la identidad visual de una médica tan talentosa.</p>",
     // Hello API: hello-API
     "projects.hello-api.seo.title": "Hello API | Diseño de logo",
     "projects.hello-api.seo.description": "Diseño de logo para Hello API",
@@ -165,6 +172,13 @@ export const projects = {
     "projects.ixkik.summary": "Textile art shaping our identity, IXKIK is a brand infused with the strength and essence of Mexican culture.",
     "projects.ixkik.category": "Logo design",
     "projects.ixkik.synopsis": "<p>IXKIK is a Mexican brand that celebrates the diversity and richness of Mexican culture through its artisanal textiles.</p> <p>Its logo, represented by a woven butterfly, embodies tradition and the identity of artisans, conveying the beauty and talent of our roots.</p>",
+    // Stationery Design for a Neurologist: em-neurology
+    "projects.em-neurology.seo.title": "Stationery Design for a Neurologist",
+    "projects.em-neurology.seo.description": "Logo design, business cards, medical prescription pad, patient tracking sheet and official stamp.",
+    "projects.em-neurology.name": "Adult Neurology",
+    "projects.em-neurology.summary": "Logo design, business cards, medical prescription pad, patient tracking sheet and official stamp.",
+    "projects.em-neurology.category": "Print Design",
+    "projects.em-neurology.synopsis": "<p>Logo and stationery design for Dr. Fernanda Flores Alfaro, a distinguished specialist in the field of adult neurology. Her business card highlights her professionalism, while the logo seeks to reflect her humanism and excellence, always staying at the leading-edge of medical science.</p> <p>It’s an honor to have collaborated on this project and contributed to the visual identity of such a talented doctor.</p>",
     // Hello API: hello-api
     "projects.hello-api.seo.title": "Hello API | Logo design",
     "projects.hello-api.seo.description": "Logo design for Hello API",

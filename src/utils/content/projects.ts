@@ -290,7 +290,7 @@ export const projectIxkik = (args?: { locale?: Locale }) => {
   return {
     ...info,
     year: "2017",
-    client: " Creative Lab",
+    client: "Creative Lab",
     section: "design",
     externalLink: "https://www.behance.net/gallery/81122411/IXKIK-Mexican-Logo-Design",
     slides: [
@@ -298,6 +298,27 @@ export const projectIxkik = (args?: { locale?: Locale }) => {
       "/projects/ixkik/slide_2.jpg",
       "/projects/ixkik/slide_3.jpg",
       "/projects/ixkik/slide_4.jpg"
+    ],
+  };
+};
+
+export const projectEmNeurology = (args?: { locale?: Locale }) => {
+  const locale = args?.locale;
+  const slug = "em-neurology";
+
+  const info = project({ slug, locale });
+
+  return {
+    ...info,
+    year: "2023",
+    client: "Dra. Fernanda Flores Alfaro",
+    section: "design",
+    externalLink: "https://www.behance.net/gallery/176277577/Stationery-Design-for-a-Neurologist",
+    slides: [
+      "/projects/em-neurology/slide_1.jpg",
+      "/projects/em-neurology/slide_2.jpg",
+      "/projects/em-neurology/slide_3.jpg",
+      "/projects/em-neurology/slide_4.jpg"
     ],
   };
 };
@@ -335,5 +356,6 @@ export const projects: Projects = {
   "intorahsante":projectIntorahsante,
   // Design projects  
   "ixkik": projectIxkik,
+  "em-neurology": projectEmNeurology,
   "hello-api": projectHelloAPI,
 };

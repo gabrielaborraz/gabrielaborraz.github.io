@@ -6,6 +6,7 @@ import { getLocaleFromUrl, useTranslations } from "../../../../utils/i18n/utils"
 import {
   projectHelloAPI,
   projectIxkik,
+  projectEmNeurology,
 } from "../../../../utils/content/projects";
 
 import Layout from "../../../../layouts/Layout.astro";
@@ -19,6 +20,7 @@ const title = t('porfolio.design.seo.title');
 const description = t('porfolio.design.seo.description');
 
 const ixkik = projectIxkik({ locale });
+const emNeurology = projectEmNeurology({ locale });
 
 export { getStaticPaths };
 ---
@@ -49,6 +51,16 @@ export { getStaticPaths };
 
     <div class="content">
       <ul class="projects-cards">
+        <li>
+          <ProjectCard
+            imageSrc={emNeurology.imageSrc}
+            name={emNeurology.name}
+            summary={emNeurology.summary}
+            year={emNeurology.year}
+            client={emNeurology.client}
+            projectUrl={emNeurology.projectUrl}
+            videoUrl={emNeurology.videoUrl} />
+        </li>
         <li>
           <ProjectCard
             imageSrc={ixkik.imageSrc}
