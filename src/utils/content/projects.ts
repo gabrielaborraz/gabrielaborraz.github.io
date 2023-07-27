@@ -313,7 +313,7 @@ export const projectEmNeurology = (args?: { locale?: Locale }) => {
     year: "2023",
     client: "Dra. Fernanda Flores Alfaro",
     section: "design",
-    externalLink: "https://www.behance.net/gallery/176277577/Stationery-Design-for-a-Neurologist",
+    externalLink: "https://www.behance.net/gallery/176277577/Neurologist-Stationery-Design",
     slides: [
       "/projects/em-neurology/slide_1.jpg",
       "/projects/em-neurology/slide_2.jpg",
