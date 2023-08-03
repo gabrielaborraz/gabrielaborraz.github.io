@@ -25,7 +25,7 @@ export const portfolio = {
     "breadcrumb.portfolio": "Portafolio",
     "breadcrumb.multimedia": "Multimedia",
     "breadcrumb.design": "Diseño",
-    "portfolio.external-btn.multimedia": "Ver multimedia →",
+    "portfolio.external-btn.multimedia": "Ver más →",
     "portfolio.external-btn.design": "Ver en Behance →",
 
     /***********CREDIT TABLE***********/
@@ -61,7 +61,7 @@ export const portfolio = {
     "breadcrumb.portfolio": "Portfolio",
     "breadcrumb.multimedia": "Multimedia",
     "breadcrumb.design": "Design",
-    "portfolio.external-btn.multimedia": "Watch multimedia →",
+    "portfolio.external-btn.multimedia": "Watch more →",
     "portfolio.external-btn.design": "See on Behance →",
     /***********CREDIT TABLE***********/
     "portfolio.table-cell.year": "Year",

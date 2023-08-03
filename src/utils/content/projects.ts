@@ -232,6 +232,28 @@ export const projectNitzaStorytime = (args?: { locale?: Locale }) => {
   };
 };
 
+export const projectEthicalCooking = (args?: { locale?: Locale }) => {
+  const locale = args?.locale;
+  const slug = "ethical-cooking-courses";
+
+  const info = project({ slug, locale });
+
+  return {
+    ...info,
+    year: "2020",
+    client: "Academia de Cocina Ética",
+    videoUrl: "https://www.youtube.com/watch?v=Q4QkEtSI1S4",
+    animation: ["Gabriela Borraz"],
+    section: "multimedia",
+    externalLink: "https://www.instagram.com/solarirenee/",
+    slides: [
+      "/projects/ethical-cooking-courses/slide_1.jpg",
+      "/projects/ethical-cooking-courses/slide_2.jpg",
+      "/projects/ethical-cooking-courses/slide_3.jpg"
+    ],
+  };
+};
+
 export const projectIntorahsante = (args?: { locale?: Locale }) => {
   const locale = args?.locale;
   const slug = "intorahsante";
@@ -351,9 +373,10 @@ export const projects: Projects = {
   "midot-power-kids": projectMidotPowerKids,
   "positive-actions": projectPositiveActions,
   "milly-cohen-tales": projectMillyCohenTales,
-  "the-viola-journey": projectTheViolaJourney,
   "nitza-storytime": projectNitzaStorytime,
+  "ethical-cooking-courses": projectEthicalCooking,
   "intorahsante":projectIntorahsante,
+  "the-viola-journey": projectTheViolaJourney,
   // Design projects  
   "ixkik": projectIxkik,
   "em-neurology": projectEmNeurology,

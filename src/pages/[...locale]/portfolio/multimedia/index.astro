@@ -12,6 +12,7 @@ import {
   projectPositiveActions,
   projectMillyCohenTales,
   projectNitzaStorytime,
+  projectEthicalCooking,
   projectIntorahsante,
   projectTheViolaJourney  
 } from "../../../../utils/content/projects";
@@ -34,6 +35,7 @@ const midotPowerKids = projectMidotPowerKids({ locale });
 const positiveActions = projectPositiveActions({ locale });
 const millyCohenTales = projectMillyCohenTales({ locale });
 const nitzaStorytime = projectNitzaStorytime({ locale });
+const ethicalCooking = projectEthicalCooking({ locale });
 const intorahsante = projectIntorahsante({ locale });
 const theViolaJourney = projectTheViolaJourney({ locale });
 
@@ -85,6 +87,16 @@ export { getStaticPaths };
             client={intorahsante.client}
             projectUrl={intorahsante.projectUrl}
             videoUrl={intorahsante.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
+            imageSrc={ethicalCooking.imageSrc}
+            name={ethicalCooking.name}
+            summary={ethicalCooking.summary}
+            year={ethicalCooking.year}
+            client={ethicalCooking.client}
+            projectUrl={ethicalCooking.projectUrl}
+            videoUrl={ethicalCooking.videoUrl} />
         </li>
         <li>
           <ProjectCard

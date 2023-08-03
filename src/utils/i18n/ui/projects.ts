@@ -57,6 +57,13 @@ export const projects = {
     "projects.nitza-storytime.summary": "Únete a Nitza en sus divertidas anécdotas sobre la vida y aprende con sus historias.",
     "projects.nitza-storytime.category": "Serie animada infantil",
     "projects.nitza-storytime.synopsis": "<p>Nitza Abadi es una talentosa narradora que da vida a cautivadores cuentos con lecciones morales. Su forma única de contar historias te hará pasar un rato divertido y aprender de una manera completamente nueva.</p> <p>¡Únete a ella y no te pierdas esta encantadora aventura de imaginación y aprendizaje!</p>",
+    // Renee Solari Academy: ethical-cooking-courses
+    "projects.ethical-cooking-courses.seo.title": "Cortinillas de Entrada  | Academia de Cocina Ética",
+    "projects.ethical-cooking-courses.seo.description": "Serie de videos para la Academia de Cocina Ética por Renée Solari, que ofrece una amplia gama de cursos de cocina ética, vegana y sustentable.",
+    "projects.ethical-cooking-courses.name": "Cursos de Cocina Ética y Sustentable",
+    "projects.ethical-cooking-courses.summary": "Cortinillas para los cursos de cocina de Renée Solari en la Academia de Cocina Ética.",
+    "projects.ethical-cooking-courses.category": "Cortinillas de entrada",
+    "projects.ethical-cooking-courses.synopsis": "<p>Serie de cortinillas para la Academia de Renée Solari que ofrece una amplia gama de cursos de cocina ética, cocina vegana, entre otras fascinantes opciones gastronómicas sustentables.</p> <p>Descubre las deliciosas propuestas que la Academia de Cocina Ética tiene para ofrecerte.</p>",
     // Intorahsante: intorahsante
     "projects.intorahsante.seo.title": "Intorahsante | Episodio piloto",
     "projects.intorahsante.seo.description": "Episodio piloto lleno de delicias gastronómicas de la cultura judía.",
@@ -151,6 +158,13 @@ export const projects = {
     "projects.nitza-storytime.summary": "Join Nitza in her fun anecdotes about life and learn through her captivating stories.",
     "projects.nitza-storytime.category": "Kids animation",
     "projects.nitza-storytime.synopsis": "<p>Nitza Abadi is a talented storyteller who brings captivating tales to life with moral lessons. Her unique way of storytelling will entertain you and provide a whole new learning experience.</p> <p>Join her and don't miss out on this enchanting journey of imagination and learning!</p>",
+    // Renee Solari Academy: ethical-cooking-courses
+    "projects.ethical-cooking-courses.seo.title": "Opening Sequences | Ethical Culinary Academy",
+    "projects.ethical-cooking-courses.seo.description": "Video series for Ethical Culinary Academy by Renée Solari, offering a wide range of ethical, vegan and sustainable cooking courses.",
+    "projects.ethical-cooking-courses.name": "Ethical and Sustainable Cooking Courses",
+    "projects.ethical-cooking-courses.summary": "Opening sequences for the Renée Solari cooking courses at Ethical Culinary Academy.",
+    "projects.ethical-cooking-courses.category": "Opening sequences",
+    "projects.ethical-cooking-courses.synopsis": "<p>Series of opening sequences for Renée Solari Academy, offering a wide range of courses in ethical cooking, vegan cuisine and other fascinating sustainable gastronomic options.</p> <p>Discover the delicious proposals that this Ethical Culinary Academy has to offer.</p>",
     // Intorahsante: intorahsante
     "projects.intorahsante.seo.title": "Intorahsante | Pilot episode",
     "projects.intorahsante.seo.description": "Pilot episode full of gastronomic delights from Jewish culture.",

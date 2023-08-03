@@ -5,11 +5,11 @@ import { getLocaleFromUrl, useTranslations } from "../../../utils/i18n/utils";
 
 import {
   projectHabibMistery,
-  projectMidotPowerKids,
   projectMillyCohenTales,
-  projectTheViolaJourney,
-  projectIntorahsante,
   projectNitzaStorytime,
+  projectEthicalCooking,
+  projectIntorahsante,
+  projectTheViolaJourney,  
   projectIxkik,
   projectEmNeurology,
 } from "../../../utils/content/projects";
@@ -26,9 +26,9 @@ const title = t('portfolio.seo.title');
 const description = t('portfolio.seo.description');
 
 const habibMistery = projectHabibMistery({ locale });
-const midotPowerKids = projectMidotPowerKids({ locale });
 const millyCohenTales = projectMillyCohenTales({ locale });
 const nitzaStorytime = projectNitzaStorytime({ locale });
+const ethicalCooking = projectEthicalCooking({ locale });
 const intorahsante = projectIntorahsante({ locale });
 const theViolaJourney = projectTheViolaJourney({ locale });
 const ixkik = projectIxkik({ locale });
@@ -80,6 +80,16 @@ export { getStaticPaths };
         </li>
         <li>
           <ProjectCard
+            imageSrc={ethicalCooking.imageSrc}
+            name={ethicalCooking.name}
+            summary={ethicalCooking.summary}
+            year={ethicalCooking.year}
+            client={ethicalCooking.client}
+            projectUrl={ethicalCooking.projectUrl}
+            videoUrl={ethicalCooking.videoUrl} />
+        </li>
+        <li>
+          <ProjectCard
             imageSrc={nitzaStorytime.imageSrc}
             name={nitzaStorytime.name}
             summary={nitzaStorytime.summary}
@@ -98,16 +108,6 @@ export { getStaticPaths };
             projectUrl={millyCohenTales.projectUrl}
             videoUrl={millyCohenTales.videoUrl} />
         </li>        
-        <li>
-          <ProjectCard
-            imageSrc={midotPowerKids.imageSrc}
-            name={midotPowerKids.name}
-            summary={midotPowerKids.summary}
-            year={midotPowerKids.year}
-            client={midotPowerKids.client}
-            projectUrl={midotPowerKids.projectUrl}
-            videoUrl={midotPowerKids.videoUrl} />
-        </li>
         <li>
           <ProjectCard
             imageSrc={habibMistery.imageSrc}
