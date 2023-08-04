@@ -11,7 +11,7 @@ import {
   projectMidotPowerKids,
   projectTheViolaJourney,
   projectIntorahsante,
-  projectNitzaStorytime,
+  projectEthicalCooking,
 } from '../../utils/content/projects';
 
 const locale = getLocaleFromUrl(Astro.url);
@@ -31,7 +31,7 @@ const midotPowerKids = projectMidotPowerKids({ locale });
 const millyCohenTales = projectMillyCohenTales({ locale });
 const theViolaJourney = projectTheViolaJourney({ locale });
 const intorahsante = projectIntorahsante({ locale });
-const nitzaStorytime = projectNitzaStorytime({ locale });
+const ethicalCooking = projectEthicalCooking({ locale });
 
 const showReelUrl = 'https://www.youtube.com/watch?v=edXnSyD0NsA'
 
@@ -168,13 +168,13 @@ export { getStaticPaths };
         </li>
         <li>
           <ProjectCard
-          imageSrc={nitzaStorytime.imageSrc}
-          name={nitzaStorytime.name}
-          summary={nitzaStorytime.summary}
-          year={nitzaStorytime.year}
-          client={nitzaStorytime.client}
-          projectUrl={nitzaStorytime.projectUrl}
-          videoUrl={nitzaStorytime.videoUrl} />
+            imageSrc={ethicalCooking.imageSrc}
+            name={ethicalCooking.name}
+            summary={ethicalCooking.summary}
+            year={ethicalCooking.year}
+            client={ethicalCooking.client}
+            projectUrl={ethicalCooking.projectUrl}
+            videoUrl={ethicalCooking.videoUrl} />
         </li>
       </ul>
 

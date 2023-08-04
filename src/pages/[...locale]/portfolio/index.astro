@@ -4,12 +4,12 @@ import { routes } from "../../../routes";
 import { getLocaleFromUrl, useTranslations } from "../../../utils/i18n/utils";
 
 import {
-  projectHabibMistery,
-  projectMillyCohenTales,
-  projectNitzaStorytime,
-  projectEthicalCooking,
+  projectTheViolaJourney,
   projectIntorahsante,
-  projectTheViolaJourney,  
+  projectEthicalCooking,
+  projectNitzaStorytime,
+  projectMillyCohenTales,  
+  projectPositiveActions,
   projectIxkik,
   projectEmNeurology,
 } from "../../../utils/content/projects";
@@ -25,12 +25,12 @@ const t = useTranslations(locale);
 const title = t('portfolio.seo.title');
 const description = t('portfolio.seo.description');
 
-const habibMistery = projectHabibMistery({ locale });
-const millyCohenTales = projectMillyCohenTales({ locale });
-const nitzaStorytime = projectNitzaStorytime({ locale });
-const ethicalCooking = projectEthicalCooking({ locale });
-const intorahsante = projectIntorahsante({ locale });
 const theViolaJourney = projectTheViolaJourney({ locale });
+const intorahsante = projectIntorahsante({ locale });
+const ethicalCooking = projectEthicalCooking({ locale });
+const nitzaStorytime = projectNitzaStorytime({ locale });
+const millyCohenTales = projectMillyCohenTales({ locale });
+const positiveActions = projectPositiveActions({ locale });
 const ixkik = projectIxkik({ locale });
 const emNeurology = projectEmNeurology({ locale });
 
@@ -110,13 +110,13 @@ export { getStaticPaths };
         </li>        
         <li>
           <ProjectCard
-            imageSrc={habibMistery.imageSrc}
-            name={habibMistery.name}
-            summary={habibMistery.summary}
-            year={habibMistery.year}
-            client={habibMistery.client}
-            projectUrl={habibMistery.projectUrl}
-            videoUrl={habibMistery.videoUrl} />
+            imageSrc={positiveActions.imageSrc}
+            name={positiveActions.name}
+            summary={positiveActions.summary}
+            year={positiveActions.year}
+            client={positiveActions.client}
+            projectUrl={positiveActions.projectUrl}
+            videoUrl={positiveActions.videoUrl} />
         </li>
       </ul>
 
