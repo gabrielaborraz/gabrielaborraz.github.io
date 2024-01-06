@@ -356,10 +356,13 @@ export const projectHelloAPI = (args?: { locale?: Locale }) => {
     year: "2023",
     client: "Hello API",
     section: "design",
-    externalLink: "https://www.behance.net/gabrielaborraz",
+    externalLink: "https://www.behance.net/gallery/188241747/Branding-Design-for-Hello-API",
     slides: [
-       "/projects/hello-api/slide_1.jpg",
-      "/projects/hello-api/slide_2.jpg"
+      "/projects/hello-api/slide_1.jpg",
+      "/projects/hello-api/slide_2.jpg",
+      "/projects/hello-api/slide_3.jpg",
+      "/projects/hello-api/slide_4.jpg",
+      "/projects/hello-api/slide_5.jpg",
     ],
   };
 };

@@ -12,6 +12,7 @@ import {
   projectPositiveActions,
   projectIxkik,
   projectEmNeurology,
+  projectHelloAPI,
 } from "../../../utils/content/projects";
 
 import Layout from "../../../layouts/Layout.astro";
@@ -33,6 +34,7 @@ const millyCohenTales = projectMillyCohenTales({ locale });
 const positiveActions = projectPositiveActions({ locale });
 const ixkik = projectIxkik({ locale });
 const emNeurology = projectEmNeurology({ locale });
+const helloAPI = projectHelloAPI({ locale });
 
 export { getStaticPaths };
 ---
@@ -136,6 +138,16 @@ export { getStaticPaths };
 
     <div class="content">
       <ul class="projects-cards">
+        <li>
+          <ProjectCard
+            imageSrc={helloAPI.imageSrc}
+            name={helloAPI.name}
+            summary={helloAPI.summary}
+            year={helloAPI.year}
+            client={helloAPI.client}
+            projectUrl={helloAPI.projectUrl}
+            videoUrl={helloAPI.videoUrl} />
+        </li>
         <li>
           <ProjectCard
             imageSrc={emNeurology.imageSrc}
